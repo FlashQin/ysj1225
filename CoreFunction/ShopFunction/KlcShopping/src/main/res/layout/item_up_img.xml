@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/shopPhotoIv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_upload"
+        app:riv_corner_radius="3dp" />
+
+    <TextView
+        android:id="@+id/delImgTv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/bg_del_img"
+        android:layout_toRightOf="@id/shopPhotoIv"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:text="—"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>

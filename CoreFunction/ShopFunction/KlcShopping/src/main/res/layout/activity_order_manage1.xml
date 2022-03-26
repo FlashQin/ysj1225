@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:onClick="backClick"
+                android:padding="15dp"
+                android:src="@mipmap/icon_back"
+                android:tint="#333" />
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="19dp"
+                android:singleLine="true"
+                android:text="购物订单"
+                android:textColor="#2B2C2C"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="#DEDEDE" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F4F4F4"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp">
+
+                <RadioButton
+                    android:id="@+id/allBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableBottom="@drawable/selector_line_short"
+                    android:gravity="center"
+                    android:paddingVertical="7dp"
+                    android:text="全部"
+                    android:textColor="@drawable/selector_color_goods_state"
+                    android:textSize="13dp" />
+
+                <RadioButton
+                    android:id="@+id/payBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/selector_line_long"
+                    android:gravity="center"
+                    android:paddingVertical="7dp"
+                    android:text="待付款"
+                    android:textColor="@drawable/selector_color_goods_state"
+                    android:textSize="13dp" />
+
+                <RadioButton
+                    android:id="@+id/sendBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/selector_line_long"
+                    android:gravity="center"
+                    android:paddingVertical="7dp"
+                    android:text="待发货"
+                    android:textColor="@drawable/selector_color_goods_state"
+                    android:textSize="13dp" />
+
+                <RadioButton
+                    android:id="@+id/receivedBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/selector_line_long"
+                    android:gravity="center"
+                    android:paddingVertical="7dp"
+                    android:text="待收货"
+                    android:textColor="@drawable/selector_color_goods_state"
+                    android:textSize="13dp" />
+
+                <RadioButton
+                    android:id="@+id/afterBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/selector_line_long"
+                    android:gravity="center"
+                    android:paddingVertical="7dp"
+                    android:text="退货/退款"
+                    android:textColor="@drawable/selector_color_goods_state"
+                    android:textSize="13dp" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvToBePayNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_red_point"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:minWidth="14dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone"
+                        tools:ignore="SmallSp"
+                        tools:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvToBeDeliveredNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_red_point"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:minWidth="14dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone"
+                        tools:ignore="SmallSp"
+                        tools:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvToBeReceivedNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_red_point"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:minWidth="14dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone"
+                        tools:ignore="SmallSp"
+                        tools:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvCancelGoodsNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_red_point"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:minWidth="14dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone"
+                        tools:ignore="SmallSp"
+                        tools:visibility="visible" />
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F4F4F4" />
+
+    </LinearLayout>
+</layout>

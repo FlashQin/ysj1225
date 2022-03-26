@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="im_type_image">[图片]</string>
+    <string name="im_type_voide">[语音]</string>
+    <string name="im_type_gift">[礼物消息]</string>
+    <string name="im_msg_send_failed">消息发送失败</string>
+    <string name="trend_comment_more">查看更多评论</string>
+
+
+    <string name="msg_read">已读</string>
+    <string name="msg_delete">删除</string>
+    <string name="cancel">取消</string>
+</resources>

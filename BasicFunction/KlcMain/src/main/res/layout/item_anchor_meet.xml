@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.kalacheng.main.R" />
+
+        <variable
+            name="bean"
+            type="com.kalacheng.buscommon.model.ApiUserInfo" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnBeanCallback" />
+
+        <variable
+            name="stateVisibility"
+            type="Boolean" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:onClick="@{() ->  callback.onClick(bean)}">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            app:riv_oval="true"
+            bind:errorRes="@{R.mipmap.ic_launcher}"
+            bind:image="@{bean.avatar}" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="18dp"
+            android:scaleType="centerInside"
+            bind:image="@{bean.onlineStatus==0?R.drawable.lightgrey_oval:R.drawable.green_oval}" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_avatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="匹配中"
+            android:textColor="#ff222222"
+            android:textSize="12sp"
+            android:visibility="@{stateVisibility ? View.VISIBLE : View.GONE}" />
+    </RelativeLayout>
+</layout>

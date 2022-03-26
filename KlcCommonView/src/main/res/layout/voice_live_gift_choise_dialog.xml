@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/voice_live_gift_mikeList"
+        android:layout_width="@dimen/x150"
+        android:layout_height="@dimen/x124"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginBottom="@dimen/x4"
+        android:background="@drawable/voice_gift_choise_bg" />
+
+</LinearLayout>

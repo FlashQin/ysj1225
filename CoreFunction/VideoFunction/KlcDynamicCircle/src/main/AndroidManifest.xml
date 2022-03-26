@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.dynamiccircle">
+
+    <application>
+
+        <!--动态视频直播-->
+        <activity android:name=".activity.VideoActivity" />
+        <!--我的动态-->
+        <activity android:name=".activity.DynamicActivity" />
+        <!-- 社区 -->
+        <activity android:name=".activity.CommunityActivity" />
+    </application>
+</manifest>

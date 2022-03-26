@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">KlcPoints</string>
+
+    <!-- 排行-->
+    <string name="ranking">排行</string>
+    <string name="main_list_profit">收益榜</string>
+    <string name="main_list_contribute">贡献榜</string>
+    <string name="main_list_day">日榜</string>
+    <string name="main_list_week">周榜</string>
+    <string name="main_list_month">月榜</string>
+    <string name="main_list_all">总榜</string>
+    <string name="live_user_home_con">礼物贡献榜</string>
+
+</resources>

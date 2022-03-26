@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <inset
+            android:insetTop="12dp"
+            android:insetBottom="12dp"
+            >
+            <bitmap android:src="@mipmap/barrage_open"/>
+        </inset>
+    </item>
+    <item android:state_checked="false">
+        <inset
+            android:insetTop="12dp"
+            android:insetBottom="12dp"
+            >
+            <bitmap android:src="@mipmap/barrage_close"/>
+        </inset>
+    </item>
+</selector>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/x286"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="@dimen/x286"
+        android:layout_height="@dimen/x344"
+        android:orientation="vertical"
+        android:background="@drawable/bg_sign_in">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x80"
+            android:src="@mipmap/icon_meiriqiandao"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.kalacheng.util.view.FlowLayout
+                android:id="@+id/flowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/x12"
+                android:paddingTop="@dimen/x18"/>
+            <LinearLayout
+                android:id="@+id/prizeLl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="恭喜获得"
+                    android:textSize="@dimen/x14"
+                    android:textColor="#FF4A43"/>
+
+                <ImageView
+                    android:id="@+id/dayPrizeIv"
+                    android:layout_width="@dimen/x90"
+                    android:layout_height="@dimen/x90"
+                    android:layout_marginTop="@dimen/x30"
+                    android:src="@mipmap/zanweitu"
+                    android:scaleType="centerCrop"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/okTv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x34"
+            android:layout_marginHorizontal="@dimen/x34"
+            android:gravity="center"
+            android:text="立即签到"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x14"
+            android:background="@drawable/bg_sign_in_btn"
+            android:layout_marginBottom="@dimen/x18"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/Sign_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x30"
+        android:background="@mipmap/dialog_close"/>
+
+</LinearLayout>

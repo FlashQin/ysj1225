@@ -1,0 +1,71 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.kalacheng.libuser.model.ApiUsableAnchorResp" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnItemClickCallback" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            bind:riv_oval="true"
+            bind:image="@{bean.avatar_thumb}" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/avatar"
+            android:text="@{bean.nickname}"
+            android:textColor="@color/textColor3"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/sex"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/name" />
+
+        <ImageView
+            android:id="@+id/level"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/sex" />
+
+        <TextView
+            android:id="@+id/btn_invite"
+            android:layout_width="70dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_btn_live_pk"
+            android:gravity="center"
+            android:onClick="@{(view) ->  callback.onClick(view,bean)}"
+            android:text="@string/live_pk_invite"
+            android:textColor="@drawable/btn_live_pk"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</layout>

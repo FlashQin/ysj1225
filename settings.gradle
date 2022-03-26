@@ -1,0 +1,49 @@
+include ':app', ':libLiveCloud', ':KlcBase', ':KlcBeans', ':KlcLive', ':KlcVideoRecord', ':KlcMain', 'KlcMainPage', ':KlcCenter', ":KlcFrame", ":KlcUtils", ":KlcLogin",
+        ':KlcFans', ':KlcMoney', ':KlcDynamicCircle', ':KlcLiveCommon', ':KlcPoints', ':KlcMob', ":KlcOne2OneSvipLive", ":KlcOneVoiceLive", ':KlcMessage', ':KlcMap', ':KlcTiUi',
+        ':KlcCommonView', 'KlcCenterCommon', ':KlcShortVideo', ':KlcHomePage', 'KlcShopping'
+
+//直播单元测试用，可以删除
+project(':libLiveCloud').projectDir = new File("../../../LibTools/", "libLiveCloud")
+project(':KlcLive').projectDir = new File("../../../LibBusiness/CoreFunction/LiveFunction/", "KlcLive")
+//登录、注册
+project(':KlcLogin').projectDir = new File("../../../LibBusiness/BasicFunction/", "KlcLogin")
+project(':KlcMain').projectDir = new File("../../../LibBusiness/BasicFunction/", "KlcMain")
+project(':KlcMainPage').projectDir = new File("../../../LibBusiness/BasicFunction/", "KlcMainPage")
+//我的
+project(':KlcCenterCommon').projectDir = new File("../../../LibBusiness/BasicFunction/", "KlcCenterCommon")
+project(':KlcCenter').projectDir = new File("../../../LibBusiness/BasicFunction/", "KlcCenter")
+
+//直播相关公共架包
+project(':KlcLiveCommon').projectDir = new File("../../../LibBusiness/CoreFunction/LiveFunction/", "KlcLiveCommon")
+//搜索、粉丝、关注
+project(':KlcFans').projectDir = new File("../../../LibBusiness/AuxFunction/", "KlcFans")
+//资金
+project(':KlcMoney').projectDir = new File("../../../LibBusiness/AuxFunction/", "KlcMoney")
+project(':KlcBase').projectDir = new File("../../../LibBase/", "KlcBase")
+project(':KlcUtils').projectDir = new File("../../../LibTools/", "KlcUtils")
+project(':KlcBeans').projectDir = new File("../../../LibBase/", "KlcBeans")
+project(':KlcFrame').projectDir = new File("../../../LibBase/", "KlcFrame")
+//动态展示
+project(':KlcDynamicCircle').projectDir = new File("../../../LibBusiness/CoreFunction/VideoFunction/", "KlcDynamicCircle")
+//视频上传
+project(':KlcVideoRecord').projectDir = new File("../../../LibBusiness/CoreFunction/VideoFunction/", "KlcVideoRecord")
+//积分榜
+project(':KlcPoints').projectDir = new File("../../../LibBusiness/AuxFunction/", "KlcPoints")
+
+project(':KlcMob').projectDir = new File("../../../LibTools/", "KlcMob")
+project(':KlcMap').projectDir = new File("../../../LibTools/", "KlcMap")
+project(':KlcTiUi').projectDir = new File("../../../LibTools/", "KlcTiUi")
+
+//一对一视频
+project(':KlcOne2OneSvipLive').projectDir = new File("../../../LibBusiness/CoreFunction/LiveFunction/", "KlcOne2OneSvipLive")
+project(':KlcOneVoiceLive').projectDir = new File("../../../LibBusiness/CoreFunction/LiveFunction/", "KlcOneVoiceLive")
+project(':KlcShortVideo').projectDir = new File("../../../LibBusiness/CoreFunction/VideoFunction/", "KlcShortVideo")
+
+project(':KlcMessage').projectDir = new File("../../../LibBusiness/AuxFunction/", "KlcMessage")
+
+//公共组件
+project(':KlcCommonView').projectDir = new File("../../../LibBase/", "KlcCommonView")
+//个人主页
+project(':KlcHomePage').projectDir = new File("../../../LibBusiness/BasicFunction/", "KlcHomePage")
+//直播购
+project(':KlcShopping').projectDir = new File("../../../LibBusiness/CoreFunction/ShopFunction/", "KlcShopping")

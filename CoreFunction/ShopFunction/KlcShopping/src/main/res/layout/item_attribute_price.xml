@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="12dp">
+
+    <TextView
+        android:id="@+id/attributeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:textColor="#666666"
+        android:textSize="13dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="15dp">
+
+        <EditText
+            android:id="@+id/price1Et"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:background="#EEEEEE"
+            android:gravity="center"
+            android:hint="输入价格"
+            android:inputType="numberDecimal"
+            android:textColorHint="#999999"
+            android:textColor="#666666"
+            android:textSize="13dp" />
+
+        <EditText
+            android:id="@+id/price2Et"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_weight="1"
+            android:background="#EEEEEE"
+            android:inputType="numberDecimal"
+            android:gravity="center"
+            android:hint="优惠价格"
+            android:textColorHint="#999999"
+            android:textColor="#666666"
+            android:textSize="13dp" />
+
+        <EditText
+            android:id="@+id/countEt"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:background="#EEEEEE"
+            android:gravity="center"
+            android:hint="输入库存"
+            android:textColorHint="#999999"
+            android:textColor="#666666"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DEDEDE" />
+
+</LinearLayout>

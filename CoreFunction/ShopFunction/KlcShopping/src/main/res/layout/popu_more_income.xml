@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="3dp">
+
+    <TextView
+        android:id="@+id/tv_all"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:text="全部"
+        android:textSize="16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#DDDDDD" />
+
+    <TextView
+        android:id="@+id/tv_day_7"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:text="最近7天"
+        android:textSize="16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#DDDDDD" />
+
+    <TextView
+        android:id="@+id/tv_day_15"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:text="最近15天"
+        android:textSize="16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#DDDDDD" />
+
+    <TextView
+        android:id="@+id/tv_month_1"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:text="最近1个月"
+        android:textSize="16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#DDDDDD" />
+
+    <TextView
+        android:id="@+id/tv_month_3"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:text="最近3个月"
+        android:textSize="16dp" />
+
+</LinearLayout>

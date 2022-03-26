@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:textColor="@color/gray3"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp">
+
+        <com.kalacheng.message.util.view.MyImageView
+            android:id="@+id/imageIv"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="3dp"/>
+        <FrameLayout
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imageIv">
+
+            <ImageView
+                android:id="@+id/icon_fail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/icon_chat_msg_warn"
+                android:visibility="invisible" />
+
+            <ProgressBar
+                android:id="@+id/loading"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:indeterminateBehavior="repeat"
+                android:indeterminateDrawable="@drawable/anim_loading"
+                android:indeterminateOnly="true"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</LinearLayout>

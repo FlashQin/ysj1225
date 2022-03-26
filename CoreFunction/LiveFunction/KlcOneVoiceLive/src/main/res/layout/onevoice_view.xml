@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.onevoicelive.viewmodel.OneVoiceViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/oneVoice_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x170"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x150">
+
+        <RelativeLayout
+            android:id="@+id/VoiceLive_AnchorRe"
+            android:layout_width="@dimen/x160"
+            android:layout_height="@dimen/x160"
+            android:layout_centerHorizontal="true">
+
+            <com.kalacheng.commonview.view.VoiceAnchorAnimation
+                android:id="@+id/AnchorspreadView"
+                android:layout_width="@dimen/x160"
+                android:layout_height="@dimen/x160"
+                android:layout_centerInParent="true" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/VoiceLive_AnchorHeadImage"
+                android:layout_width="@dimen/x130"
+                android:layout_height="@dimen/x130"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:riv_oval="true" />
+
+            <ImageView
+                android:id="@+id/VoiceLive_AnchorClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/x10"
+                android:background="@mipmap/icon_voice_close"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x100"
+            android:layout_alignBottom="@+id/VoiceLive_AnchorRe"
+            android:layout_marginLeft="-50dp"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_toRightOf="@+id/VoiceLive_AnchorRe">
+
+            <com.kalacheng.commonview.view.VoiceAnchorAnimation
+                android:id="@+id/UserspreadView"
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x100"
+                android:layout_centerInParent="true"
+                app:waterradius="@dimen/x20"
+                app:waterstrokeWidth="0.8dp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/VoiceLive_UserHeadImage"
+                android:layout_width="@dimen/x80"
+                android:layout_height="@dimen/x80"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:riv_oval="true" />
+
+            <ImageView
+                android:id="@+id/VoiceLive_UserClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/icon_voice_close"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.libuser.model.ApiUserAtten" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/follow_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/icon_image"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginBottom="12dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            bind:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/icon_image"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@id/icon_image"
+            android:text="@{viewModel.username}"
+            android:textColor="#242424"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/icon_image"
+            android:layout_marginBottom="1dp"
+            android:layout_toRightOf="@id/icon_image"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutSex"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="4dp"
+                android:paddingRight="3dp">
+
+              <!--  <ImageView
+                    android:id="@+id/ivSex"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_girl_white" />
+
+                <TextView
+                    android:id="@+id/tv_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="0"
+                    android:textColor="#ffffffff"
+                    android:textSize="10sp" />-->
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginLeft="4dp"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/ivWealthGrade"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginLeft="4dp"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/ivNobleGrade"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginLeft="4dp"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFollow"
+            android:layout_width="61dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="11dp"
+            android:background="@drawable/bg_follow_no"
+            android:gravity="center"
+            android:text="关注"
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</layout>

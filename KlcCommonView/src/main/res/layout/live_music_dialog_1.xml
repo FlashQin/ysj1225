@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_video_comment"
+    android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <com.kalacheng.util.view.ViewPagerIndicator
+                    android:id="@+id/LiveMusic_Indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y50"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:layout_marginRight="@dimen/x30"
+                    app:bold="true"
+                    app:change_size="true"
+                    app:currentItem="0"
+                    app:indicatorColor="@color/textColor3"
+                    app:indicatorHeight="3dp"
+                    app:indicatorWidth="22dp"
+                    app:lightColor="@color/textColor3"
+                    app:normalColor="@color/textColor9"
+                    app:title_textSize="14sp"
+                    app:visibleItemCount="2" />
+
+                <ImageView
+                    android:id="@+id/upload_img"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="centerInside"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:src="@mipmap/music_add"/>
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/LiveMusic_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+</LinearLayout>

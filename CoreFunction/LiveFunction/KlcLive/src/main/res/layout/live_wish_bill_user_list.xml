@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.kalacheng.libuser.model.ApiWishUser" />
+    </data>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/LiveWishBillUserList_userImage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:riv_oval="true"
+            android:layout_centerInParent="true"
+            bind:image="@{viewModel.avatar}"/>
+        <TextView
+            android:id="@+id/LiveWishBillUserList_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray3"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-5dp"
+            android:layout_below="@+id/LiveWishBillUserList_userImage"/>
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.videorecord">
+
+    <application>
+        <activity android:name=".activity.VideoPublishActivity" />
+    </application>
+</manifest>

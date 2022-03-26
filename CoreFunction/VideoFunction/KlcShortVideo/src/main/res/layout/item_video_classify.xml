@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.kalacheng.shortvideo.R" />
+
+        <variable
+            name="bean"
+            type="com.kalacheng.libuser.model.ApiShortVideoDto" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnBeanCallback" />
+    </data>
+
+    <com.kalacheng.util.view.ItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() ->  callback.onClick(bean)}"
+        app:height_ratio="25"
+        app:width_ratio="17">
+
+        <LinearLayout
+            android:id="@+id/layoutZan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_zan"
+                android:drawablePadding="2dp"
+                android:text="@{String.valueOf(bean.likes)}"
+                android:textColor="@color/textColor9"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:drawableLeft="@mipmap/icon_comment"
+                android:drawablePadding="2dp"
+                android:text="@{String.valueOf(bean.comments)}"
+                android:textColor="@color/textColor9"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivThumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/layoutZan"
+            android:layout_marginBottom="6dp"
+            android:scaleType="centerCrop"
+            bind:errorRes="@{R.drawable.bg_error_color}"
+            bind:image="@{bean.thumb}" />
+
+        <com.kalacheng.util.view.MaskImageView
+            android:id="@+id/ivImagesShadow"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/layoutZan"
+            android:layout_marginBottom="6dp"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/icon_pic"
+            android:visibility="@{bean.type==2 ? View.VISIBLE : View.GONE}" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignBottom="@id/ivThumb"
+            android:layout_marginLeft="4dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:translationY="17dp"
+            app:riv_oval="true"
+            bind:errorRes="@{R.mipmap.ic_launcher}"
+            bind:image="@{bean.avatar}" />
+    </com.kalacheng.util.view.ItemLayout>
+</layout>

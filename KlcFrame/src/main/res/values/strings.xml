@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">BaseUtils</string>
+
+    <string name="login_auth_ing">正在授权登录</string>
+    <string name="loading">加载中</string>
+
+    <string name="dialog_tip">提示</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="refuse">拒绝</string>
+    <string name="accept">接受</string>
+    <string name="delete">删除</string>
+    <string name="link_mic_pk_wait">发起PK请求</string>
+    <string name="link_mic_pk_wait_2">对方发起PK</string>
+    <string name="live_pk_time_1">PK时间</string>
+    <string name="live_pk_time_2">惩罚时间</string>
+
+    <string name="cash">提现账户</string>
+    <string name="cash_account_empty">您当前还没设置提现账户</string>
+    <string name="cash_add_account">添加提现账户</string>
+    <string name="cash_account_type">账户类型</string>
+    <string name="cash_input_bank_user_name">请输入持卡人姓名</string>
+    <string name="cash_input_bank_account">请输入银行卡账号</string>
+    <string name="cash_input_bank_name">请输入银行名称</string>
+    <string name="cash_input_wx_account">请输入微信账号</string>
+    <string name="cash_input_ali_account">请输入支付宝账号</string>
+    <string name="cash_input_ali_name">请输入支付宝账号姓名</string>
+    <string name="cash_type_ali">支付宝</string>
+    <string name="cash_type_wx">微信</string>
+    <string name="cash_type_bank">银行卡</string>
+    <string name="cash_delete">是否要删除该账户？</string>
+
+    <string name="main_input_invatation_code">请填写邀请码</string>
+    <string name="live_set_fee_empty">请设置收费金额</string>
+
+    <string name="live_set_fee">请设置收费金额</string>
+    <string name="live_set_pwd_empty">请设置房间密码</string>
+    <string name="live_set_pwd">请输入房间密码</string>
+    <string name="live_set_pwd_error">密码不正确</string>
+    <string name="live_time_fee">收费金额</string>
+    <string name="live_time_fee_info_1">选择收费:</string>
+    <string name="live_time_fee_info_2">娱币/分钟</string>
+    <string name="live_choose_charge">选择收费</string>
+    <string name="edit_profile_right_date">请选择正确的日期</string>
+
+    <string name="pri_msg">私信</string>
+    <string name="home_page">主页</string>
+    <string name="following">已关注</string>
+    <string name="consume_tip">送出的</string>
+
+    <!-- 主页多对一-->
+    <string name="main_home">首页</string>
+    <string name="main_near">附近</string>
+    <string name="main_near2">附近的人</string>
+    <string name="main_video">短视频</string>
+    <string name="main_trend">动态</string>
+    <string name="main_list">排行</string>
+    <string name="main_me">我的</string>
+    <string name="follow">+ 关注</string>
+    <string name="hot_title">热门</string>
+    <string name="living">Live</string>
+    <string name="living_chinese">直播</string>
+    <string name="living_voicechat">语聊</string>
+    <string name="live_buy">直播购</string>
+    <string name="hall">大厅</string>
+    <string name="main_page">主页</string>
+    <string name="main_start_live">视频直播</string>
+    <string name="main_start_video">短视频</string>
+    <string name="main_start_pic">照片</string>
+    <string name="main_start_voice">语音直播</string>
+    <string name="main_start_dynamic">发动态</string>
+    <string name="report">举报</string>
+    <string name="me_fans">粉丝</string>
+
+
+    <!-- 主页一对一-->
+    <string name="quick">速配</string>
+    <string name="near">附近</string>
+    <string name="male_fan">粉丝</string>
+    <string name="goddess">女生</string>
+    <string name="malegod">活跃</string>
+    <string name="mandess">男生</string>
+    <string name="recommend">推荐</string>
+    <string name="square">广场</string>
+    <string name="onevsone">1v1</string>
+    <string name="friends">交友</string>
+    <string name="try_see">免费</string>
+    <string name="new_man">新人</string>
+    <string name="main_active">活跃</string>
+    <string name="main_message">消息</string>
+    <string name="info">资料</string>
+    <string name="anchor">主播</string>
+    <string name="user">用户</string>
+    <string name="video">视频</string>
+    <string name="askchat">求聊</string>
+    <string name="robchat">抢聊</string>
+    <string name="chatlocal">聊场</string>
+    <string name="treasurechest">百宝箱</string>
+    <!-- 主页短视频-->
+    <string name="view_point">看点</string>
+    <string name="party">派对</string>
+    <string name="short_video">短视频</string>
+    <string name="short_follow">关注</string>
+    <string name="short_recommend">推荐</string>
+    <string name="short_point">看点</string>
+
+
+    <string name="live_setting_kick">踢人</string>
+    <string name="live_setting_gap">禁言</string>
+    <string name="live_setting_gap_cancel">解除禁言</string>
+    <string name="live_setting_gap_list">禁言列表</string>
+    <string name="live_setting_admin">设为管理员</string>
+    <string name="live_setting_admin_cancel">取消管理员</string>
+    <string name="live_setting_admin_list">管理员列表</string>
+    <string name="live_setting_close_live">关闭直播</string>
+    <string name="live_setting_forbid_account">禁用账户</string>
+    <string name="live_setting_kicklist">踢人列表</string>
+
+    <string name="live_setting_contribution">粉丝贡献榜</string>
+    <string name="live_setting_TabInfoDtonumber">在线观看人数</string>
+
+
+
+</resources>

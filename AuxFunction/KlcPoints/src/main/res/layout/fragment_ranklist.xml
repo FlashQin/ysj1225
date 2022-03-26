@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.points.viewmodel.RankListViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/layoutBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_ranklist">
+
+        <FrameLayout
+            android:id="@+id/layoutListTop"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="35dp"
+                android:onClick="backClick"
+                android:padding="9dp"
+                android:src="@mipmap/icon_back"
+                android:tint="@color/white" />
+
+            <com.kalacheng.util.view.ViewPagerIndicator
+                android:id="@+id/indicator"
+                android:layout_width="210dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="28dp"
+                app:bold="true"
+                app:change_size="true"
+                app:currentItem="0"
+                app:indicatorColor="@color/white"
+                app:indicatorHeight="3dp"
+                app:indicatorWidth="22dp"
+                app:lightColor="@color/white"
+                app:normalColor="#ccffffff"
+                app:title_textSize="18sp"
+                app:visibleItemCount="2" />
+
+
+        </FrameLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layoutListTop"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:overScrollMode="never" />
+    </RelativeLayout>
+
+
+</layout>

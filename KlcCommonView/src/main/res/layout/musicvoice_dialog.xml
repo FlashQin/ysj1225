@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x100"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_video_comment">
+
+    <SeekBar
+        android:id="@+id/voice_seek"
+        android:layout_width="match_parent"
+        android:maxHeight="6dip"
+        android:minHeight="6dip"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/bg_voice_seek"
+        />
+</RelativeLayout>

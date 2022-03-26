@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <include layout="@layout/layout_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/whitesolid_purplestroke_rect">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="用户获取手机号"
+            android:textColor="@color/textColor3"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_phone_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/iv_phone_money"
+            android:text="100"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_phone_money"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_phone_name"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_money" />
+
+        <TextView
+            android:id="@+id/tv_phone_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="23dp"
+            android:layout_toLeftOf="@+id/ivPhone"
+            android:text="/次" />
+
+        <ImageView
+            android:id="@+id/ivPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_switch_close" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_wx"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/whitesolid_purplestroke_rect">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="用户获取微信号"
+            android:textColor="@color/textColor3"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_wx_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/iv_wx_money"
+            android:text="100"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_wx_money"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_wx_name"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_money" />
+
+        <TextView
+            android:id="@+id/tv_wx_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="23dp"
+            android:layout_toLeftOf="@+id/ivWx"
+            android:text="/次" />
+
+        <ImageView
+            android:id="@+id/ivWx"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_switch_close" />
+    </RelativeLayout>
+
+    <com.kalacheng.util.view.ViewPagerIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:change_size="true"
+        app:currentItem="0"
+        app:lightColor="@color/textColor3"
+        app:normalColor="#B7B7B7"
+        app:title_textSize="14sp"
+        app:visibleItemCount="2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/viewDivider0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#925EFF" />
+
+        <View
+            android:id="@+id/viewDivider1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1"
+            android:background="#925EFF"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never" />
+</LinearLayout>

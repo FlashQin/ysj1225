@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.kalacheng.main.R" />
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.buscommon.AppHomeHallDTO" />
+    </data>
+
+    <com.kalacheng.util.view.ItemLayout
+        android:id="@+id/rl_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:height_ratio="18"
+        app:width_ratio="18">
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            bind:errorRes="@{R.drawable.bg_error_color}"
+            bind:image="@{viewModel.sourceCover}" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_hall_shadow" />
+
+        <ImageView
+            android:id="@+id/ivVoiceAnimation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="7dp"
+            android:background="@mipmap/voice1"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_tab_name_voice"
+            android:paddingLeft="5dp"
+            android:paddingTop="3dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="3dp"
+            android:text="@{`#` + viewModel.tabName + `#`}"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:visibility="@{viewModel.tabName.length()==0 ? View.GONE : View.VISIBLE}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg_transport_grey"
+                    android:ellipsize="end"
+                    android:paddingLeft="13dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="3dp"
+                    android:singleLine="true"
+                    android:text="@{viewModel.title}"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/icon_recommend_voice" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_whiteeye"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:text="@{String.valueOf(viewModel.nums)}"
+                android:textColor="#fff"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </com.kalacheng.util.view.ItemLayout>
+
+</layout>

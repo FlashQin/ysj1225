@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutUserSing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@drawable/shape_bg_shadow"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/UserTask_Sign_Day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/x10"
+                    android:text="每日签到（第0天）"
+                    android:textColor="@color/textColor3"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x60"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginTop="@dimen/x8"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginBottom="@dimen/x14">
+
+                    <LinearLayout
+                        android:id="@+id/UserTask_Sign_GiftInfor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/x60"
+                        android:background="@drawable/bg_user_task"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/UserTask_Sign_GiftImage"
+                            android:layout_width="@dimen/x40"
+                            android:layout_height="@dimen/x40"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/x14"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/UserTask_Sign_GiftName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/x10"
+                            android:layout_marginRight="@dimen/x14"
+                            android:maxEms="10"
+                            android:textColor="#98A1B4" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/UserTask_Sign"
+                        android:layout_width="@dimen/x100"
+                        android:layout_height="@dimen/x30"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_user_task_btn"
+                        android:gravity="center"
+                        android:text="立即签到"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@drawable/shape_bg_shadow"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/x20">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/x10">
+
+                    <TextView
+                        android:id="@+id/UserTask_Sign_TaskNextGrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="完成任务获得LV0级大礼包"
+                        android:textColor="@color/textColor3"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/UserTask_Sign_TaskGrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/x12"
+                        android:text="当前：LV0"
+                        android:textColor="@color/textColor6"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/UserTask_Sign_GradePro_Re"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/UserTask_Sign_GradePro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_marginTop="@dimen/x20"
+                        android:layout_marginRight="@dimen/x20"
+                        android:background="@mipmap/icon_user_task_pro" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginTop="@dimen/x5"
+
+                    android:layout_marginRight="@dimen/x20">
+
+                    <TextView
+                        android:id="@+id/UserTask_Sign_EmpiricalValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="经验值：0"
+                        android:textColor="#BBBBBB"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/UserTask_Sign_NextEmpiricalValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="距离升级：0"
+                        android:textColor="#BBBBBB"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/UserTask_Sign_GradeReList"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x90"
+                    android:layout_marginTop="@dimen/x20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x12"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_marginEnd="@dimen/x12"
+                android:background="@drawable/shape_bg_shadow"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/x10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="今日任务"
+                        android:textColor="@color/textColor3"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/x12"
+                        android:text=""
+                        android:textColor="@color/textColor6"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/UserTask_TaskList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/x10"
+                    android:layout_marginRight="@dimen/x12"
+                    android:layout_marginBottom="@dimen/x20" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

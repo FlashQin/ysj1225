@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.kalacheng.money.R" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bean"
+            type="com.kalacheng.libuser.model.AppUsersCharge" />
+
+        <!-- 是否隐藏划线价格 true 隐藏 -->
+        <variable
+            name="isShowMoney"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/layoutCoin"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <LinearLayout
+            android:id="@+id/layoutCoinContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_coin_rule_unselect"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvCoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{(long)bean.coin+``}"
+                    android:textColor="#2F2F2F"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvCoinCompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#2F2F2F"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{`¥` + String.valueOf(bean.money)}"
+                    android:textColor="@color/textColor9"
+                    android:textSize="11sp"
+                    android:visibility="@{isShowMoney ? View.GONE : View.VISIBLE}" />
+
+                <TextView
+                    android:id="@+id/tv_discount_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="@{`¥` + String.valueOf(bean.discountMoney)}"
+                    android:textColor="@color/textColor9"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/layoutDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/bg_dicount_desr_2" />
+
+            <TextView xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_dicount_desr_1"
+                android:gravity="center"
+                android:minWidth="35dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="1dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="1dp"
+                android:text="@{bean.dicountDesr}"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+        </FrameLayout>
+    </RelativeLayout>
+</layout>

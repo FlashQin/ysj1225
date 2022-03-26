@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/VoiceSendGiftChose"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x29">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/VoiceSendGiftChose_HeadImage"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:scaleType="centerCrop"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/VoiceSendGiftChose_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginRight="@dimen/x8"
+            android:layout_toRightOf="@+id/VoiceSendGiftChose_HeadImage"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="asdsajd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x12" />
+    </RelativeLayout>
+
+</RelativeLayout>

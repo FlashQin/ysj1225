@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/daysTv"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:textColor="#888888"
+            android:textSize="12dp"
+            tools:text="08-27" />
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:textColor="#888888"
+            android:textSize="12dp"
+            tools:text="16:40" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="12dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/topLineView"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#DDDDDD" />
+
+        <ImageView
+            android:id="@+id/enterIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_oval_dd" />
+
+        <View
+            android:id="@+id/bottomLineView"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#DDDDDD" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/traceTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="23dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textColor="#999999"
+        android:textSize="12dp"
+        tools:text="运输中，武汉鄂州机场已发出，下一站汉阳集散中心" />
+
+</LinearLayout>

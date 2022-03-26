@@ -1,0 +1,48 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.commonview">
+
+    <application>
+        <!-- 礼物墙 -->
+        <activity android:name=".activity.GiftActivity" />
+        <!-- 勋章墙 -->
+        <activity android:name=".activity.HonorActivity" />
+        <!-- 我的守护 -->
+        <activity android:name=".activity.GuardActivity" />
+        <!--举报-->
+        <activity
+            android:name=".activity.VideoReportActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- TA的直播 -->
+        <activity android:name=".activity.TALiveActivity" />
+        <!-- WebViewActivity -->
+        <activity android:name=".activity.WebViewActivity" />
+        <!-- 选择本地相册 -->
+        <activity android:name=".activity.PictureChooseActivity" />
+        <!-- 选择本地视频 -->
+        <activity android:name=".activity.VideoChooseActivity" />
+        <!-- 视频录制 -->
+        <activity android:name=".activity.DynamicMakeActivity" />
+
+        <service android:name=".service.DownloadService" />
+
+        <service
+            android:name=".jguangIm.XService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+        <!--极光推送（推送消息拦截）-->
+        <receiver
+            android:name=".jguangIm.JPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="${JPUSH_PKGNAME}" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.kalacheng.fans.R" />
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.buscommon.model.LiveBean" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/follow_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/icon_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="12dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            bind:errorRes="@{R.mipmap.ic_launcher}"
+            bind:image="@{viewModel.avatar}"
+            bind:placeholderRes="@{R.mipmap.ic_launcher}"
+            bind:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/icon_image"
+            android:text="@{viewModel.nickname}"
+            android:textColor="@color/textColor3"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/icon_image"
+            android:text="@{viewModel.signature}"
+            android:textColor="@color/textColor9"
+            android:textSize="12sp" />
+
+
+        <LinearLayout
+            android:id="@+id/layoutSex"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginTop="@dimen/x14"
+            android:layout_toRightOf="@+id/name"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="4dp"
+            android:paddingRight="3dp">
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/anLevel"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="@dimen/x14"
+            android:layout_toRightOf="@+id/layoutSex"
+            bind:image="@{viewModel.userLevel}" />
+
+        <ImageView
+            android:id="@+id/userLevel"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="@dimen/x14"
+            android:layout_toRightOf="@+id/anLevel"
+            bind:image="@{viewModel.anchorLevel}" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f4f4f4" />
+
+    </RelativeLayout>
+</layout>

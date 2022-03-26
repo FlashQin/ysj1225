@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="18dp"
+        android:onClick="backClick"
+        android:padding="9dp"
+        android:src="@mipmap/icon_back"
+        android:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/btn_refresh"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="18dp"
+        android:onClick="backClick"
+        android:padding="9dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_picture_refresh" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/pink_rect"
+            android:drawableLeft="@mipmap/icon_download"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:text="保存到手机"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btn_copy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/pink_rect"
+            android:drawableLeft="@mipmap/icon_copy"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="复制下载链接"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

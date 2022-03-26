@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="84dp"
+    android:paddingHorizontal="12dp"
+    android:background="@drawable/bg_video_comment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textColorE"
+        android:layout_alignParentTop="true"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/avatarIv"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="14dp"
+        android:src="@mipmap/ic_launcher"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/callTypeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/avatarIv"
+        android:layout_toEndOf="@id/avatarIv"
+        android:drawablePadding="5dp"
+        android:text="视频通话"
+        android:textColor="@color/textColor3"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/callPicTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/avatarIv"
+        android:layout_toEndOf="@id/avatarIv"
+        android:text="150金币 / 分钟"
+        android:textColor="@color/textColor3"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/robCahtTv"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_oval_red"
+        android:gravity="center"
+        android:text="抢单"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+</RelativeLayout>

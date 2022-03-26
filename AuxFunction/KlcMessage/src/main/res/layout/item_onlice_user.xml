@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/textColorE" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="14dp"
+            android:scaleType="centerCrop"
+            app:riv_oval="true" />
+
+        <View
+            android:id="@+id/statusView"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignEnd="@id/avatarIv"
+            android:layout_alignBottom="@id/avatarIv"
+            android:background="@drawable/bg_message_count" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/avatarIv"
+            android:layout_toEndOf="@id/avatarIv"
+            android:textColor="@color/textColor3"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/distanceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/avatarIv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/nameTv"
+            android:textColor="@color/textColorB"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/nameTv"
+            android:layout_alignBottom="@id/avatarIv"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutSex"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginEnd="4dp"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="5dp" />
+
+            <TextView
+                android:id="@+id/ageTv"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_age"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="5dp"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/rankIv"
+                android:layout_width="32dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="4dp" />
+
+            <ImageView
+                android:id="@+id/nobleGradeIv"
+                android:layout_width="30dp"
+                android:layout_height="15dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_media"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="3dp"
+                android:src="@mipmap/icon_nearby_media"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/voiceOrLiveIv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="3dp"
+                android:src="@mipmap/yuyin"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/messageIv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="3dp"
+                android:src="@mipmap/icon_nearby_message" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="3dp"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+</LinearLayout>

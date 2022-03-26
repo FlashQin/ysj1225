@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="message_count_color">#FD5555</color>
+    <color name="message_color0">#888888</color>
+    <color name="message_color1">#DD85FD</color>
+
+    <color name="title_name_color">#2B2C2C</color>
+    <color name="follow_color">#DC92F5</color>
+    <color name="new_release_color">#CE85FD</color>
+    <color name="gift_count_color">#FF9A00</color>
+</resources>

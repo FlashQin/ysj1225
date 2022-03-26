@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:paddingTop="19dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="社区"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshCommunity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableLoadMore="false">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    app:elevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_scrollFlags="scroll|snap">
+
+                        <LinearLayout
+                            android:id="@+id/layoutBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.kalacheng.util.view.ItemLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:height_ratio="1"
+                                app:width_ratio="3">
+
+                                <com.bigkoo.convenientbanner.ConvenientBanner
+                                    android:id="@+id/convenientBanner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </com.kalacheng.util.view.ItemLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/x8"
+                                android:layout_marginTop="10dp"
+                                android:background="#F5F5F5" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/topicLl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:overScrollMode="never"
+                                android:paddingVertical="@dimen/x9" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/x8"
+                                android:background="#F5F5F5" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/x14">
+
+                        <TextView
+                            android:id="@+id/tvFollow"
+                            android:layout_width="@dimen/x60"
+                            android:layout_height="@dimen/x24"
+                            android:layout_marginHorizontal="@dimen/x14"
+                            android:background="@drawable/selector_radio"
+                            android:gravity="center"
+                            android:text="关注"
+                            android:textColor="@color/color_user_radio"
+                            android:textSize="@dimen/x14" />
+
+                        <TextView
+                            android:id="@+id/tvRecommend"
+                            android:layout_width="@dimen/x60"
+                            android:layout_height="@dimen/x24"
+                            android:layout_marginEnd="@dimen/x8"
+                            android:background="@drawable/selector_radio"
+                            android:gravity="center"
+                            android:text="推荐"
+                            android:textColor="@color/color_user_radio"
+                            android:textSize="@dimen/x14" />
+
+                        <TextView
+                            android:id="@+id/tvAll"
+                            android:layout_width="@dimen/x60"
+                            android:layout_height="@dimen/x24"
+                            android:layout_marginEnd="@dimen/x8"
+                            android:background="@drawable/selector_radio"
+                            android:gravity="center"
+                            android:text="全部"
+                            android:textColor="@color/color_user_radio"
+                            android:textSize="@dimen/x14" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:overScrollMode="never"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <ImageView
+            android:id="@+id/fabuIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginBottom="@dimen/x52"
+            android:src="@mipmap/icon_fabu" />
+    </RelativeLayout>
+</LinearLayout>
+

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.commonview.viewmodel.LiveGuardListViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y350"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y210"
+            android:background="@mipmap/bg_guard">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y170"
+                android:layout_gravity="bottom">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/x10"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_toLeftOf="@+id/guard_image"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="@dimen/x73"
+                        android:layout_height="@dimen/x73">
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="@dimen/x73"
+                            android:layout_height="@dimen/x73"
+                            android:background="@drawable/white_oval"
+                            android:scaleType="centerCrop"
+                            app:riv_oval="true" />
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/Anchor_HeadImage"
+                            android:layout_width="@dimen/x70"
+                            android:layout_height="@dimen/x70"
+                            android:src="@mipmap/ic_launcher"
+                            android:scaleType="centerCrop"
+                            android:layout_centerInParent="true"
+                            app:riv_oval="true" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/Anchor_Name"
+                        android:layout_width="@dimen/x73"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x10"
+                        android:textColor="@color/white"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/x14" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/guard_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/x50"
+                    android:background="@mipmap/guard" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginTop="@dimen/x10"
+                    android:layout_toRightOf="@+id/guard_image"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="@dimen/x73"
+                        android:layout_height="@dimen/x73">
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="@dimen/x73"
+                            android:layout_height="@dimen/x73"
+                            android:background="@drawable/white_oval"
+                            android:scaleType="centerCrop"
+                            app:riv_oval="true" />
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/User_HeadImage"
+                            android:layout_width="@dimen/x70"
+                            android:layout_height="@dimen/x70"
+                            android:src="@mipmap/bg_null"
+                            android:scaleType="centerCrop"
+                            android:layout_centerInParent="true"
+                            app:riv_oval="true" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/User_Name"
+                        android:layout_width="@dimen/x73"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x10"
+                        android:textColor="@color/white"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/x14" />
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/guardlist_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_marginBottom="@dimen/x20"
+                android:text="TA们也在守护"
+                android:textColor="@color/textColor6"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/guardlist_re"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x50"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/x30" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/guardlist_null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/x40"
+            android:text="暂时还没有粉丝守护主播"
+            android:textColor="@color/textColor6"
+            android:textSize="14sp" />
+    </LinearLayout>
+</layout>

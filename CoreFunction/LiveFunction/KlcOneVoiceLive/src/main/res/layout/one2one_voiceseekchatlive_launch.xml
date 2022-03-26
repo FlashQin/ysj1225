@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.kalacheng.onevoicelive.viewmodel.One2OneVoiceSeekChatViewModel" />
+    </data>
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="@mipmap/bg_seekchat">
+
+
+         <RelativeLayout
+             android:layout_width="@dimen/x120"
+             android:layout_height="@dimen/x120"
+             android:layout_marginTop="@dimen/x200"
+             android:layout_centerHorizontal="true">
+
+             <ImageView
+                 android:id="@+id/seekChat_Ball"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_centerInParent="true"
+                 android:background="@mipmap/seekchat_progress"/>
+             <com.makeramen.roundedimageview.RoundedImageView
+                 android:id="@+id/OneVoiceLaunch_HeadImage"
+                 android:layout_width="@dimen/x80"
+                 android:layout_height="@dimen/x80"
+                 android:src="@mipmap/meinv"
+                 android:layout_centerInParent="true"
+                 android:scaleType="centerCrop"
+                 bind:riv_oval="true"
+                 />
+         </RelativeLayout>
+
+        <TextView
+            android:id="@+id/voiceseekeChat_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="退出求聊"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/x10"
+            android:paddingLeft="@dimen/x10"
+            android:paddingBottom="@dimen/x3"
+            android:paddingTop="@dimen/x3"
+            android:background="@drawable/bg_btn_confirm"
+            android:layout_marginTop="@dimen/x40"
+            android:layout_marginRight="@dimen/x20"/>
+     </RelativeLayout>
+</layout>

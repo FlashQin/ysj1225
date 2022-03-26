@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rl_trends_title"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:background="@drawable/bg_trend_title"-->
+<!--        android:paddingTop="21dp">-->
+
+
+    <LinearLayout
+        android:id="@+id/rl_trends_title"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivFill"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <com.kalacheng.util.view.ViewPagerIndicator
+                android:id="@+id/indicator"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                app:bold="true"
+                app:change_size="true"
+                app:currentItem="0"
+                app:indicatorColor="#FF54A0"
+                app:indicatorHeight="5dp"
+                app:indicatorWidth="8dp"
+                app:lightColor="#333333"
+                app:normalColor="#666666"
+                app:title_textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvDynamic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_pink_camera"
+                android:drawablePadding="6dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="right|center"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/app_default_line"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

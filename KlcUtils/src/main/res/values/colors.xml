@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#fff</color>
+    <color name="main_bottom_bg">@color/white</color>
+    <color name="pink_main">#fd46a8</color>
+    <color name="pink_f4d0df">#fd46a8</color>
+
+    <color name="gameTextColor">#323232</color>
+    <color name="gift_color">#FF925EFF</color>
+    <color name="gift_bg">#E6242424</color>
+    <color name="yellow2">#f0cd08</color>
+    <color name="color_FBE99A">#FBE99A</color>
+    <color name="color_FFFFA000">#FFFFA000</color>
+
+    <color name="textColor3">#333333</color>
+    <color name="textColor6">#666666</color>
+    <color name="textColor9">#999999</color>
+    <color name="textColor8">#888888</color>
+    <color name="textColorA">#AAAAAA</color>
+    <color name="textColorB">#BBBBBB</color>
+    <color name="textColorC">#CCCCCC</color>
+    <color name="textColorD">#DDDDDD</color>
+    <color name="textColorE">#EEEEEE</color>
+    <color name="color_DD85FD">#DD85FD</color>
+    <color name="colol_FFFF71B3">#FFFF71B3</color>
+    <color name="swipe_refresh">#FF5350</color>
+    <color name="color_2B2C2C">#2B2C2C</color>
+    <color name="color_FB0035">#FB0035</color>
+    <color name="color_FF5500">#FF5500</color>
+    <!--首页颜色-->
+    <color name="main_indicator_normal_colol">#ccffffff</color>
+    <color name="main_indicator_light_colol">#ffffff</color>
+    <color name="main_indicator_indicator_colol">#ffffff</color>
+
+    <!-- 飘屏底色 -->
+    <color name="bg_floating_screen_purple_color">#FF8A7FF8</color>
+
+    <color name="color_DC92F5">#DC92F5</color>
+</resources>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray2"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/white"
+            android:paddingTop="19dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/titleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/set"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:onClick="backClick"
+                    android:padding="9dp"
+                    android:src="@mipmap/icon_back"
+                    android:tint="@color/textColor" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray2" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/distanceCb"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x55"
+                    android:background="@drawable/bg_line_bottom"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableEnd="@drawable/selector_open_close"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/x12"
+                    android:text="是否显示距离"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:textColor="#444444"
+                    android:textSize="@dimen/x14" />
+                <CheckBox
+                    android:id="@+id/positioningCb"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x55"
+                    android:background="@drawable/bg_line_bottom"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableEnd="@drawable/selector_open_close"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/x12"
+                    android:text="是否隐藏位置"
+                    android:textColor="#444444"
+                    android:textSize="@dimen/x14" />
+                <TextView
+                    android:id="@+id/msgSettingTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x55"
+                    android:background="@drawable/bg_line_bottom"
+                    android:drawableEnd="@mipmap/icon_jiantou_right"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/x12"
+                    android:text="消息设置"
+                    android:textColor="#444444"
+                    android:textSize="@dimen/x14"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/aboutUsTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x55"
+                    android:background="@drawable/bg_line_bottom"
+                    android:drawableEnd="@mipmap/icon_jiantou_right"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/x12"
+                    android:text="关于我们"
+                    android:textColor="#444444"
+                    android:textSize="@dimen/x14" />
+
+                <RelativeLayout
+                    android:id="@+id/cacheSizeRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x55"
+                        android:background="@drawable/bg_line_bottom"
+                        android:drawableEnd="@mipmap/icon_jiantou_right"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/x12"
+                        android:text="清除缓存"
+                        android:textColor="#444444"
+                        android:textSize="@dimen/x14" />
+
+                    <TextView
+                        android:id="@+id/cacheSizeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/x30"
+                        android:text="30.7MB"
+                        android:textColor="#FFAAAAAA"
+                        android:textSize="@dimen/x14" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/phoneRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x55"
+                        android:background="@drawable/bg_line_bottom"
+                        android:drawableEnd="@mipmap/icon_jiantou_right"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/x12"
+                        android:text="手机号"
+                        android:textColor="#444444"
+                        android:textSize="@dimen/x14" />
+
+                    <TextView
+                        android:id="@+id/phoneTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/x30"
+                        android:text="17642938611"
+                        android:textColor="#FFAAAAAA"
+                        android:textSize="@dimen/x14" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/changePasswordTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x55"
+                    android:background="@drawable/bg_line_bottom"
+                    android:drawableEnd="@mipmap/icon_jiantou_right"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/x12"
+                    android:text="登录密码修改"
+                    android:textColor="#444444"
+                    android:textSize="@dimen/x14" />
+
+                <RelativeLayout
+                    android:id="@+id/accountCancellation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x55"
+                        android:background="@drawable/bg_line_bottom"
+                        android:drawableEnd="@mipmap/icon_jiantou_right"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/x12"
+                        android:text="账号注销"
+                        android:textColor="#444444"
+                        android:textSize="@dimen/x14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/x30"
+                        android:textColor="#FFAAAAAA"
+                        android:textSize="@dimen/x14" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/versionNameRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x55"
+                        android:background="@drawable/bg_line_bottom"
+                        android:drawableEnd="@mipmap/icon_jiantou_right"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/x12"
+                        android:text="当前版本"
+                        android:textColor="#444444"
+                        android:textSize="@dimen/x14" />
+
+                    <TextView
+                        android:id="@+id/versionNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/x30"
+                        android:text="V1.0.3"
+                        android:textColor="#FFAAAAAA"
+                        android:textSize="@dimen/x14" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_login_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x55"
+                    android:layout_marginTop="@dimen/x30"
+                    android:layout_marginBottom="@dimen/x10"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="OnClick"
+                    android:text="@string/login_out"
+                    android:textColor="#8035C2"
+                    android:textSize="@dimen/x16" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

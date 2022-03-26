@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.kalacheng.util.view.ItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginTop="@dimen/x20"
+        android:orientation="vertical"
+        app:width_ratio="33"
+        app:height_ratio="44"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/bg_fristlove_seek"
+            android:scaleType="centerCrop" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x60"
+                android:background="@mipmap/bg_fristlove_seek_title"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="聊天类型"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:textSize="15sp" />
+
+                <RadioGroup
+                    android:id="@+id/radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/videoRb"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/x34"
+                        android:layout_weight="1"
+                        android:background="@drawable/selcet_chat_type"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="视频通话"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="@dimen/x15"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/voiceRb"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/x34"
+                        android:layout_weight="1"
+                        android:background="@drawable/selcet_chat_type"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="语音通话"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x50"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置话费"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/settingPriceTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x34"
+                    android:background="@drawable/bg_is_viceo"
+                    android:drawableEnd="@mipmap/fristlove_down"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:text="100金币 / 分钟"
+                    android:textSize="14sp"
+                    android:paddingRight="@dimen/x10"
+                    android:paddingLeft="@dimen/x15"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </com.kalacheng.util.view.ItemLayout>
+
+    <ImageView
+        android:id="@+id/seekchatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/icon_seekchat_video"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-30dp"/>
+
+</LinearLayout>

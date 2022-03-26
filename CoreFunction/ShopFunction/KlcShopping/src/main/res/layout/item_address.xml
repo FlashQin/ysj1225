@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="address"
+            type="com.kalacheng.busshop.model.ShopAddress" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:clipChildren="false">
+
+        <LinearLayout
+            android:id="@+id/itemLl"
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:orientation="horizontal"
+            android:background="@android:color/white">
+
+            <RelativeLayout
+                android:id="@+id/item1Rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/isDefaultIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@mipmap/icon_gouxuan_1" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="14dp"
+                    android:layout_toEndOf="@id/isDefaultIv"
+                    android:paddingTop="24dp">
+
+                    <TextView
+                        android:id="@+id/nameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{address.userName}"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/phoneTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_toEndOf="@id/nameTv"
+                        android:text="@{address.phoneNum}"
+                        android:textColor="#666666"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/isDefaultTv"
+                        android:layout_width="30dp"
+                        android:layout_height="19dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/phoneTv"
+                        android:gravity="center"
+                        android:background="@drawable/bg_default"
+                        android:text="默认"
+                        android:textColor="#FF5500"
+                        android:textSize="11dp"
+                        android:visibility="@{address.isDefault == 0?View.GONE:View.VISIBLE}" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nameTv"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:ellipsize="end"
+                        android:lines="2"
+                        android:text="@{address.pro+` `+address.city+` `+address.area+` `+address.address}"
+                        android:textColor="#333333"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#DEDEDE" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/item2Ll"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/editTv"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="#F0F0F0"
+                    android:gravity="center"
+                    android:text="编辑"
+                    android:textColor="#333333"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/delTv"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="#FF4915"
+                    android:gravity="center"
+                    android:text="删除"
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="BaseAppTheme" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/background</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseAppTheme" />
+
+    <style name="UCropTheme" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
+
+    <!-- 含半透明背景 -->
+    <style name="dialog" parent="AppTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <!--显示区域以外是否使用黑色半透明背景-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- 不含半透明背景 -->
+    <style name="dialog2" parent="AppTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--显示区域以外是否使用黑色半透明背景-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- 自定义Dialog样式（底部显示） -->
+    <style name="BottomDialogStyle" parent="@style/dialog">
+        <item name="android:windowAnimationStyle">@style/bottomToTopAnim</item>
+    </style>
+
+    <!-- 进出动画 -->
+    <style name="bottomToTopAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/bottomview_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/bottomview_anim_exit</item>
+    </style>
+
+    <style name="TopToBottomAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/bottomview_anim_exit_3</item>
+        <item name="android:windowExitAnimation">@anim/bottomview_anim_enter_3</item>
+    </style>
+
+    <style name="leftToRightAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/left_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/left_anim_exit</item>
+    </style>
+
+    <style name="line2" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/textColorE</item>
+    </style>
+
+    <!-- 自定义Dialog For Activity样式（居中显示） -->
+    <style name="DialogActivityStyle" parent="Theme.AppCompat.Light.Dialog">
+        <!--设置dialog的背景-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--设置Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--设置无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--点击空白地方关闭-->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--设置窗口内容不覆盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--设置动画-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!--背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="DialogTransparent" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!--标题  -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--透明背景-->
+        <item name="android:background">@android:color/transparent</item>
+        <!--窗口背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--弹窗背景是否变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--设置动画-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>-->
+    </style>
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="dt_top_width" format="dimension" />
+        <attr name="dt_top_height" format="dimension" />
+        <attr name="dt_left_width" format="dimension" />
+        <attr name="dt_left_height" format="dimension" />
+        <attr name="dt_right_width" format="dimension" />
+        <attr name="dt_right_height" format="dimension" />
+        <attr name="dt_bottom_width" format="dimension" />
+        <attr name="dt_bottom_height" format="dimension" />
+        <attr name="dt_top_drawable" format="reference" />
+        <attr name="dt_left_drawable" format="reference" />
+        <attr name="dt_right_drawable" format="reference" />
+        <attr name="dt_bottom_drawable" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="TabButton">
+        <attr name="tbn_selected_icon" format="reference" />
+        <attr name="tbn_unselected_icon" format="reference" />
+        <attr name="tbn_tip" format="string" />
+        <attr name="tbn_icon_size" format="dimension" />
+        <attr name="tbn_text_size" format="dimension" />
+
+        <attr name="tbn_text_color_select" format="color" />
+        <attr name="tbn_text_color_un_select" format="color" />
+        <attr name="tbn_checked" format="boolean" />
+    </declare-styleable>
+
+    <style name="DefaultBeautySeekBar">
+        <item name="android:maxHeight">2dp</item>
+        <item name="android:minHeight">2dp</item>
+        <item name="android:progressDrawable">@drawable/bg_default_beauty_seek_bar</item>
+    </style>
+
+</resources>

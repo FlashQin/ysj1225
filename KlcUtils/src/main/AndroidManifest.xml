@@ -1,0 +1,36 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.util">
+
+    <!-- 访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 网络状态 / 获取运营商信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 / 获取设备MAC地址 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 手机震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 手机状态（IMEI） -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- SDCard读取 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- SDCard写入 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 如果你的系统版本是 8.0+，那你需要多加一个权限，否则无法跳转到安装页 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application>
+
+        <!-- 大屏手机顶部黑边去除 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/UCropTheme" />
+
+    </application>
+
+</manifest>

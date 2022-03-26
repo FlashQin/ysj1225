@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bing="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.kalacheng.libuser.model.ApiUsersLine" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/newrby_re"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x110">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="@dimen/x70"
+            android:layout_height="@dimen/x70"
+            android:layout_marginStart="@dimen/x12"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginEnd="14dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/x5" />
+
+        <ImageView
+            android:id="@+id/statueIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/avatarIv"
+            android:layout_alignBottom="@id/avatarIv" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/avatarIv"
+            android:layout_toEndOf="@id/avatarIv"
+            android:text="@{model.userName}"
+            android:textColor="#333333"
+            android:textSize="@dimen/x15"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="@dimen/x30"
+            android:layout_height="@dimen/x15"
+            android:layout_alignTop="@id/nameTv"
+            android:layout_marginStart="@dimen/x6"
+            android:layout_marginTop="@dimen/x3"
+            android:layout_toEndOf="@id/nameTv"
+            bing:image="@{model.nobleGradeImg}" />
+
+        <TextView
+            android:id="@+id/constellationTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:layout_marginTop="@dimen/x5"
+            android:layout_toEndOf="@id/avatarIv"
+            android:textColor="#FF666666"
+            android:textSize="@dimen/x13" />
+
+        <TextView
+            android:id="@+id/tagTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/avatarIv"
+            android:layout_marginRight="@dimen/x70"
+            android:layout_marginBottom="@dimen/x3"
+            android:layout_toEndOf="@id/avatarIv"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@{model.signature}"
+            android:textColor="#FF666666"
+            android:textSize="@dimen/x13" />
+
+        <TextView
+            android:id="@+id/distanceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/nameTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:textColor="#FF999999"
+            android:textSize="@dimen/x12" />
+
+        <TextView
+            android:id="@+id/followTv"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/x24"
+            android:layout_alignBottom="@id/avatarIv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/x12"
+            android:layout_marginBottom="@dimen/x3"
+            android:background="@drawable/bg_follow"
+            android:drawableStart="@mipmap/icon_gensui"
+            android:drawablePadding="@dimen/x4"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x11"
+            android:text="跟随"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/x12" />
+
+        <View
+            android:id="@+id/lineView"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/avatarIv"
+            android:background="#DDDDDD" />
+
+    </RelativeLayout>
+</layout>

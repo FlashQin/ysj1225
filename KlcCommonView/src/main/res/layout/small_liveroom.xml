@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <RelativeLayout
+        android:layout_width="@dimen/x70"
+        android:layout_height="@dimen/x70"
+        android:background="@mipmap/bg_small">
+
+        <ImageView
+            android:layout_width="@dimen/x62"
+            android:layout_height="@dimen/x62"
+            android:background="@drawable/white_oval"
+            android:layout_centerInParent="true"/>
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/HeadImage"
+            android:layout_width="@dimen/x57"
+            android:layout_height="@dimen/x57"
+            android:layout_centerInParent="true"
+            app:riv_oval="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"/>
+        <ImageView
+            android:id="@+id/voice_Animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_marginTop="@dimen/x5"
+            android:visibility="gone"
+            android:background="@mipmap/voice1"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,101 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.kalacheng.commonview.R" />
+
+        <variable
+            name="bean"
+            type="com.kalacheng.libuser.model.LiveRoomDTO" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnItemClickCallback" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.kalacheng.util.view.SquareLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/textColorE"
+            android:onClick="@{(view) ->  callback.onClick(view,bean)}"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                bind:image="@{bean.thumb}" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/translucent_grey_rect"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="@{bean.status==1?View.VISIBLE:View.GONE}">
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/green_oval" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="LIVE"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/icon_eyes"
+                    android:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@{String.valueOf(bean.audienceNumber)}"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </com.kalacheng.util.view.SquareLayout>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@{bean.status==1?`正在直播中`:bean.title}"
+            android:textColor="#ff2b2c2c"
+            android:textSize="12sp" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/Live_NoticeTop"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/x10">
+
+        <ImageView
+            android:id="@+id/Live_NoticeClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:background="@mipmap/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="房间公告"
+            android:textColor="@color/textColor3"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/Live_NoticeSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:text="发布"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/Live_NoticeContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/Live_NoticeNumber"
+        android:layout_below="@+id/Live_NoticeTop"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginTop="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:background="@drawable/bg_modify_notice"
+        android:gravity="start"
+        android:maxLength="1000"
+        android:padding="5dp"
+        android:textColor="@color/textColor6"
+        android:textSize="@dimen/x12" />
+
+    <TextView
+        android:id="@+id/Live_NoticeNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="@dimen/x12"
+        android:layout_marginBottom="@dimen/x20"
+        android:text="1/1000"
+        android:textColor="@color/textColor6"
+        android:textSize="@dimen/x10" />
+</RelativeLayout>

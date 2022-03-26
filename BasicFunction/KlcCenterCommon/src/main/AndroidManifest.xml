@@ -1,0 +1,84 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.centercommon">
+
+    <application>
+        <!-- 编辑资料 -->
+        <activity android:name=".activity.EditInformationActivity" />
+        <!-- 修改昵称 -->
+        <activity android:name=".activity.NameActivity" />
+        <!-- 个性签名 -->
+        <activity android:name=".activity.PersonalActivity" />
+        <!-- 编辑生日 -->
+        <activity android:name=".activity.BirthdayActivity" />
+        <!-- 我的标签 -->
+        <activity android:name=".activity.TagActivity" />
+        <!-- 邀请赚钱 -->
+        <activity android:name=".activity.InvitationCodeActivity" />
+        <!-- 收入排行 -->
+        <activity android:name=".activity.InvitationRankActivity" />
+        <!-- 图片分享 -->
+        <activity android:name=".activity.SaveInvitationCodeActivity" />
+        <!-- 佣金提现 -->
+        <activity android:name=".activity.InvitationExtractActivity" />
+        <!-- 收益中心 -->
+        <activity android:name=".activity.CashActivity" />
+        <!-- 提现账户 -->
+        <activity android:name=".activity.CashAccountActivity" />
+        <!-- 添加提现账户 -->
+        <activity android:name=".activity.AddCashAccountActivity" />
+        <!-- 等级特权 -->
+        <activity android:name=".activity.MyPrivilegeActivity" />
+        <!-- 我的时间轴 -->
+        <activity android:name=".activity.MyTimeAxisActivity" />
+        <!-- 粉丝团 -->
+        <activity android:name=".activity.FansGroupActivity" />
+        <!-- 付费设置 -->
+        <activity android:name=".activity.PaySettingActivity" />
+        <!-- 话费设置 -->
+        <activity android:name=".activity.One2OneCallActivity" />
+        <!-- 一对一视频预览 -->
+        <activity android:name=".activity.One2OneVideo" />
+        <!-- 我的声音 -->
+        <activity android:name=".activity.MyVoiceActivity" />
+        <!-- 直播数据 -->
+        <activity android:name=".activity.FansLiveDataActivity" />
+        <!-- 申请认证 -->
+        <activity android:name=".activity.ApplyAnchorActivity" />
+        <!-- 身份证上传 -->
+        <activity android:name=".activity.UpLoadIdCardActivity" />
+        <!-- 上传认证视频 -->
+        <activity android:name=".activity.UpLoadAuthVideoActivity" />
+        <!-- 美颜设置 -->
+        <activity android:name=".activity.BeautySettingActivity" />
+        <!-- 设置 -->
+        <activity android:name=".activity.SettingAppActivity" />
+        <!-- 消息设置 -->
+        <activity android:name=".activity.MsgSettingActivity" />
+        <!-- 用户注销 -->
+        <activity android:name=".activity.AccountCancellationActivity" />
+        <!-- 账户验证 -->
+        <activity android:name=".activity.AccountCancellationConfirmActivity" />
+        <!-- 认证中心，短视频 -->
+        <activity android:name=".activity.AnchorCenterActivity" />
+        <!-- 用户任务中心 -->
+        <activity android:name=".activity.UserTaskCenterActivity" />
+        <!-- 任务中心 -->
+        <activity android:name=".activity.TaskCenterActivity" />
+        <!-- 青少年模式 -->
+        <activity android:name=".activity.YoungPatternActivity" />
+
+        <!-- 青少年模式设置密码 -->
+        <activity android:name=".activity.YoungPatternSetPassWordActivity" />
+
+        <!-- 青少年模式确认密码 -->
+        <activity android:name=".activity.YoungPatternConfirmPassWordActivity" />
+        <!-- 关于我们 -->
+        <activity android:name=".activity.AboutUsActivity" />
+        <!-- 特权设置 -->
+        <activity android:name=".activity.PowerSettingActivity" />
+        <!-- 装扮中心 -->
+        <activity android:name=".activity.DressingCenterActivity" />
+        <!-- 客服中心 -->
+        <activity android:name=".activity.CustomerServeActivity" />
+    </application>
+</manifest>

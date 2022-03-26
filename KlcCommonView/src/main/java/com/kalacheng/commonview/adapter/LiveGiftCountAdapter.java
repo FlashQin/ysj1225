@@ -1,0 +1,73 @@
+package com.kalacheng.commonview.adapter;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.kalacheng.base.listener.OnItemClickListener;
+import com.kalacheng.commonview.R;
+
+
+/**
+ * Created by cxf on 2018/10/13.
+ */
+
+public class LiveGiftCountAdapter extends RecyclerView.Adapter<LiveGiftCountAdapter.Vh> {
+
+    private String[] mArray;
+    private LayoutInflater mInflater;
+    private View.OnClickListener mOnClickListener;
+    private OnItemClickListener<String> mOnItemClickListener;
+
+    public LiveGiftCountAdapter(Context context) {
+        mArray = new String[]{"1", "10", "66", "88", "100", "520", "1314"};
+        mInflater = LayoutInflater.from(context);
+        mOnClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Object tag = v.getTag();
+                if (tag != null && mOnItemClickListener != null) {
+                    mOnItemClickListener.onItemClick(0, (String) tag);
+                }
+            }
+        };
+    }
+
+    public void setOnItemClickListener(OnItemClickListener<String> onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
+    }
+
+    @NonNull
+    @Override
+    public Vh onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new Vh(mInflater.inflate(R.layout.item_live_gift_count, parent, false));
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull Vh vh, int position) {
+        vh.setData(mArray[position]);
+    }
+
+    @Override
+    public int getItemCount() {
+        return mArray.length;
+    }
+
+    class Vh extends RecyclerView.ViewHolder {
+
+        public Vh(View itemView) {
+            super(itemView);
+            itemView.setOnClickListener(mOnClickListener);
+        }
+
+        void setData(String text) {
+            itemView.setTag(text);
+            ((TextView) itemView).setText(text);
+        }
+    }
+}

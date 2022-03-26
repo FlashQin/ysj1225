@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x20">
+        <TextView
+            android:id="@+id/TreasureChestRecord_gameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor3"
+            android:textSize="14sp"
+            android:text="主播转盘 - 等风来看看"/>
+        <TextView
+            android:id="@+id/TreasureChestRecord_gameTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor6"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_below="@+id/TreasureChestRecord_gameName"
+            android:text="2020.02.14 10:34:26"/>
+        <TextView
+            android:id="@+id/TreasureChestRecord_Money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor3"
+            android:textSize="14sp"
+            android:text="-100金币"
+            android:layout_alignParentRight="true"/>
+        <TextView
+            android:id="@+id/TreasureChestRecord_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor6"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/TreasureChestRecord_Money"
+            android:text="未中奖"/>
+    </RelativeLayout>
+</LinearLayout>

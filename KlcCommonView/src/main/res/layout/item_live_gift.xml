@@ -1,0 +1,84 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <import type="com.kalacheng.util.R" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bean"
+            type="com.kalacheng.libuser.model.NobLiveGift" />
+
+        <variable
+            name="markSrc"
+            type="Integer" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnItemClickCallback" />
+
+    </data>
+
+    <com.kalacheng.util.view.MyFrameLayout2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:mfl_ratio="1">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_live_gift_item"
+            android:button="@null"
+            android:onClick="@{(view) ->  callback.onClick(view,bean)}" />
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            bind:image="@{bean.gifticon}" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="23dp"
+            android:gravity="center"
+            android:text="@{bean.giftname}"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/textcolor_B7B7B7"
+            android:textSize="12sp" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </com.kalacheng.util.view.MyFrameLayout2>
+</layout>

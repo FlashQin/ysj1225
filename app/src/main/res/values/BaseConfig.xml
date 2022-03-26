@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="containLive">true</bool>//是否包含直播
+    <bool name="containOne2One">true</bool>//是否包含1对1
+    <bool name="containShortVideo">true</bool>//是否包含短视频
+    <bool name="containVoice">false</bool>//是否包含语音
+    <bool name="containShopping">true</bool>//是否包含直播购
+
+    <integer name="mainStatusBarWhite0">0</integer>//MainActivity时，状态栏颜色，-1 自定义；0 白色字体；1 黑色字体
+    <integer name="TrendsWhite">1</integer>//动态的颜色 0:为默认颜色 1：为白色
+
+    <bool name="isDynamicSetting1V1Main">true</bool>//是否需要动态配置一对一首页界面（FirstMainFragment）
+    <integer name="firstLoveMainRightType">1</integer>//一对一主页，右上角按钮样式，0 搜索；1 加号；
+
+    <integer name="firstLoveMainPosition">1</integer>//一对一交友，显示第几个下标 默认显示0
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_video_comment">
+
+        <RelativeLayout
+            android:id="@+id/GiveBeautifulNumber_Top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x48">
+            <TextView
+                android:id="@+id/GiveBeautifulNumber_titel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor3"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x12"
+                android:text="赠送靓号给"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/GiveBeautifulNumber_headimage"
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30"
+                app:riv_oval="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_toRightOf="@+id/GiveBeautifulNumber_titel"
+                android:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/GiveBeautifulNumber_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor3"
+                android:textSize="14sp"
+                android:layout_toRightOf="@+id/GiveBeautifulNumber_headimage"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x10"
+                android:text="刘聪的KEY"/>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/GiveBeautifulNumber_NumList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginBottom="@dimen/x20"
+            android:layout_below="@+id/GiveBeautifulNumber_Top"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_video_comment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x48"
+       >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x48"
+            android:textSize="14sp"
+            android:textColor="@color/textColor3"
+            android:text="充值"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            />
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/close"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"
+            />
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recharge_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginBottom="@dimen/x10"/>
+</LinearLayout>

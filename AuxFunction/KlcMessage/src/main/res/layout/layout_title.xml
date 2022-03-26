@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:background="@color/white"
+    android:paddingTop="19dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backIv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="18dp"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            android:id="@+id/titleNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:text="星冰乐"
+            android:textColor="@color/title_name_color"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/moreIv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:paddingHorizontal="10dp"
+            android:src="@mipmap/liaotian_gengduo" />
+
+        <TextView
+            android:id="@+id/followTv"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/moreIv"
+            android:background="@drawable/bg_follow"
+            android:gravity="center"
+            android:text="关注"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray2" />
+
+</RelativeLayout>

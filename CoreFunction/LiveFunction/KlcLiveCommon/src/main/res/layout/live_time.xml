@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/x270"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/dialog_close" />
+        <LinearLayout
+            android:layout_width="@dimen/x270"
+            android:layout_height="@dimen/x166"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_below="@+id/dialog_close"
+            android:background="@mipmap/bg_live_time">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前直播时长"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/live_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginTop="@dimen/x5"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/live_time_close"
+                android:layout_width="@dimen/x120"
+                android:layout_height="@dimen/x25"
+                android:text="我知道了"
+                android:layout_marginTop="@dimen/x5"
+                android:textColor="#FF7851DF"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:background="@drawable/live_time"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

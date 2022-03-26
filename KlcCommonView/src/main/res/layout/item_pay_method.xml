@@ -1,0 +1,53 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bean"
+            type="com.kalacheng.libuser.model.PayConfigDto" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnBeanCallback" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() ->  callback.onClick(bean)}"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#DEDEDE" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_cash_ali" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@{bean.payName}"
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

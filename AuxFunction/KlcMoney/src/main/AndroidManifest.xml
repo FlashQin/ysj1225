@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.money">
+
+    <application>
+        <!--充值中心-->
+        <activity android:name=".activity.MyCoinActivity" />
+    </application>
+</manifest>

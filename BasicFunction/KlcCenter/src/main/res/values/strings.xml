@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MXDOne2OneCenter</string>
+    <string name="vip">会员</string>
+    <string name="account">账户</string>
+    <string name="anchor">主播</string>
+    <string name="more">更多</string>
+    <string name="trend_comment_more">查看更多评论</string>
+    <string name="save">保存</string>
+    <string name="reg_input_phone">请输入手机号</string>
+
+    <string name="me_power_setting">特权设置</string>
+
+</resources>

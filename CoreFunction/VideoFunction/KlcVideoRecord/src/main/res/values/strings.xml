@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MXDVideoRecord</string>
+
+    <string name="next">下一步</string>
+    <string name="complete">完成</string>
+    <string name="save">保存</string>
+    <string name="delete">是否删除?</string>
+    <string name="uploading">上传中</string>
+
+    <string name="live_open_flash">只有后置摄像头才能开启闪光灯</string>
+
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.kalacheng.commonview.R" />
+
+        <import type="android.view.View" />
+
+
+        <variable
+            name="bean"
+            type="com.kalacheng.buscommon.model.GuardUserDto" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnItemClickCallback" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_guard1"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@drawable/bg_homepage_guard">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_avatar1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="13dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            app:riv_oval="true"
+            bind:image="@{bean.anchorIdImg}" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_guard1"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="40dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            app:riv_oval="true"
+            bind:image="@{bean.userHeadImg}" />
+
+        <TextView
+            android:id="@+id/tv_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_avatar1"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="14dp"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</layout>

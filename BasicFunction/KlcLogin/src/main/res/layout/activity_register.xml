@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="phoneTextWatcher"
+            type="android.text.TextWatcher" />
+
+        <variable
+            name="codeTextWatcher"
+            type="android.text.TextWatcher" />
+
+        <variable
+            name="isSureEnabled"
+            type="Boolean" />
+
+        <variable
+            name="isCodeEnabled"
+            type="Boolean" />
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.login.viewmodel.LoginViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/view_title" />
+
+        <LinearLayout
+            android:id="@+id/ll_forget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffce85fd"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvForgetInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="为确保账号安全，请验证您的手机号"
+                android:textColor="#ffffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+86"
+                android:textColor="#222222"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/reg_input_phone"
+                android:inputType="number|numberDecimal"
+                android:maxLength="11"
+                android:text="@={viewModel.phone}"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColorB"
+                android:textSize="16sp"
+                bind:addTextChanged="@{phoneTextWatcher}" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/line2"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <EditText
+                android:id="@+id/edit_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/reg_input_code"
+                android:inputType="number"
+                android:maxLength="11"
+                android:text="@={viewModel.code}"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColorB"
+                android:textSize="16sp"
+                bind:addTextChanged="@{codeTextWatcher}" />
+
+            <TextView
+                android:id="@+id/btn_code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
+                android:enabled="@{isCodeEnabled}"
+                android:gravity="center_vertical"
+                android:onClick="registerClick"
+                android:text="@{viewModel.btnCode}"
+                android:textColor="@drawable/reg_btn_code"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/line2"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp" />
+
+        <RelativeLayout
+            android:id="@+id/layoutPwd"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text="@string/reg_input_pwd_1_info"
+                android:textColor="@color/textColorC"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/reg_input_pwd_1"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:text="@={viewModel.password}"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColorB"
+                android:textSize="16sp"
+                bind:addTextChanged="@{codeTextWatcher}" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewPwdLine"
+            style="@style/line2"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text="@string/reg_input_pwd_1_info"
+                android:textColor="@color/textColorC"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_pwd_melody"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/reg_input_pwd_2"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:text="@={viewModel.password_melody}"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColorB"
+                android:textSize="16sp"
+                bind:addTextChanged="@{codeTextWatcher}" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/line2"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="47dp"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/login_btn"
+            android:enabled="@{isSureEnabled}"
+            android:gravity="center"
+            android:onClick="registerClick"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+</layout>

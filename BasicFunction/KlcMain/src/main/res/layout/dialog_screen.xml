@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x16"
+        android:background="@android:color/white"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#CCCCCC"/>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/x12">
+
+        <RadioButton
+            android:id="@+id/oneRb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x38"
+            style="@style/selector_pop_radio_styles"
+            android:paddingStart="@dimen/x8"
+            android:gravity="center_vertical"
+            android:checked="true"
+            android:text="全部"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/color_pop_radio"/>
+
+        <RadioButton
+            android:id="@+id/twoRb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x38"
+            style="@style/selector_pop_radio_styles"
+            android:paddingStart="@dimen/x8"
+            android:gravity="center_vertical"
+            android:text="直播中"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/color_pop_radio"/>
+
+        <RadioButton
+            android:id="@+id/threeRb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x38"
+            style="@style/selector_pop_radio_styles"
+            android:paddingStart="@dimen/x8"
+            android:gravity="center_vertical"
+            android:text="房间中"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/color_pop_radio"/>
+
+        <RadioButton
+            android:id="@+id/fourRb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x38"
+            style="@style/selector_pop_radio_styles"
+            android:paddingStart="@dimen/x8"
+            android:gravity="center_vertical"
+            android:text="在线"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/color_pop_radio"/>
+
+        <RadioButton
+            android:id="@+id/fiveRb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x38"
+            style="@style/selector_pop_radio_styles"
+            android:paddingStart="@dimen/x8"
+            android:gravity="center_vertical"
+            android:text="离线"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/color_pop_radio"/>
+
+    </RadioGroup>
+
+</LinearLayout>

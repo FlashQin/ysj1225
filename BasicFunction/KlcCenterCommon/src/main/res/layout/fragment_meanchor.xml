@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refreshAnchor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:srlEnableLoadMore="false">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="12dp"
+        android:paddingTop="@dimen/x10"
+        android:paddingRight="12dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/view_uncertified"
+                layout="@layout/fragment_anchor_uncertified"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/view_identify"
+                layout="@layout/fragment_anchor_identify"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/view_identify_video"
+                layout="@layout/fragment_anchor_identify_video"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

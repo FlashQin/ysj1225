@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/x280"
+        android:layout_height="@dimen/x320"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_dialog_2">
+
+        <ImageView
+            android:id="@+id/AccountDisable_Close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/x10"
+            android:background="@mipmap/close" />
+
+        <ImageView
+            android:id="@+id/AccountDisable_Image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/x50"
+            android:background="@mipmap/icon_accountdisable" />
+
+        <TextView
+            android:id="@+id/AccountDisable_DayNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AccountDisable_Image2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/x20"
+            android:text="你的登录账号被禁用3天"
+            android:textColor="@color/textColor3"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/AccountDisable_Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AccountDisable_DayNum"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginRight="@dimen/x30"
+            android:text="由于你在动态中上传了违规平台的内容，不符合法律规则"
+            android:textColor="@color/textColor3"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_above="@+id/AccountDisable_Buttom"
+            android:background="#DEDEDE" />
+
+        <LinearLayout
+            android:id="@+id/AccountDisable_Buttom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/AccountDisable_Cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/textColor6"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_line"
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:background="#DEDEDE"
+                tools:ignore="Suspicious0dp" />
+
+            <TextView
+                android:id="@+id/AccountDisable_Appeal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="申诉"
+                android:textColor="@color/textColor3"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

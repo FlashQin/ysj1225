@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.shopping">
+
+    <application>
+        <!-- 商家简介 -->
+        <activity
+            android:name=".seller.activity.UpShopDataActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 入驻协议 -->
+        <activity android:name=".seller.activity.MoveInAgreeActivity" />
+        <!-- 官方小店 -->
+        <activity android:name=".seller.activity.ShopManageActivity" />
+        <!-- 我的收入 -->
+        <activity android:name=".seller.activity.MyIncomeActivity" />
+        <!-- 添加商品 -->
+        <activity
+            android:name=".seller.activity.AddGoodsActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 商品分类 -->
+        <activity android:name=".seller.activity.GoodsClassifyActivity" />
+        <!-- 商品属性 -->
+        <activity android:name=".seller.activity.GoodsAttributeActivity" />
+        <!-- 编辑属性价格 -->
+        <activity
+            android:name=".seller.activity.EditPriceActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 商品管理 -->
+        <activity android:name=".seller.activity.GoodsManageActivity" />
+        <!-- 全部订单 - 卖家 -->
+        <activity android:name=".seller.activity.OrderManageActivity2" />
+        <!-- 收入明细（废弃） -->
+        <activity android:name=".seller.activity.InComeDetailsActivity" />
+        <!-- 直播预告 -->
+        <activity android:name=".seller.activity.LiveBuyNoticeActivity" />
+        <!-- 选择物流 -->
+        <activity android:name=".seller.activity.ChooseLogisticsActivity" />
+        <!-- 提现 -->
+        <activity android:name=".seller.activity.ShopCashActivity" />
+        <!-- 商品详情 -->
+        <activity android:name=".buyer.activity.GoodsDetailsActivity" />
+        <!-- 购物车 -->
+        <activity android:name=".buyer.activity.ShoppingCartActivity" />
+        <!-- 确认订单 -->
+        <activity android:name=".buyer.activity.SubmitOrderActivity" />
+        <!-- 添加收货地址 -->
+        <activity android:name=".buyer.activity.AddAddressActivity" />
+        <!-- 购物订单 - 买家 -->
+        <activity android:name=".buyer.activity.OrderManageActivity1" />
+        <!-- 收货地址 -->
+        <activity android:name=".buyer.activity.AddressListActivity" />
+        <!-- 小店预览 -->
+        <activity android:name=".buyer.activity.ShopActivity" />
+        <!-- 订单详情 -->
+        <activity android:name=".buyer.activity.OrderDetailsActivity" />
+        <!-- 物流详情 -->
+        <activity android:name=".buyer.activity.LogisdticsDetailsActivity" />
+        <!-- 审核退款申请 -->
+        <activity android:name=".seller.activity.ReviewRefundActivity" />
+    </application>
+
+</manifest>

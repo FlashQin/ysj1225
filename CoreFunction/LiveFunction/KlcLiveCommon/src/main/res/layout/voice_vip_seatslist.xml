@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_video_comment">
+
+        <RelativeLayout
+            android:id="@+id/voiceVipSeats_Top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x48">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/textColor3"
+                android:text="豪华贵宾席"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@mipmap/close"/>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/voiceVipSeats_List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voiceVipSeats_Top"/>
+
+        <TextView
+            android:id="@+id/voiceVipSeats_Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x40"
+            android:textSize="@dimen/x16"
+            android:textColor="@color/textColor6"
+            android:text="暂无贵宾"
+            android:visibility="gone"
+            android:layout_below="@+id/voiceVipSeats_Top"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</LinearLayout>

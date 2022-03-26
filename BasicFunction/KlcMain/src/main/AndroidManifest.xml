@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.main">
+
+    <application>
+        <activity android:name=".activity.RankListActivity" />
+        <activity android:name=".activity.SquareTagActivity" />
+        <activity android:name=".activity.MeetAudienceSingleActivity" />
+        <activity android:name=".activity.MeetAudienceManyActivity" />
+        <activity android:name=".activity.MeetAnchorActivity" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="etWatcher"
+            type="android.text.TextWatcher" />
+
+        <variable
+            name="isSureEnabled"
+            type="Boolean" />
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.login.viewmodel.LoginViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <include layout="@layout/view_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/reg_input_phone"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:text="@={viewModel.phone}"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColorB"
+                    android:textSize="16sp"
+                    bind:addTextChanged="@{etWatcher}" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/line2"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <EditText
+                    android:id="@+id/etPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/reg_input_pwd_1"
+                    android:inputType="textPassword"
+                    android:maxLength="11"
+                    android:text="@={viewModel.password}"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColorB"
+                    android:textSize="16sp"
+
+                    bind:addTextChanged="@{etWatcher}" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/line2"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp" />
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="47dp"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/login_btn"
+                android:enabled="@{isSureEnabled}"
+                android:gravity="center"
+                android:onClick="loginClick"
+                android:text="@string/login_confirm"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tvPwdForget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="45dp"
+                android:onClick="loginClick"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="忘记密码?"
+                android:textColor="@color/textColorC"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="17dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/login_tip_1"
+                android:textColor="@color/textColorA"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/btn_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:onClick="loginClick"
+                android:text="@string/login_tip_2"
+                android:textColor="@color/violetTxt"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

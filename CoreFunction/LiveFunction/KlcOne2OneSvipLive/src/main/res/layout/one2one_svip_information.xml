@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.one2onelive.viewmodel.One2OneInformationViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/one2one_Rele"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x10">
+
+        <RelativeLayout
+            android:id="@+id/layoutVoiceLiveTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginRight="@dimen/x12"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layoutAnchorInfo"
+                android:layout_width="@dimen/x132"
+                android:layout_height="@dimen/x36"
+                android:background="@mipmap/information_icon"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivAnchorAvatar"
+                    android:layout_width="@dimen/x31"
+                    android:layout_height="@dimen/x31"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/x2"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_oval="true"
+                    bind:image="@{viewModel.joinRoom.anchorAvatar}" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toLeftOf="@+id/tvAnchorFollow"
+                    android:layout_toRightOf="@+id/ivAnchorAvatar"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAnchorName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxEms="6"
+                        android:maxLines="1"
+                        android:text="@{viewModel.joinRoom.anchorName}"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/tvAnchorFollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x2"
+                    android:background="@mipmap/follow_icon"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/one2one_lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/x3"
+                android:layout_marginRight="@dimen/x10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/live_user_gold_lin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x30"
+                    android:layout_marginBottom="@dimen/x10"
+                    android:background="@mipmap/one2one_live_money"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/live_user_gold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:gravity="center_vertical"
+                        android:text="他的余额 0"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:layout_marginRight="@dimen/x5"
+                        android:background="@mipmap/icon_money" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/live_time"
+                    android:layout_width="@dimen/x80"
+                    android:layout_height="@dimen/x30"
+                    android:layout_below="@+id/live_user_gold"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:background="@drawable/voice_button_bg"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAnchorVoiceHot"
+                android:layout_width="@dimen/x80"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutAnchorInfo"
+                android:layout_marginTop="@dimen/x10"
+                android:background="@drawable/bg_live_hot"
+                android:drawableLeft="@mipmap/live_hot"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="@dimen/x2"
+                android:paddingTop="@dimen/x2"
+                android:paddingRight="@dimen/x10"
+                android:paddingBottom="@dimen/x2"
+                android:singleLine="true"
+                android:text="@{String.valueOf(viewModel.joinRoom.votes)}"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <ViewFlipper
+                android:id="@+id/VoiceLive_marquee"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x20"
+                android:layout_below="@+id/tvAnchorVoiceHot"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_weight="1"
+                android:autoStart="true"
+                android:background="@drawable/bg_gradient_orange"
+                android:flipInterval="4000"
+                android:inAnimation="@anim/slide_in_bottom"
+                android:outAnimation="@anim/slide_out_top"
+                android:paddingRight="6dp" />
+
+            <!--该用户有2分钟免费通话时长-->
+            <TextView
+                android:id="@+id/vip_free"
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/VoiceLive_marquee"
+                android:layout_marginTop="@dimen/x10"
+                android:background="@mipmap/bg_free_bubble"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:text="小主：该用户正在使用1分钟免费通话与你聊天，尽情展示你的魅力留住他！奥力给！" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

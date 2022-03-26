@@ -1,0 +1,130 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.kalacheng.libuser.model.ApiCfgPayCallOneVsOne" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnItemClickCallback" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.kalacheng.util.view.ItemLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:height_ratio="3"
+            app:width_ratio="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <VideoView
+                        android:id="@+id/video_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_thumb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="5dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_item_many_people"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="2dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/tvVoiceCoin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_item_many_people_voice"
+                        android:drawablePadding="3dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="0金币/分"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvVideoCoin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:drawableLeft="@mipmap/icon_item_many_people_video"
+                        android:drawablePadding="3dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="0金币/分"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.kalacheng.util.view.ItemLayout>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@{bean.userName}"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <ImageView
+                android:id="@+id/iv_video"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="6dp"
+                android:onClick="@{(view) ->  callback.onClick(view,bean)}"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_meet_video" />
+
+            <ImageView
+                android:id="@+id/iv_voice"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="6dp"
+                android:onClick="@{(view) ->  callback.onClick(view,bean)}"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_meet_voice" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.kalacheng.livecommon.R" />
+        <variable
+            name="bean"
+            type="com.kalacheng.buscommon.model.ApiUserBasicInfo" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnItemClickCallback" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{(view) ->  callback.onClick(view,bean)}"
+        android:paddingLeft="5dp">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/x27"
+            android:layout_height="@dimen/x27"
+            android:layout_alignParentBottom="true"
+            app:riv_oval="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            bind:errorRes="@{R.mipmap.ic_launcher}"
+            bind:image="@{bean.avatar}" />
+
+
+
+
+    </RelativeLayout>
+</layout>

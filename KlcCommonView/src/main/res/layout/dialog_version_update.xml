@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp">
+
+    <ImageView
+        android:id="@+id/ivVersionUpdateBg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_update_bg" />
+
+    <ImageView
+        android:id="@+id/ivVersionClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="center"
+        android:src="@mipmap/icon_update_close" />
+
+    <TextView
+        android:id="@+id/tvVersionUpdateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="35dp"
+        android:text="发现新版本"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tvVersionUpdateCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvVersionUpdateTitle"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="10dp"
+        android:text="最新版本："
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivVersionUpdateBg"
+        android:background="@drawable/bg_update_dialog"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="22dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更新内容："
+                    android:textColor="@color/textColor6"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvVersionUpdateTip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="1.UI样式调整"
+                    android:textColor="@color/textColor6"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="33dp">
+
+            <TextView
+                android:id="@+id/tvVersionUpdateConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_update_button"
+                android:gravity="center"
+                android:text="立即更新"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <com.kalacheng.util.view.ApkDownloadProgressView
+                android:id="@+id/pvDownload"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@color/textColor9"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </LinearLayout>
+</RelativeLayout>

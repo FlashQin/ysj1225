@@ -1,0 +1,139 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+apply plugin: 'android-aspectjx'
+
+def releaseTime() {
+    return new Date().format("MMdd_HHmm", TimeZone.getTimeZone("GMT+8:00"))
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        multiDexEnabled true
+        flavorDimensions "default"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi-v7a', 'x86'//, 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled true//混淆
+            shrinkResources true //删除无效引用
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false//混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'//忽略 Google Search（放于每个module的build.gradle文件中）
+    }
+    dataBinding {
+        enabled = true
+    }
+
+
+    productFlavors {
+        //直播交友
+        klcZbYdyDsp {
+            applicationId "com.klc.fzcs"
+            versionCode 22
+            versionName "1.22"
+            manifestPlaceholders = [
+                    OpenInstallAppKey: "",//OpenInstall
+                    JPUSH_PKGNAME    : applicationId,//极光
+                    JPUSH_CHANNEL    : "developer-default",
+                    JPUSH_APPKEY     : "7c1b2ee7136da8b5ef5eab81",
+                    Tencent_BUGLY    : "12289a52b6",//腾讯bugly
+                    Tencent_Map      : "MBZBZ-QDYCO-FW6WX-S52JI-CRTQ5-IMFCG",//腾讯地图
+                    WX_PAY_APP_ID    : "wx1fd200479c9d533d"//微信支付，AppId
+            ]
+//            buildConfigField 'String', 'SERVER_URL', '"http://zbydy.kalacheng.com"'
+//                                    buildConfigField 'String', 'SERVER_URL', '"http://192.168.8.22:1805"'  //姜孝政
+//          buildConfigField 'String', 'SERVER_URL', '"http://192.168.8.30:1888"'   //王雄
+            buildConfigField 'String', 'SERVER_URL', '"http://192.168.8.8:1805"'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def fileName = productFlavors.name[0] + "_" + productFlavors.versionName[0] + "_" + releaseTime() + ".apk"
+            outputFileName = fileName
+        }
+    }
+
+}
+repositories {
+    flatDir {
+        dirs 'libs', '../libs'
+    }
+    maven {
+        url "http://mvn.mob.com/android"
+    }
+}
+aspectjx {
+    //排除所有package路径中包含`android.support`的class文件及库（jar文件）
+    //消除Aspectj对支付宝影响
+    exclude 'com.alipay'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:23.1.1'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(':KlcFrame')
+    implementation project(':KlcLive')
+    implementation project(':KlcUtils')
+    implementation project(':KlcBase')
+    implementation project(':KlcBeans')
+    implementation files('../../../../Libs/IMSocket.aar')
+    implementation project(':KlcLive')
+    implementation project(':KlcLogin')
+    implementation project(':KlcDynamicCircle')
+    implementation project(':KlcCenter')
+    implementation project(':KlcFans')
+    implementation project(':KlcMoney')
+    implementation project(':KlcLiveCommon')
+    implementation project(':KlcVideoRecord')
+    implementation project(':KlcPoints')
+    implementation project(':KlcMob')
+    implementation project(':KlcCommonView')
+    implementation project(':KlcMain')
+    implementation project(':KlcMainPage')
+    implementation project(':KlcOne2OneSvipLive')
+    implementation project(':KlcOneVoiceLive')
+    implementation project(':KlcMessage')
+    implementation project(':KlcShortVideo')
+    implementation project(':KlcHomePage')
+    implementation project(':KlcShopping')
+
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+    api 'com.alibaba:arouter-api:1.3.0'
+
+}

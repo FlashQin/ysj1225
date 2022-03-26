@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MDXMain</string>
+    <!--房间类型-->
+    <string name="roomtype1">普通房间</string>
+    <string name="roomtype2">密码房间</string>
+    <string name="roomtype3">收费房间</string>
+    <string name="roomtype4">计时房间</string>
+    <string name="hall_state_ing">LIVE</string>
+    <string name="hall_state_ed">休息中</string>
+
+    <!-- 排行-->
+    <string name="ranking">排行</string>
+    <string name="main_list_profit">收益榜</string>
+    <string name="main_list_contribute">贡献榜</string>
+    <string name="main_list_day">日榜</string>
+    <string name="main_list_week">周榜</string>
+    <string name="main_list_month">月榜</string>
+    <string name="main_list_all">总榜</string>
+
+    <string name="main_tab_1">短视频</string>
+    <string name="main_tab_2">直播</string>
+    <string name="main_tab_3">广场</string>
+    <string name="main_tab_4">消息</string>
+    <string name="main_tab_5">我的</string>
+
+</resources>

@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.one2onelive">
+
+    <application>
+        <activity android:name=".activity.One2OneSvipLiveAnchorActivity" />
+        <activity android:name=".activity.One2OneSvipSideshowActivity" />
+        <activity android:name=".activity.One2OneSeekChatActivity" />
+    </application>
+</manifest>

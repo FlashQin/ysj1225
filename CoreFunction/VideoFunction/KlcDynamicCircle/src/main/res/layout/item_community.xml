@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bgFl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_shadow">
+
+    <LinearLayout
+        android:id="@+id/bgLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/x11">
+
+        <com.kalacheng.util.view.ItemLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:height_ratio="1"
+            app:width_ratio="1">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/coverIv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/zanweitu"
+                app:riv_corner_radius_top_left="7dp"
+                app:riv_corner_radius_top_right="7dp" />
+        </com.kalacheng.util.view.ItemLayout>
+
+        <TextView
+            android:id="@+id/contentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingHorizontal="@dimen/x7"
+            android:paddingTop="@dimen/x7"
+            android:textColor="#888888"
+            android:textSize="@dimen/x12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/x7"
+            android:layout_marginTop="@dimen/x7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/avatarIv"
+                android:layout_width="@dimen/x26"
+                android:layout_height="@dimen/x26"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/zanweitu"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/x8"
+                android:paddingEnd="@dimen/dp_0"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#888888"
+                android:textSize="@dimen/x14" />
+
+            <TextView
+                android:id="@+id/numTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/icon_like"
+                android:drawablePadding="@dimen/x4"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/x8"
+                android:text="2367"
+                android:textColor="#888888"
+                android:textSize="@dimen/x13" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivVipTag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_yigebiankuang" />
+
+</FrameLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="55dp"
+        android:paddingRight="55dp">
+
+        <TextView
+            android:layout_marginTop="45dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor3"
+            android:textSize="25sp"
+            android:text="设置你的形象"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor6"
+            android:textSize="13sp"
+            android:text="让大家更好的认识你"/>
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iv_head"
+                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_mine_person"
+                app:riv_oval="true" />
+
+            <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iv_head_min"
+                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_camera_gray"
+                app:riv_oval="true" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_name"
+            android:paddingLeft="25dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/shape_f5f5f5_22_bg"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:textColor="@color/textColor3"
+            android:textSize="14sp"
+            android:hint="请输入您的昵称"
+            tools:text="我是小妖怪"/>
+
+        <LinearLayout
+            android:id="@+id/ll_birthday"
+            android:background="@drawable/shape_f5f5f5_22_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_birthday"
+                android:paddingLeft="25dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:focusable="false"
+                android:layout_weight="1"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor3"
+                android:textSize="14sp"
+                android:hint="请选择您的生日"
+                tools:text="2020-03-09"/>
+
+            <ImageView
+                android:layout_marginRight="23dp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_arrow_bottom" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etSignature"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="4dp"
+            android:background="@null"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="#ff9b58fe"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_boy_select"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_f5f5f5_22_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_boy"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_img_boy" />
+
+                <ImageView
+                    android:id="@+id/iv_boy_select"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_alignRight="@id/iv_boy"
+                    android:layout_alignBottom="@id/iv_boy"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="4dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_select_checked"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_boy_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/iv_boy"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="男生"
+                    android:textColor="@color/textColor3"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_girl_select"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_f5f5f5_22_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_girl"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_img_girl" />
+
+                <TextView
+                    android:id="@+id/tv_girl_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/iv_girl"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:text="女生"
+                    android:textColor="@color/textColor3"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:textSize="@dimen/sp_12"
+            android:text="性别确认后不能修改哦～"/>
+
+        <TextView
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_gray_30"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

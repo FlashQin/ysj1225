@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_video_comment"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:text="上传活动横幅"
+            android:textColor="@color/textColor3"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/LiveShopActivity_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:background="@mipmap/close" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_margin="@dimen/x30"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x100">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/LiveShopActivity_Image"
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x100"
+                android:background="@mipmap/bg_shop_activity"
+                android:scaleType="center"
+                app:riv_corner_radius="7dp" />
+
+            <TextView
+                android:id="@+id/bt_delete"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_delete_icon"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="—"
+                android:textColor="@android:color/white"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/live_shop_activity_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/x40"
+            android:layout_marginRight="@dimen/x20"
+            android:lineSpacingExtra="@dimen/x10"
+            android:text="图片建议尺寸：\n宽度为270px，高度不得超过540px;\n仅支持1张活动横幅"
+            android:textColor="@color/textColor9"
+            android:textSize="@dimen/x12" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/OpenNobleGift"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--vip-->
+    <!--全站广播-->
+    <RelativeLayout
+        android:id="@+id/rl_broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationX="1700dp">
+
+        <ImageView
+            android:id="@+id/iv_broadcast"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_broadcast_all"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_toRightOf="@+id/iv_broadcast"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/bg_white_circular_22">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/rl_broadcast_userImage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="3dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:riv_oval="true" />
+
+            <ImageView
+                android:id="@+id/iv_broadcast_tag"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="30dp"
+                android:layout_height="15dp"/>
+
+            <TextView
+                android:id="@+id/rl_broadcast_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#4BC9FF"
+                android:textSize="12sp"
+                tools:text="我是小妖怪："/>
+
+            <TextView
+                android:id="@+id/rl_broadcast_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x10"
+                android:textColor="@color/textColor6"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                tools:text="杀人不眨眼，吃人不放盐。"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

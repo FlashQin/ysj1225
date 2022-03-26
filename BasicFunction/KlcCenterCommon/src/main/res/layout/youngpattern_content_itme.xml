@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/x5"
+            android:layout_height="@dimen/x5"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_oval_green"/>
+
+        <TextView
+            android:id="@+id/YoungPattern_Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginLeft="@dimen/x10"
+            android:textColor="@color/textColor3"
+            android:text="为呵护未成年人健康成长，我们将针对未成年人推出更优化的内容"/>
+    </LinearLayout>
+</LinearLayout>

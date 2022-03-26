@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_60"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/dp_5"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/music_img"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/music_db_none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="4dp" />
+
+
+    <TextView
+        android:id="@+id/tv_music_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_2"
+        android:ellipsize="middle"
+        android:maxEms="10"
+        android:singleLine="true"
+        android:textColor="@color/textColor3"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toEndOf="@+id/music_img"
+        app:layout_constraintTop_toTopOf="@+id/music_img"
+        tools:text="这是一首老歌这是一首老歌11111111111111111111111111111111111111111111" />
+
+    <TextView
+        android:id="@+id/tv_music_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:textColor="@color/textColor9"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_music_name"
+        app:layout_constraintEnd_toStartOf="@+id/tvSelect"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_music_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_music_name"
+        tools:text=" - 未知歌手.mp3" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:textColor="@color/textColor9"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintBottom_toBottomOf="@+id/music_img"
+        app:layout_constraintStart_toStartOf="@+id/tv_music_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_music_name"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="00:00:00" />
+
+
+
+    <!-- 文件上传状态 -->
+    <TextView
+        android:id="@+id/tvSelect"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_35"
+        android:layout_gravity="end|center_vertical"
+        android:gravity="center"
+        android:text="未上传"
+        android:textColor="@color/textColor3"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/bg_6E78D9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout >

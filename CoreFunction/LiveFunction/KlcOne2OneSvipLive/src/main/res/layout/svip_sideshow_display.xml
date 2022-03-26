@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+   >
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.kalacheng.one2onelive.viewmodel.SvipSideshowDisplayViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/Svip_Dispalay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</layout>

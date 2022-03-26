@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.livecommon">
+
+    <application>
+        <!--房间管理-->
+        <activity android:name=".component.AdminListActivity" />
+    </application>
+</manifest>

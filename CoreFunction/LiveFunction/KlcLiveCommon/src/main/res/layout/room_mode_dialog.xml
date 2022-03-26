@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_video_comment"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x48">
+
+        <ImageView
+            android:id="@+id/room_mode_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:background="@mipmap/close" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="修改房间模式"
+            android:textColor="@color/textColor3"
+            android:textSize="@dimen/x16" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/room_mode_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginBottom="@dimen/x10"
+        android:text="当前房间模式：普通房间"
+        android:textColor="@color/textColor6"
+        android:textSize="@dimen/x16" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/room_mode_set"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="@dimen/x20"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="@dimen/x10"
+        android:background="@drawable/live_btn_start"
+        android:gravity="center"
+        android:text="修改房间模式"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/x10"
+        android:text="修改为普通模式时,新用户可自由无限制进入直播间"
+        android:textColor="@color/textColor9"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/x10"
+        android:text="修改为其他模式时,当前直播间用户将自动退出直播间"
+        android:textColor="@color/textColor9"
+        android:textSize="12sp" />
+
+</LinearLayout>

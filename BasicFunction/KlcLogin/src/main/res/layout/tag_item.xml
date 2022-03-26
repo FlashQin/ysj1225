@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bean"
+            type="com.kalacheng.buscommon.model.TabInfoDto" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnBeanCallback" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{() ->  callback.onClick(bean)}"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/type_lable"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/tag_background"
+            android:gravity="center"
+            android:text="@{bean.name}"
+            android:textColor="@drawable/tag_textcolor" />
+
+        <ImageView
+            android:id="@+id/iv_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_tag_select"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

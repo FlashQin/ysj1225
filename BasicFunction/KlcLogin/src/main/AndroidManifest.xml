@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.login">
+
+    <application>
+        <!-- 登录 -->
+        <activity
+            android:name=".component.LoginActivity"
+            android:launchMode="singleTask" />
+        <!-- 注册 -->
+        <activity
+            android:name=".component.RegisterActivity"
+            android:launchMode="singleTask" />
+        <!-- 手机号登录 -->
+        <activity
+            android:name=".component.PhoneLoginActivity"
+            android:launchMode="singleTask" />
+        <!--修改密码-->
+        <activity
+            android:name=".component.ChangePasswordActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".component.RequiredInfoActivity" />
+        <activity android:name=".component.TagSelectActivity" />
+
+    </application>
+</manifest>

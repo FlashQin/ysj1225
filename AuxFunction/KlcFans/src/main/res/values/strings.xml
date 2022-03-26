@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KlcFans</string>
+
+    <string name="search">搜索</string>
+    <string name="search_hint">请输入昵称或者ID搜索</string>
+    <!--fans列表-->
+    <string name="fans_tips1">你还没有粉丝</string>
+    <string name="browse_tips1">还没有浏览你的人</string>
+    <string name="fans_tips2">完善个人信息会让更多的人关注你哦~</string>
+</resources>

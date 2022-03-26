@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TreasureChest_buttom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30"
+            android:background="@drawable/bg_btn_agree"
+            android:gravity="center"
+            android:text="抽1次"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/TreasureChest_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/x5"
+            android:drawableLeft="@mipmap/icon_money"
+            android:drawablePadding="@dimen/x5"
+            android:gravity="center"
+            android:text="100"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

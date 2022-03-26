@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="me_bottom_names">
+        <item>SVIP</item>
+        <item>免打扰</item>
+        <item>购物订单</item>
+        <item>特权设置</item>
+        <item>主播中心</item>
+        <item>官方小店</item>
+        <item>我的时间轴</item>
+        <item>美颜设置</item>
+        <item>青少年模式</item>
+        <item>客服</item>
+        <item>365客服热线</item>
+        <item>设置</item>
+    </string-array>
+
+    <integer-array name="me_bottom_ids">
+        <item>@mipmap/icon_me_svip</item>
+        <item>@mipmap/icon_no_disturb</item>
+        <item>@mipmap/icon_me_order</item>
+        <item>@mipmap/icon_me_power_setting</item>
+        <item>@mipmap/icon_me_anchor_center_b</item>
+        <item>@mipmap/icon_me_official_shop</item>
+        <item>@mipmap/icon_me_time_axis</item>
+        <item>@mipmap/icon_me_beauty_setting</item>
+        <item>@mipmap/icon_me_anchor_center</item>
+        <item>@mipmap/icon_me_customer_service</item>
+        <item>@mipmap/icon_me_service_phone</item>
+        <item>@mipmap/icon_me_setting</item>
+    </integer-array>
+</resources>

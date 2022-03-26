@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/transparent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_dialog"
+        android:gravity="bottom"
+        android:layout_width="275dp"
+        android:layout_height="225dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:lineSpacingExtra="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/textColor3"
+            android:text="恭喜你!"/>
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:lineSpacingExtra="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/textColor6"
+            tools:text="你获得2次时长为2分钟的免费通话,快去聊天吧!"/>
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"/>
+
+        <TextView
+            android:id="@+id/btn_confirm"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="我知道了"
+            android:textColor="@color/textColor9"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_call"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="180dp"
+        android:layout_height="140dp"
+        android:src="@mipmap/icon_img_call"/>
+
+</RelativeLayout>

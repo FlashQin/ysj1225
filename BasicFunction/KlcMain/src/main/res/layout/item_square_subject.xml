@@ -1,0 +1,48 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bean"
+            type="com.kalacheng.libuser.model.AppHotSort" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnBeanCallback" />
+    </data>
+
+    <com.kalacheng.util.view.ItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_square"
+        android:gravity="center_horizontal"
+        android:onClick="@{() ->  callback.onClick(bean)}"
+        bind:height_ratio="3"
+        bind:width_ratio="5">
+
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            bind:image="@{bean.image}" />
+
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:ems="1"
+            android:text="@{bean.name}"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </com.kalacheng.util.view.ItemLayout>
+</layout>

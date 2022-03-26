@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.commonview.viewmodel.FloatingScreenViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/notice_re"
+            android:layout_width="@dimen/x280"
+            android:layout_height="@dimen/x22"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x60"
+            android:background="@drawable/notice"
+            android:translationX="-700dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/notice_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x10"
+                android:background="@mipmap/notice" />
+
+            <com.kalacheng.util.view.MarqueeView
+                android:id="@+id/notice_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_toRightOf="@+id/notice_image"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:direction="left"
+                app:isRepeat="false"
+                app:speed="20"
+                app:startPoint="end" />
+
+        </RelativeLayout>
+
+        <!--普通礼物-->
+        <RelativeLayout
+            android:id="@+id/Re_Gift"
+            android:layout_width="@dimen/x310"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginTop="@dimen/x150"
+            android:translationX="-700dp">
+
+            <RelativeLayout
+                android:id="@+id/Re_Gift1"
+                android:layout_width="@dimen/x310"
+                android:layout_height="@dimen/x34"
+                android:layout_marginTop="@dimen/x10"
+                android:background="@mipmap/bg_ordinary">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/Gift_userImage"
+                    android:layout_width="@dimen/x30"
+                    android:layout_height="@dimen/x30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_oval="true" />
+
+                <TextView
+                    android:id="@+id/Gift_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_toRightOf="@+id/Gift_userImage"
+                    android:maxLength="6"
+                    android:text="送给送给送给"
+                    android:textColor="@color/color_FBE99A"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Gift_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/Gift_userName"
+                    android:text="送给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Gift_anchorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toRightOf="@+id/Gift_text"
+                    android:maxLength="6"
+                    android:text="送给送给送给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!--  <TextView
+                      android:id="@+id/Gift_Number"
+                      android:layout_width="@dimen/x40"
+                      android:layout_height="wrap_content"
+                      android:textSize="18sp"
+                      android:text="x1"
+                      android:layout_centerVertical="true"
+                      android:layout_alignParentRight="true"
+                      android:textColor="@color/yellow2"/>-->
+                <com.kalacheng.util.view.MagicTextView
+                    android:id="@+id/Gift_Number"
+                    android:layout_width="@dimen/x50"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:visibility="visible"
+                    app:outerShadowDx="3"
+                    app:outerShadowDy="3"
+                    app:outerShadowRadius="1"
+                    app:strokeColor="@color/yellow2"
+                    app:strokeJoinStyle="round"
+                    app:strokeWidthsss="2" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/Gift_giftImage"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_alignBaseline="@+id/Re_Gift1"
+                android:layout_marginLeft="@dimen/x210" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Re_Gift_Two"
+            android:layout_width="@dimen/x310"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginTop="@dimen/x190"
+            android:translationX="-700dp">
+
+            <RelativeLayout
+                android:id="@+id/Re_Gift1_Two"
+                android:layout_width="@dimen/x310"
+                android:layout_height="@dimen/x34"
+                android:layout_marginTop="@dimen/x10"
+                android:background="@mipmap/bg_ordinary">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/Gift_userImage_Two"
+                    android:layout_width="@dimen/x30"
+                    android:layout_height="@dimen/x30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_oval="true" />
+
+                <TextView
+                    android:id="@+id/Gift_userName_Two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_toRightOf="@+id/Gift_userImage_Two"
+                    android:maxLength="6"
+                    android:text="送给送给送给"
+                    android:textColor="@color/color_FBE99A"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Gift_text_Two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/Gift_userName_Two"
+                    android:text="送给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/Gift_anchorName_Two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toRightOf="@+id/Gift_text_Two"
+                    android:maxLength="6"
+                    android:text="送给送给送给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!--<TextView
+                    android:id="@+id/Gift_Number_Two"
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="x1"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/yellow2"/>-->
+                <com.kalacheng.util.view.MagicTextView
+                    android:id="@+id/Gift_Number_Two"
+                    android:layout_width="@dimen/x50"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:visibility="visible"
+                    app:outerShadowDx="3"
+                    app:outerShadowDy="3"
+                    app:outerShadowRadius="1"
+                    app:strokeColor="@color/yellow2"
+                    app:strokeJoinStyle="round"
+                    app:strokeWidthsss="2" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/Gift_giftImage_Two"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_alignBaseline="@+id/Re_Gift1_Two"
+                android:layout_marginLeft="@dimen/x210" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Re_Gift_Three"
+            android:layout_width="@dimen/x310"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginTop="@dimen/x230"
+            android:translationX="-700dp">
+
+            <RelativeLayout
+                android:id="@+id/Re_Gift1_Three"
+                android:layout_width="@dimen/x310"
+                android:layout_height="@dimen/x34"
+                android:layout_marginTop="@dimen/x10"
+                android:background="@mipmap/bg_ordinary">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/Gift_userImage_Three"
+                    android:layout_width="@dimen/x30"
+                    android:layout_height="@dimen/x30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_oval="true" />
+
+                <TextView
+                    android:id="@+id/Gift_userName_Three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_toRightOf="@+id/Gift_userImage_Three"
+                    android:maxLength="6"
+                    android:text="送给送给送给"
+                    android:textColor="@color/color_FBE99A"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Gift_text_Three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/Gift_userName_Three"
+                    android:text="送给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/Gift_anchorName_Three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toRightOf="@+id/Gift_text_Three"
+                    android:maxLength="6"
+                    android:text="送给送给送给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!--          <TextView
+                              android:id="@+id/Gift_Number_Three"
+                              android:layout_width="@dimen/x40"
+                              android:layout_height="wrap_content"
+                              android:textSize="18sp"
+                              android:text="x1"
+                              android:layout_centerVertical="true"
+                              android:layout_alignParentRight="true"
+                              android:textColor="@color/yellow2"/>-->
+                <com.kalacheng.util.view.MagicTextView
+                    android:id="@+id/Gift_Number_Three"
+                    android:layout_width="@dimen/x50"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:visibility="visible"
+                    app:outerShadowDx="3"
+                    app:outerShadowDy="3"
+                    app:outerShadowRadius="1"
+                    app:strokeColor="@color/yellow2"
+                    app:strokeJoinStyle="round"
+                    app:strokeWidthsss="2" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/Gift_giftImage_Three"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_alignBaseline="@+id/Re_Gift1_Three"
+                android:layout_marginLeft="@dimen/x210" />
+        </RelativeLayout>
+
+        <!--守护礼物-->
+        <RelativeLayout
+            android:id="@+id/Re_GuardGift"
+            android:layout_width="@dimen/x300"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/x270"
+            android:translationX="-700dp">
+
+            <RelativeLayout
+                android:id="@+id/Re_GuardGift1"
+                android:layout_width="@dimen/x300"
+                android:layout_height="@dimen/x34"
+                android:layout_marginTop="@dimen/x10"
+                android:background="@mipmap/screen_guard_bg">
+
+                <RelativeLayout
+                    android:id="@+id/GuardGift_re"
+                    android:layout_width="@dimen/x30"
+                    android:layout_height="@dimen/x30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/GuardGift_AnchorImage"
+                        android:layout_width="@dimen/x30"
+                        android:layout_height="@dimen/x30"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher"
+                        app:riv_oval="true" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/GuardGift_userImage"
+                        android:layout_width="@dimen/x15"
+                        android:layout_height="@dimen/x15"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher"
+                        app:riv_oval="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/GuardGift_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_toRightOf="@+id/GuardGift_re"
+                    android:maxLength="6"
+                    android:text="送给送给送给"
+                    android:textColor="@color/color_FBE99A"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/GuardGift_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/GuardGift_userName"
+                    android:text="送给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/GuardGift_anchorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toRightOf="@+id/GuardGift_text"
+                    android:maxLength="6"
+                    android:text="送给送给送给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!--<TextView
+                    android:id="@+id/GuardGift_Number"
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="x1"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/yellow2"/>-->
+                <com.kalacheng.util.view.MagicTextView
+                    android:id="@+id/GuardGift_Number"
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:visibility="visible"
+                    app:outerShadowDx="3"
+                    app:outerShadowDy="3"
+                    app:outerShadowRadius="1"
+                    app:strokeColor="@color/yellow2"
+                    app:strokeJoinStyle="round"
+                    app:strokeWidthsss="2" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/GuardGift_giftImage"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_alignBaseline="@+id/Re_GuardGift1"
+                android:layout_marginLeft="@dimen/x210" />
+        </RelativeLayout>
+
+        <!--粉丝礼物-->
+        <RelativeLayout
+            android:id="@+id/Re_FansGift"
+            android:layout_width="@dimen/x300"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/x310"
+            android:translationX="-700dp">
+
+            <RelativeLayout
+                android:id="@+id/Re_FansGift1"
+                android:layout_width="@dimen/x300"
+                android:layout_height="@dimen/x34"
+                android:layout_marginTop="@dimen/x10"
+                android:background="@mipmap/bg_fans_gift">
+
+                <RelativeLayout
+                    android:id="@+id/FansGift_Re"
+                    android:layout_width="@dimen/x30"
+                    android:layout_height="@dimen/x30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/FansGift_userImage"
+                        android:layout_width="@dimen/x30"
+                        android:layout_height="@dimen/x30"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher"
+                        app:riv_oval="true" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/x18"
+                        android:layout_height="@dimen/x18"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@mipmap/followed_icon"
+                        android:scaleType="centerCrop"
+                        app:riv_oval="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/FansGift_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_toRightOf="@+id/FansGift_Re"
+                    android:maxLength="6"
+                    android:text="送给送给送给"
+                    android:textColor="@color/color_FBE99A"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/FansGift_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/FansGift_userName"
+                    android:text="送给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/FansGift_anchorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toRightOf="@+id/FansGift_text"
+                    android:maxLength="6"
+                    android:text="送给送给送给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!--<TextView
+                    android:id="@+id/FansGift_Number"
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="x1"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/yellow2"/>-->
+
+                <com.kalacheng.util.view.MagicTextView
+                    android:id="@+id/FansGift_Number"
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:visibility="visible"
+                    app:outerShadowDx="3"
+                    app:outerShadowDy="3"
+                    app:outerShadowRadius="1"
+                    app:strokeColor="@color/yellow2"
+                    app:strokeJoinStyle="round"
+                    app:strokeWidthsss="2" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/FansGift_giftImage"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_alignBaseline="@+id/Re_FansGift1"
+                android:layout_marginLeft="@dimen/x210" />
+        </RelativeLayout>
+
+        <!--vip进入-->
+        <RelativeLayout
+            android:id="@+id/Re_GuardianEntry"
+            android:layout_width="@dimen/x240"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginTop="@dimen/y420"
+            android:translationX="-700dp">
+            <!--vip-->
+            <RelativeLayout
+                android:id="@+id/Re_Vip1"
+                android:layout_width="@dimen/x250"
+                android:layout_height="@dimen/x34"
+                android:background="@mipmap/bg_noble_gift"
+                android:visibility="visible"
+
+                >
+
+                <RelativeLayout
+                    android:id="@+id/Vip_userImageRela"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x2"
+                    android:background="@drawable/yellow_oval">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/Vip_userImage"
+                        android:layout_width="@dimen/x30"
+                        android:layout_height="@dimen/x30"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher"
+                        app:riv_oval="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Vip_GradeRe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_toRightOf="@+id/Vip_userImageRela">
+
+                    <ImageView
+                        android:id="@+id/Vip_Grade"
+                        android:layout_width="@dimen/x30"
+                        android:layout_height="@dimen/x30"
+                        android:layout_centerVertical="true"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/Vip_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toRightOf="@+id/Vip_GradeRe"
+                    android:maxLength="6"
+                    android:text="送送给送给给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toRightOf="@+id/Vip_Name"
+                    android:text="驾临直播间"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <!--守护-->
+            <RelativeLayout
+                android:id="@+id/Re_GuardianEntry1"
+                android:layout_width="@dimen/x280"
+                android:layout_height="@dimen/x22"
+                android:background="@drawable/bg_gruad"
+                android:visibility="visible"
+
+                >
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/GuardianEntry_userImage"
+                    android:layout_width="@dimen/x18"
+                    android:layout_height="@dimen/x18"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x2"
+                    android:background="@mipmap/guard_icon"
+                    app:riv_oval="true" />
+
+                <RelativeLayout
+                    android:id="@+id/GuardianEntry_GradeRe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_toRightOf="@+id/GuardianEntry_userImage">
+
+                    <TextView
+                        android:id="@+id/GuardianEntry_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="主播的守护"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/GuardianEntry_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toRightOf="@+id/GuardianEntry_GradeRe"
+                    android:maxLength="6"
+                    android:text="送送给送给给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toRightOf="@+id/GuardianEntry_Name"
+                    android:text="驾临直播间"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <!--粉丝-->
+            <RelativeLayout
+                android:id="@+id/Re_Fans"
+                android:layout_width="@dimen/x280"
+                android:layout_height="@dimen/x22"
+                android:layout_below="@+id/Re_GuardianEntry1"
+                android:background="@drawable/bg_fans"
+                android:visibility="gone">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/Fans_userImage"
+                    android:layout_width="@dimen/x18"
+                    android:layout_height="@dimen/x18"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x2"
+                    android:background="@mipmap/followed_icon"
+                    android:scaleType="centerCrop"
+                    app:riv_oval="true" />
+
+                <RelativeLayout
+                    android:id="@+id/Fans_GradeRe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_toRightOf="@+id/Fans_userImage">
+
+                    <TextView
+                        android:id="@+id/Fans_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="粉丝团成员"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/Fans_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toRightOf="@+id/Fans_GradeRe"
+                    android:maxLength="6"
+                    android:text="送送给送给给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toRightOf="@+id/Fans_Name"
+                    android:text="驾临直播间"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--        土豪进场-->
+        <RelativeLayout
+            android:id="@+id/rl_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:translationX="-700dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@mipmap/bg_welcome"
+                android:gravity="center|left">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/rl_welcome_userImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_border_color="#D4B777"
+                    app:riv_border_width="1dp"
+                    app:riv_oval="true" />
+
+                <TextView
+                    android:id="@+id/rl_welcome_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="#624305"
+                    android:textSize="12sp"
+                    tools:text="【我是小妖怪】" />
+
+                <TextView
+                    android:id="@+id/rl_welcome_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40dp"
+                    android:text="进入直播间"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 普通用户 进场  -->
+        <RelativeLayout
+            android:id="@+id/rl_base_user_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_marginTop="@dimen/x350">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x21"
+                android:layout_marginStart="@dimen/x10"
+                android:background="@drawable/bg_floating_screen_purple"
+                android:gravity="center|start">
+
+                <ImageView
+                    android:id="@+id/rl_base_user_welcome_nobleGrade"
+                    android:layout_width="@dimen/x31"
+                    android:layout_height="@dimen/x14"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/x5"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/rl_base_user_welcome_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="@dimen/x5"
+                    android:textColor="#C7FFF4"
+                    android:textSize="@dimen/sp_12"
+                    tools:text="【我是小妖怪】" />
+
+                <TextView
+                    android:id="@+id/rl_base_user_welcome_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/x6"
+                    android:layout_marginEnd="@dimen/x11"
+                    android:text=" 加入了直播间"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <!--贵族送礼礼物-->
+        <RelativeLayout
+            android:id="@+id/Re_NobleGift"
+            android:layout_width="@dimen/x300"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginTop="@dimen/y370"
+            android:translationX="-700dp">
+
+            <RelativeLayout
+                android:id="@+id/Re_NobleGift_Relat"
+                android:layout_width="@dimen/x32"
+                android:layout_height="@dimen/x32"
+                android:layout_marginTop="@dimen/x12"
+                android:background="@drawable/yellow_oval">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/NobleGift_userImage"
+                    android:layout_width="@dimen/x30"
+                    android:layout_height="@dimen/x30"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_oval="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Re_NobleGift1"
+                android:layout_width="@dimen/x260"
+                android:layout_height="@dimen/x34"
+                android:layout_marginLeft="@dimen/x2"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_toRightOf="@+id/Re_NobleGift_Relat"
+                android:background="@mipmap/bg_noble_gift">
+
+                <TextView
+                    android:id="@+id/NobleGift_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:maxLength="6"
+                    android:text="送给送给送给"
+                    android:textColor="@color/color_FBE99A"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/NobleGift_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/NobleGift_userName"
+                    android:text="送给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/NobleGift_anchorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toRightOf="@+id/NobleGift_text"
+                    android:maxLength="6"
+                    android:text="送给送给送给"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!-- <TextView
+                     android:id="@+id/NobleGift_Number"
+                     android:layout_width="@dimen/x40"
+                     android:layout_height="wrap_content"
+                     android:textSize="18sp"
+                     android:text="x1"
+                     android:layout_centerVertical="true"
+                     android:layout_alignParentRight="true"
+                     android:textColor="@color/yellow2"/>-->
+                <com.kalacheng.util.view.MagicTextView
+                    android:id="@+id/NobleGift_Number"
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:visibility="visible"
+                    app:outerShadowDx="3"
+                    app:outerShadowDy="3"
+                    app:outerShadowRadius="1"
+                    app:strokeColor="@color/yellow2"
+                    app:strokeJoinStyle="round"
+                    app:strokeWidthsss="2" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/NobleGift_giftImage"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_marginLeft="@dimen/x200" />
+        </RelativeLayout>
+
+        <!--坐骑-->
+        <RelativeLayout
+            android:id="@+id/Re_MountsGift"
+            android:layout_width="@dimen/x290"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginTop="@dimen/x340"
+            android:translationX="-600dp">
+
+            <RelativeLayout
+                android:id="@+id/Re_MountsGift1"
+                android:layout_width="@dimen/x290"
+                android:layout_height="@dimen/x34"
+                android:background="@mipmap/bg_mounts">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/MountsGift_userImage"
+                    android:layout_width="@dimen/x30"
+                    android:layout_height="@dimen/x30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_oval="true" />
+
+                <ImageView
+                    android:id="@+id/MountsGift_Garde"
+                    android:layout_width="@dimen/x30"
+                    android:layout_height="@dimen/x30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/MountsGift_userImage" />
+
+                <TextView
+                    android:id="@+id/MountsGift_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/MountsGift_Garde"
+                    android:maxLength="4"
+                    android:text="小米小米小米"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/MountsGift_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/MountsGift_userName"
+                    android:text="坐着"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/MountsGift_MountsName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/MountsGift_text"
+                    android:maxLength="4"
+                    android:text="【小毛驴】"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/MountsGift_MountsName"
+                    android:text="进入直播间"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--直播购物-->
+        <RelativeLayout
+            android:id="@+id/Re_LiveBuy"
+            android:layout_width="@dimen/x290"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginTop="@dimen/x340"
+            android:translationX="-660dp">
+
+            <RelativeLayout
+                android:id="@+id/Re_LiveBuy1"
+                android:layout_width="@dimen/x290"
+                android:layout_height="@dimen/x34"
+                android:background="@drawable/bg_white_top_bottom">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/LiveBuy_userImage"
+                    android:layout_width="@dimen/x26"
+                    android:layout_height="@dimen/x26"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_oval="true" />
+
+
+                <TextView
+                    android:id="@+id/LiveBuy_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_toRightOf="@+id/LiveBuy_userImage"
+                    android:maxLength="4"
+                    android:text="小米小米小米"
+                    android:textColor="#FF5500"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/LiveBuy_BuyGoods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/LiveBuy_userName"
+                    android:text="购买了"
+                    android:textColor="@color/textColor3"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/LiveBuy_BuyGoods"
+                    android:text="刚刚"
+                    android:textColor="@color/textColor6"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/vip_gift_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="210dp"
+                    android:background="@drawable/shape_progress_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vip_gift_content_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vip_gift_pic"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/vip_gift_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#00FFF4"
+                    tools:text="【我是小妖怪】" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="赠送主播"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/vip_gift_content_gift"
+                android:layout_width="90dp"
+                android:layout_height="105dp"
+                android:layout_below="@+id/vip_gift_content_layout"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vip_gift_content_gift"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/vip_gift_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#00FFF4"
+                    tools:text="【火箭】" />
+
+                <com.kalacheng.util.view.MagicTextView
+                    android:id="@+id/vip_gift_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/vip_gift_tag"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:textColor="@color/white"
+                    android:textSize="35sp"
+                    android:textStyle="italic"
+                    android:visibility="visible"
+                    app:outerShadowDx="3"
+                    app:outerShadowDy="3"
+                    app:outerShadowRadius="1"
+                    app:strokeColor="@color/color_DD85FD"
+                    app:strokeJoinStyle="round"
+                    app:strokeWidthsss="2"
+                    tools:text="x100" />
+            </RelativeLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/vip_gift_pic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:riv_oval="true" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</layout>

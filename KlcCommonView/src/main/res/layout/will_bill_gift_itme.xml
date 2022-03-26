@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/gift"
+            android:layout_width="@dimen/x120"
+            android:layout_height="@dimen/y146"
+            android:layout_marginTop="@dimen/x10"
+            android:background="@drawable/bg_wish_list">
+
+            <ImageView
+                android:id="@+id/gift_icon"
+                android:layout_width="@dimen/x71"
+                android:layout_height="@dimen/x73"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:id="@+id/gift_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/x12"
+                android:textColor="@color/textColor6"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/gift_icon"/>
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/gift_check"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/x68"
+            android:background="@mipmap/unchecked"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x5"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/gift"
+            >
+            <RelativeLayout
+                android:id="@+id/gift_reduce"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/reduce"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/gift_num"
+                android:layout_width="@dimen/x30"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor6"
+                android:textSize="@dimen/x16"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/x5"
+                android:layout_marginRight="@dimen/x5"
+                android:text="0"/>
+            <RelativeLayout
+                android:id="@+id/gift_add"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/add"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

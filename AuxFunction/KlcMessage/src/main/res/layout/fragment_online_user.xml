@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layoutGpsWarning"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#FFEFF8"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_gps_warning" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="打开手机定位权限，发现附近好友～"
+            android:textColor="#FF5EC6"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_open_gps"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="打开"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_choice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:id="@+id/ll_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_f4f4f4_50_bg"
+            android:gravity="center"
+            android:paddingLeft="27dp"
+            android:paddingTop="6dp"
+            android:paddingRight="13dp"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部"
+                android:textColor="@color/textColor6"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/iv_location_arrow"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="18dp"
+                android:src="@mipmap/icon_arrow_down" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/shape_f4f4f4_50_bg"
+            android:gravity="center"
+            android:paddingLeft="14dp"
+            android:paddingTop="6dp"
+            android:paddingRight="13dp"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不限性别"
+                android:textColor="@color/textColor6"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/iv_sex_arrow"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/icon_arrow_down" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.message">
+
+    <application>
+
+        <!-- 私信 -->
+        <activity
+            android:name=".activity.ChatRoomActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity android:name=".activity.ChatSettingActivity" />
+        <activity android:name=".activity.NotifyDetailsListActivity" />
+        <activity android:name=".activity.ReviewDetailsActivity" />
+        <activity android:name=".activity.TrendActivity" />
+        <activity android:name=".activity.GroupMemberActivity" />
+        <activity android:name=".activity.NotifyListActivity" />
+        <activity android:name=".activity.ReviewsListActivity" />
+        <!-- 极光推送（注册、登录） -->
+        <activity android:name=".activity.ConversationListActivity" />
+        <!--官方消息-->
+        <activity android:name=".activity.OfficialNewsActivity" />
+        <!--官方消息详情-->
+        <activity android:name=".activity.OfficialNewsDetailsActivity" />
+        <!-- 我加入的群组 -->
+        <activity android:name=".activity.MyJoinGroupActivity" />
+    </application>
+
+</manifest>

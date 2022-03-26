@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.shortvideo">
+
+    <application>
+        <!-- 我的视图 -->
+        <activity android:name=".activity.MyViewActivity" />
+        <activity android:name=".activity.VideoClassifyActivity" />
+        <activity android:name=".activity.VideoPlayActivity" />
+
+    </application>
+
+</manifest>

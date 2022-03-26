@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white_top_bottom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="填写退回物流单号"
+            android:textColor="#FF333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:text="快递公司"
+            android:textColor="#FF333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvCompanySelect"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/bg_shop_input_box"
+            android:drawableRight="@mipmap/icon_shop_arrow_down"
+            android:gravity="center_vertical"
+            android:hint="请选择快递公司"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/textColor3"
+            android:textColorHint="@color/textColor9"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:text="物流单号"
+            android:textColor="#FF333333"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etCompanyNum"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/bg_shop_input_box"
+            android:gravity="center_vertical"
+            android:hint="请填写物流单号"
+            android:maxLength="50"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/textColor3"
+            android:textColorHint="@color/textColor9"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="13dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/textColor9"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="#DEDEDE" />
+
+            <TextView
+                android:id="@+id/tvConfirm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="#FC8F3A"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutCompany"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/bg_logistics_company"
+            android:overScrollMode="never" />
+    </LinearLayout>
+</FrameLayout>

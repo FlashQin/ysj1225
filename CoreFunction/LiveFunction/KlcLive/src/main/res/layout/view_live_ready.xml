@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.kalacheng.live.component.viewmodel.LiveReadyViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="12dp">
+
+            <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@mipmap/icon_live_ready_close"
+                android:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/btn_camera"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/btn_beauty"
+                android:scaleType="center"
+                android:src="@mipmap/icon_live_ready_camera" />
+
+            <ImageView
+                android:id="@+id/btn_beauty"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:scaleType="center"
+                android:src="@mipmap/icon_live_beauty_1" />
+        </RelativeLayout>
+
+        <com.kalacheng.util.view.ViewPagerIndicator2
+            android:id="@+id/OpenLive_indicator2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="@dimen/x60"
+            android:layout_marginRight="50dp"
+            app:indicatorColor2="#ffffff"
+            app:indicatorHeight2="2"
+            app:indicatorMarginBottom="5"
+            app:indicatorShow="true"
+            app:indicatorWidth2="12"
+            app:lightBold="true"
+            app:lightColor2="#ffffff"
+            app:lightTextSize="18"
+            app:normalBold="false"
+            app:normalColor2="#ccffffff"
+            app:normalTextSize="16"
+            app:padding="10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y150"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@drawable/bg_live_center"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <RelativeLayout
+                    android:id="@+id/avatar_group"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="24dp">
+
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/live_ready_add"
+                        android:scaleType="center"
+                        android:src="@mipmap/icon_live_ready_add"
+                        app:riv_corner_radius="7dp" />
+
+                    <TextView
+                        android:id="@+id/cover_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/avatar"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/live_cover"
+                        android:textColor="@color/textColorC"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="@dimen/x15"
+                    android:layout_toRightOf="@id/avatar_group">
+
+                    <EditText
+                        android:id="@+id/edit_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@null"
+                        android:hint="@string/live_title_hint"
+                        android:maxLines="3"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="#8cffffff"
+                        android:textSize="17sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginTop="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/open_lin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/live_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/x24"
+                        android:background="@drawable/bg_newlive"
+                        android:drawableRight="@mipmap/icon_arrow_right_3"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/x8"
+                        android:paddingRight="@dimen/x8"
+                        android:text="@string/live_class"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/btn_room_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/x24"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_toRightOf="@+id/live_class"
+                        android:background="@drawable/bg_newlive"
+                        android:drawableRight="@mipmap/icon_arrow_right_3"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/x8"
+                        android:paddingRight="@dimen/x8"
+                        android:text="房间模式"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/liveShop_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x24"
+                    android:layout_marginTop="@dimen/x10"
+                    android:background="@drawable/bg_newlive"
+                    android:drawableRight="@mipmap/icon_arrow_right_3"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x8"
+                    android:paddingRight="@dimen/x8"
+                    android:text="@string/liveshop_class"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/x10"
+                    android:background="@drawable/bg_newlive"
+                    android:drawableLeft="@mipmap/user_address"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10"
+                    android:text="湖北武汉"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/lin_wish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x24"
+                    android:layout_marginTop="@dimen/x10"
+                    android:background="@drawable/bg_newlive"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x10">
+
+                    <ImageView
+                        android:id="@+id/btn_room_wish_image"
+                        android:layout_width="@dimen/x20"
+                        android:layout_height="@dimen/x20"
+                        android:layout_marginRight="@dimen/x2"
+                        android:background="@mipmap/wish_list"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:id="@+id/btn_room_wish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/wish_live_gift_ready"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/wish_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/icon_arrow_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x24"
+                    android:layout_marginTop="@dimen/x10"
+                    android:background="@drawable/bg_newlive"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/btn_live_shop_image"
+                        android:layout_width="@dimen/x20"
+                        android:layout_height="@dimen/x20"
+                        android:background="@mipmap/add_livegoods"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:id="@+id/btn_shop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:text="添加直播商品"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/shop_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/icon_arrow_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_shop_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x24"
+                    android:layout_marginTop="@dimen/x10"
+                    android:background="@drawable/bg_newlive"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="房间标签(选填):"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="最多支持6个，例：超低折扣"
+                        android:textColor="@color/white"
+                        android:textColorHint="#80ffffff"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_shop_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x24"
+                    android:layout_marginTop="@dimen/x6"
+                    android:background="@drawable/bg_newlive"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/x10">
+
+                    <CheckBox
+                        android:id="@+id/iv_select_shop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:button="@null"
+                        android:drawableStart="@drawable/cd_shop_and_video"
+                        android:paddingLeft="@dimen/x14"
+                        android:paddingRight="@dimen/x10" />
+
+                    <LinearLayout
+                        android:id="@+id/iv_add_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/x4"
+                            android:text="开启直播卖货，添加直播商品"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/icon_arrow_right" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/y100"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/LiveShare_recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x32"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/x10" />
+
+            <TextView
+                android:id="@+id/btn_start_live"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/live_btn_start"
+                android:gravity="center"
+                android:text="@string/live_start"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_start_live"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x12" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.kalacheng.main.R" />
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.buscommon.AppHomeHallDTO" />
+    </data>
+
+    <com.kalacheng.util.view.ItemLayout
+        android:id="@+id/rlAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/textColorE"
+        app:height_ratio="1"
+        app:width_ratio="1">
+
+        <ImageView
+            android:id="@+id/iv_thumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            bind:errorRes="@{R.drawable.bg_error_color}"
+            bind:image="@{viewModel.sourceCover}" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_hall_shadow" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_info"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="6dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher"
+                        app:riv_border_color="#fff"
+                        app:riv_border_width="2dp"
+                        app:riv_oval="true"
+                        bind:image="@{viewModel.headImg}" />
+
+                    <ImageView
+                        android:id="@+id/ivLiveState"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/green_oval" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{viewModel.username}"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:background="@drawable/bg_sex_girl"
+                            android:gravity="center_vertical"
+                            android:minWidth="31dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="3dp">
+
+                            <ImageView
+                                android:id="@+id/ivSex"
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:scaleType="centerInside"
+                                bind:image="@{viewModel.sex==2 ? R.mipmap.icon_girl_white : R.mipmap.icon_boy_white}" />
+
+                            <TextView
+                                android:id="@+id/tv_age"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:text="@{viewModel.age+``}"
+                                android:textColor="#ffffffff"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_grade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="4dp"
+                            android:scaleType="centerInside"
+                            bind:image="@{viewModel.anchorGradeIcon}" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_voice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_one2one_voice"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/icon_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/icon_one2one_video_start" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="3dp"
+                        android:src="@mipmap/bg_voice_wave" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.kalacheng.util.view.ItemLayout>
+</layout>

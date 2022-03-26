@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="me_top_names">
+        <item>邀请赚钱</item>
+        <item>装扮中心</item>
+        <item>排行榜</item>
+        <item>等级特权</item>
+        <item>充值中心</item>
+        <item>任务中心</item>
+        <item>贵族中心</item>
+        <item>收益中心</item>
+    </string-array>
+
+    <integer-array name="me_top_ids">
+        <item>@mipmap/icon_me_code</item>
+        <item>@mipmap/icon_me_shop</item>
+        <item>@mipmap/icon_me_rank</item>
+        <item>@mipmap/icon_me_privilege</item>
+        <item>@mipmap/icon_me_account</item>
+        <item>@mipmap/icon_me_mission_center</item>
+        <item>@mipmap/icon_me_noble</item>
+        <item>@mipmap/icon_profit</item>
+    </integer-array>
+</resources>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:onClick="backClick"
+                android:padding="15dp"
+                android:src="@mipmap/icon_back"
+                android:tint="#333" />
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="19dp"
+                android:singleLine="true"
+                android:text="商家简介"
+                android:textColor="#2B2C2C"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#CCDEDEDE" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="12dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/shopLogoIv"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="33dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/upload_merchant_logo"
+                        app:riv_oval="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="left"
+                        android:text="上传商家LOGO"
+                        android:textColor="#FF9BA2AC"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="28dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="商家名称"
+                            android:textColor="#FF555555"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/shopNameEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            android:hint="请输入商家名称"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:paddingStart="23dp"
+                            android:textColor="#FF9BA2AC"
+                            android:textSize="13sp"
+                            tools:ignore="RtlSymmetry" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DEDEDE" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="联系电话"
+                            android:textColor="#FF555555"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/shopPhoneEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            android:hint="请输入商家联系电话"
+                            android:inputType="phone"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:paddingStart="23dp"
+                            android:textColor="#FF9BA2AC"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DEDEDE" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="start"
+                        android:text="商家简介（非必填）"
+                        android:textColor="#FF555555"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/shopDataEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="14dp"
+                        android:maxLength="500"
+                        android:background="@drawable/bg_shop_data"
+                        android:gravity="start"
+                        android:hint="请输入商家简介,最多500字"
+                        android:padding="8dp"
+                        android:textColor="#9BA2AC"
+                        android:textSize="13dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/photoRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="start"
+                        android:text="营业证照（非必填）"
+                        android:textColor="#FF555555"
+                        android:textSize="14dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/legalRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+
+                    <TextView
+                        android:id="@+id/submitTv"
+                        android:layout_width="260dp"
+                        android:layout_height="40dp"
+                        android:layout_marginVertical="34dp"
+                        android:background="@drawable/bg_btn_agree"
+                        android:gravity="center"
+                        android:text="提交资料"
+                        android:textColor="@android:color/white"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+            <RelativeLayout
+                android:id="@+id/underReview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="140dp"
+                    android:drawableTop="@mipmap/shenhezhong"
+                    android:drawablePadding="40dp"
+                    android:gravity="center"
+                    android:text="资料审核中，请耐心等待!"
+                    android:textColor="#444444"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

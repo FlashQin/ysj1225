@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:paddingTop="19dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/reg_input_report"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:onClick="backClick"
+                android:padding="9dp"
+                android:src="@mipmap/icon_back"
+                android:tint="@color/textColor" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x30"
+        android:layout_alignParentBottom="true"
+        android:background="#f4f4f4"
+        android:textColor="@color/textColor6"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x10"
+        android:text="选择举报的理由"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Report_List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:overScrollMode="never" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/textColor6"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginLeft="@dimen/x12"
+            android:text="更多详情信息请在说明框中描述（选填）"/>
+
+        <EditText
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/x10"
+            android:padding="@dimen/x5"
+            android:gravity="left|top"
+            android:background="@drawable/bg_dialog"/>
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x48"
+        android:layout_marginTop="@dimen/x20"
+        android:layout_marginBottom="@dimen/x10"
+        android:layout_marginRight="@dimen/x12"
+        android:layout_marginLeft="@dimen/x12"
+        android:background="@drawable/bg_update_button"
+        android:gravity="center"
+        android:onClick="OnClick"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>

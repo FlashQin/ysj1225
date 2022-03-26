@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.fans">
+
+    <application>
+        <!-- 搜索 -->
+        <activity android:name=".component.SearchActivity" />
+        <!-- 关注 -->
+        <activity android:name=".component.FollowActivity" />
+        <!-- 粉丝 -->
+        <activity android:name=".component.FansActivity" />
+    </application>
+</manifest>

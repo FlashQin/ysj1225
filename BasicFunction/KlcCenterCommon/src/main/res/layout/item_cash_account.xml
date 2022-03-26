@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.kalacheng.centercommon.R" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnBeanCallback" />
+
+        <variable
+            name="bean"
+            type="com.kalacheng.libuser.model.AppUsersCashAccount" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_all"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/white"
+            android:onClick="@{()->callback.onClick(bean)}">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_cash_ali" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@id/icon"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="支付宝"
+                android:textColor="@color/textColor3"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_alignLeft="@id/name"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@{bean.account}"
+                android:textColor="@color/textColor"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

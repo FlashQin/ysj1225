@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="@dimen/x70"
+        android:layout_height="@dimen/x80"
+        android:background="@drawable/bg_user_task">
+
+        <ImageView
+            android:id="@+id/Grade_ReList_Image"
+            android:layout_width="@dimen/x44"
+            android:layout_height="@dimen/x38"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/x15"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:id="@+id/Grade_ReList_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/x5"
+            android:layout_below="@+id/Grade_ReList_Image"
+            android:textColor="#98A1B4"
+            android:text="小城堡"/>
+    </RelativeLayout>
+</LinearLayout>

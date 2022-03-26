@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">LiveCommon</string>
+
+    <string name="wish_none_info">添加礼物和数量</string>
+
+    <!--心愿单-->
+
+    <string name="wish_add_info_1">许下心愿，观众帮你实现</string>
+    <string name="wish_add_info_2">当日设置的心愿，会在当天24:00失效</string>
+    <string name="wish_add_button1">+添加心愿</string>
+    <string name="wish_add_button2">生成心愿</string>
+    <string name="wish_add_num">心愿</string>
+    <string name="votesName">魅力值</string>
+    <string name="wish_gift_select_repeat">此礼物已添加</string>
+    <string name="wish_live_room_ready">房间类型</string>
+    <string name="wish_list_title">的心愿单</string>
+    <string name="wish_none">请选择礼物</string>
+    <string name="wish_expect_num">填写礼物数量</string>
+    <string name="wish_expect_num_none">请填写礼物数量</string>
+    <string name="guard_gift_tip">年守护专属礼物</string>
+    <string name="guard_no_data_2">你还没有守护哦</string>
+    <string name="gift">礼物</string>
+    <string name="magic">魔力</string>
+
+    <string name="guard_choose_duration">选择守护时长</string>
+    <string name="guard_right">选择特权</string>
+    <string name="guard_buy">立即开通</string>
+    <string name="guard_buy_2">开通守护</string>
+    <string name="guard_buy_3">续费守护</string>
+    <string name="guard_my">我的</string>
+    <string name="guard_guard">守护</string>
+    <string name="guard_week_con">本周贡献</string>
+    <string name="guard_no_data">成为TA的第一个守护</string>
+
+    <string name="guard_tip_0">快去为喜欢的主播开通守护吧</string>
+    <string name="guard_tip_1">您是当前主播的月守护\n守护日期截止到</string>
+    <string name="guard_tip_2">您是当前主播的年守护\n守护日期截止到</string>
+    <string name="guard_buy_tip_2">您为当前主播的月守护，开通年守护将覆盖您的月守护时长，是否开通？</string>
+    <string name="guard_buy_tip_3">您将花费%1$s%2$s，为主播开通%3$s</string>
+
+    <string name="live_say_something">和大家说点什么...</string>
+    <string name="live_open_alba">开启大喇叭，</string>
+    <string name="live_tiao">条</string>
+
+    <!-- 音乐搜索 -->
+    <string name="music_search">搜索歌曲名称</string>
+    <string name="music_no_local_music">暂无下载</string>
+    <string name="content_empty">请输入内容</string>
+    <string name="delete">删除</string>
+    <string name="music_lrc_not_found">歌词未找到</string>
+    <string name="choose">选择</string>
+    <string name="download">下载</string>
+    <string name="search">搜索</string>
+    <string name="search_hint">请输入昵称或者ID搜索</string>
+    <string name="end">关闭</string>
+</resources>

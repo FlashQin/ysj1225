@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.libuser.model.ApiUserIndexNode" />
+
+        <variable
+            name="callback"
+            type="com.kalacheng.util.listener.OnBeanCallback" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        android:onClick="@{()->callback.onClick(viewModel)}">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/text"
+            android:layout_marginEnd="-16dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="@{viewModel.name}"
+            android:textColor="@color/textColor3"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="@{viewModel.remark}"
+            android:textColor="#C466FF"
+            android:textSize="16sp"
+            android:visibility="@{viewModel.id==67||viewModel.id==68 ? View.VISIBLE : View.GONE}" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@mipmap/icon_arrow_right"
+            android:visibility="@{viewModel.id==67||viewModel.id==68 ? View.GONE : View.VISIBLE}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray2" />
+    </RelativeLayout>
+</layout>

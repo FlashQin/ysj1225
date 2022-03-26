@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MXDMob</string>
+
+    <string name="mob_qq">QQ</string>
+    <string name="mob_qzone">QQ空间</string>
+    <string name="mob_wx">微信</string>
+    <string name="mob_wx_pyq">朋友圈</string>
+    <string name="mob_fb">Facebook</string>
+    <string name="mob_tt">推特</string>
+
+
+    <string name="login_auth_ing">正在授权登录</string>
+    <string name="login_auth_success">授权成功</string>
+    <string name="login_auth_failure">授权失败</string>
+    <string name="login_auth_cancle">授权取消</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DynamicCircle</string>
+
+    <string name="trend_comment_more">查看更多评论</string>
+    <string name="live_share_to">分享到</string>
+    <string name="copy_link">复制链接</string>
+    <string name="copy_success">复制成功</string>
+    <string name="choose_flie">选择文件</string>
+</resources>

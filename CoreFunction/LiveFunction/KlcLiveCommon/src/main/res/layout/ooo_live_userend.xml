@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/x35"
+        android:layout_marginRight="@dimen/x35"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lin"
+            android:layout_gravity="right"
+            android:layout_marginBottom="@dimen/x10"
+            android:background="@mipmap/dialog_close" />
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dialog_2"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginTop="@dimen/x30"
+                android:layout_marginRight="@dimen/x40">
+
+                <ImageView
+                    android:id="@+id/UserEnd_UserHead"
+                    android:layout_width="@dimen/x60"
+                    android:layout_height="@dimen/x60"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/UserEnd_UserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_toRightOf="@+id/UserEnd_UserHead"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="与彩莲的通话结束啦"
+                    android:textColor="@color/textcolor_444444"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/UserEnd_Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/UserEnd_UserName"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/x5"
+                    android:layout_toRightOf="@+id/UserEnd_UserHead"
+                    android:text="通话时长： 01:25:59"
+                    android:textColor="@color/textcolor_444444"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/UserEnd_FreeTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/UserEnd_Time"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/x3"
+                    android:layout_toRightOf="@+id/UserEnd_UserHead"
+                    android:text=""
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/vipDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x25"
+                android:layout_marginTop="@dimen/x10"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvVipMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x40"
+                    android:background="@mipmap/bg_vip"
+                    android:gravity="center"
+                    android:text="黄金贵族优惠"
+                    android:textColor="#65410E"
+                    android:textSize="@dimen/x12" />
+
+                <TextView
+                    android:id="@+id/vipDiscount_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x70"
+                    android:drawableLeft="@mipmap/icon_money"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x5"
+                    android:text="124"
+                    android:textColor="@color/textColor3"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x20"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="评价主播"
+                    android:textColor="@color/textColor3"
+                    android:textSize="16sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x12"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.kalacheng.util.view.MyGropView
+                        android:id="@+id/UserEnd_labelList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x38"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginRight="@dimen/x12"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <EditText
+                        android:id="@+id/UserEnd_AddEdit"
+                        android:layout_width="@dimen/x170"
+                        android:layout_height="@dimen/x38"
+                        android:background="@drawable/bg_svip_input"
+                        android:gravity="left|center_vertical"
+                        android:hint="输入评价"
+                        android:imeActionLabel="@string/search"
+                        android:imeOptions="actionSearch"
+                        android:paddingLeft="@dimen/x10"
+                        android:textColor="@color/textColorC"
+                        android:textColorHint="@color/textColorC"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/UserEnd_Add"
+                        android:layout_width="@dimen/x70"
+                        android:layout_height="@dimen/x38"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:background="@drawable/bg_svip_search"
+                        android:gravity="center"
+                        android:text="添加"
+                        android:textColor="@color/textColorC"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x12"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.kalacheng.util.view.MyGropView
+                        android:id="@+id/UserEnd_Select"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/UserEnd_true"
+                android:layout_width="@dimen/x200"
+                android:layout_height="@dimen/x38"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x20"
+                android:layout_marginBottom="@dimen/x20"
+                android:background="@drawable/bg_btn_confirm"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

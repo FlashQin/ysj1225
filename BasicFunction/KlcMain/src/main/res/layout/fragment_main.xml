@@ -1,0 +1,114 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp" />
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.kalacheng.util.view.ViewPagerIndicator2
+                        android:id="@+id/indicator2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        app:indicatorColor2="#FF54A0"
+                        app:indicatorHeight2="5"
+                        app:indicatorMarginBottom="5"
+                        app:indicatorShow="true"
+                        app:indicatorWidth2="8"
+                        app:lightBold="true"
+                        app:lightColor2="@color/textColor3"
+                        app:lightTextSize="18"
+                        app:normalBold="false"
+                        app:normalColor2="@color/textColor6"
+                        app:normalTextSize="16"
+                        app:padding="10" />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/ivDynamic"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_pink_camera"
+                    android:visibility="gone"
+                    tool:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivRank"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_pink_rank"
+                    android:visibility="gone"
+                    tool:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivShoppingCart"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_shopping_cart"
+                    android:visibility="gone"
+                    tool:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/btn_search"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_main_search"
+                    android:visibility="gone"
+                    tool:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivPublishMedia"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_pink_round_add" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="70dp"
+            android:background="@color/app_default_line" />
+
+    </RelativeLayout>
+
+
+</layout>

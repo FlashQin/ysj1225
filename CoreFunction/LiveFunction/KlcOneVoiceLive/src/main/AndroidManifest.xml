@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.onevoicelive">
+
+    <application>
+        <activity android:name=".activity.OneVoiceLiveAnchorActivity" />
+        <activity android:name=".activity.One2OneVoiceSeekChatActivity" />
+
+    </application>
+</manifest>

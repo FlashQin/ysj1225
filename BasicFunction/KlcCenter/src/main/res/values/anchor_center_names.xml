@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="anchor_center_names">
+<!--        <item>开启通话</item>-->
+        <item>语音接听收费</item>
+        <item>视频接听收费</item>
+        <item>状态设置</item>
+        <item>封面设置</item>
+        <item>直播数据</item>
+        <item>粉丝团</item>
+        <item>贡献榜</item>
+        <item>我的公会</item>
+        <item>付费设置</item>
+    </string-array>
+
+    <integer-array name="anchor_center_ids">
+<!--        <item>@mipmap/icon_anchor_center_open_call</item>-->
+        <item>@mipmap/icon_anchor_center_voice</item>
+        <item>@mipmap/icon_anchor_center_video</item>
+        <item>@mipmap/icon_anchor_center_status</item>
+        <item>@mipmap/icon_anchor_center_cover</item>
+        <item>@mipmap/icon_me_live_data</item>
+        <item>@mipmap/drawicon_anchor_center_fans</item>
+        <item>@mipmap/icon_anchor_center_leaderboard</item>
+        <item>@mipmap/drawicon_anchor_center_guild</item>
+        <item>@mipmap/drawicon_anchor_center_settings</item>
+    </integer-array>
+</resources>

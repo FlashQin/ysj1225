@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/shape_white_12_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="275dp"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_12_bg"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivPayClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/close" />
+
+        <ImageView
+            android:id="@+id/ivPayIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_payment_success" />
+
+        <TextView
+            android:id="@+id/tvPayStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="支付成功!"
+            android:textColor="@color/textColor3"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvPayContent"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:textColor="@color/textColor6"
+            android:textSize="13sp"
+            tools:text="您已成功充值9999金币" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/app_default_line" />
+
+        <TextView
+            android:id="@+id/tvPaySuccessBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="确定"
+            android:textColor="@color/app_color_style_button" />
+
+        <LinearLayout
+            android:id="@+id/llFailed"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvPayClose"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="关闭"
+                android:textColor="@color/textColor9" />
+
+            <View
+                android:layout_gravity="center"
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:background="@color/app_default_line" />
+
+            <TextView
+                android:id="@+id/tvPayComeBackBtn"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="重新支付"
+                android:textColor="@color/app_color_style_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

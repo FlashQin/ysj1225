@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="@dimen/x270"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/ooo_live_end">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginRight="@dimen/x24"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通话结束"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/live_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x14"
+                android:text="通话时长 05:45"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+            <LinearLayout
+                android:id="@+id/lin_live_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x8"
+                    android:text="获得收入"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/live_gold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x8"
+                    android:drawableLeft="@mipmap/icon_money"
+                    android:drawablePadding="@dimen/x2"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:text="4554"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/End_FreeTime"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:text="剩余3分钟免费时长"/>
+
+
+            <TextView
+                android:id="@+id/Live_Exit"
+                android:layout_marginBottom="@dimen/x14"
+                android:layout_width="@dimen/x110"
+                android:layout_height="@dimen/y34"
+                android:layout_marginTop="@dimen/x14"
+                android:background="@drawable/button_bg"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="#F76750"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

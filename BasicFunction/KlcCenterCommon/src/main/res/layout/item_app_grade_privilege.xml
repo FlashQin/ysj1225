@@ -1,0 +1,47 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bean"
+            type="com.kalacheng.libuser.model.AppGradePrivilege" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerInside"
+            bind:image="@{bean.status==1 ? bean.lineLogo : bean.offLineLogo}" />
+
+        <TextView xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`Lv:` + (bean.type==4 ? bean.desr : bean.grade)}"
+            android:textColor="@{bean.status==1 ?(bean.type==4?@color/grade_purple:(bean.type==2?@color/grade_yellow:@color/grade_blue)) : @color/textColor9}"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="3dp"
+            android:text="@{bean.name}"
+            android:textColor="@{bean.status==1 ?@color/textColor3 : @color/textColor9}"
+            android:textSize="12sp" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="app_default_line">#F6F6F6</color>
+
+    <color name="dialog_text_pink">#DD85FD</color>
+
+</resources>

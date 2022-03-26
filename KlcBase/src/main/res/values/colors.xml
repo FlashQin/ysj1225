@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="smart_refresh_bg">#fff</color>
+    <color name="smart_refresh_text">#323232</color>
+
+</resources>

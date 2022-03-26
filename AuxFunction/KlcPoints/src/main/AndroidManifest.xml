@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.points">
+
+    <application>
+        <!--礼物贡献榜-->
+        <activity android:name=".activity.GiftContributionActivity" />
+        <!--贡献榜-->
+        <activity android:name=".activity.FansContributionActivity" />
+    </application>
+</manifest>

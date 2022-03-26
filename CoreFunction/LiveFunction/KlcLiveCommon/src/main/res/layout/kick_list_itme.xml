@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.kalacheng.livecommon.R" />
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.libuser.model.ApiKick" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="2dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:riv_oval="true"
+            bind:image="@{viewModel.avatar}" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/avatar"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/avatar"
+            android:ellipsize="end"
+            android:maxWidth="130dp"
+            android:singleLine="true"
+            android:text="@{viewModel.username}"
+            android:textColor="@color/textColor2New"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/level_anchor"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_alignTop="@id/name"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/name"
+            android:visibility="gone"
+            bind:image="@{viewModel.anchorLevel}" />
+
+        <ImageView
+            android:id="@+id/level"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_alignTop="@id/level_anchor"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/level_anchor"
+            android:visibility="gone"
+            bind:image="@{viewModel.userLevel}" />
+
+        <ImageView
+            android:id="@+id/sex"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignTop="@id/level"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/level"
+            bind:image="@{viewModel.sex==1 ? R.mipmap.icon_boy : R.mipmap.icon_girl}" />
+
+        <TextView
+            android:id="@+id/tvSign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/avatar"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="1dp"
+            android:layout_toRightOf="@id/avatar"
+            android:ellipsize="end"
+            android:maxWidth="130dp"
+            android:singleLine="true"
+            android:text="@{viewModel.signature}"
+            android:textColor="@color/textColor9"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/btn_delete"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x28"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:background="@drawable/bg_kick"
+            android:gravity="center"
+            android:text="恢复"
+            android:textColor="#ff666666"
+            android:textSize="14sp" />
+
+        <View
+            style="@style/line2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+</layout>

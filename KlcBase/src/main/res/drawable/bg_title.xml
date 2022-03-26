@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- MDX 多对一-->
+    <!--<gradient-->
+        <!--android:endColor="#9A58FF"-->
+        <!--android:startColor="#FE73E1"-->
+        <!--android:type="linear" />-->
+
+    <!-- MDX 一对一-->
+    <gradient
+        android:angle="0"
+        android:startColor="#FF54A0"
+        android:endColor="#FF6CF6" />
+</shape>

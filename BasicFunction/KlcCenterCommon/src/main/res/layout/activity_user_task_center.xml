@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_task"/>
+
+    <RelativeLayout
+        android:id="@+id/Task_Re"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:layout_marginTop="@dimen/x30">
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:layout_centerVertical="true"
+            android:onClick="backClick"
+            android:padding="9dp"
+            android:src="@mipmap/icon_back"
+            android:tint="#fff" />
+        <com.kalacheng.util.view.ViewPagerIndicator2
+            android:id="@+id/Task_Indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x50"
+            android:layout_marginRight="@dimen/x50"
+            app:indicatorColor2="@color/white"
+            app:indicatorHeight2="2"
+            app:indicatorMarginBottom="5"
+            app:indicatorShow="true"
+            app:indicatorWidth2="12"
+            app:lightBold="true"
+            app:lightColor2="@color/white"
+            app:lightTextSize="18"
+            app:normalBold="false"
+            app:normalColor2="@color/white"
+            app:normalTextSize="16"
+            app:padding="10" />
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/Task_Viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Task_Re"/>
+
+
+</RelativeLayout>

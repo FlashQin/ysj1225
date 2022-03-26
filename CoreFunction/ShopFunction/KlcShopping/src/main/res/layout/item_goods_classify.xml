@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="vertical"
+    android:paddingTop="6dp">
+    <TextView
+        android:id="@+id/classifyTv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:text="家居好物"
+        android:textSize="14dp"
+        android:textColor="#555555"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DEDEDE"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

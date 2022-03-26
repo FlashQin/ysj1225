@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:paddingTop="14dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/goodsPicIv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="12dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        app:riv_corner_radius="3dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="12dp">
+
+        <TextView
+            android:id="@+id/goodsPriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            android:text="¥ 30.00"
+            android:textColor="#333333"
+            android:textSize="13dp" />
+
+
+        <TextView
+            android:id="@+id/goodsNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/goodsPriceTv"
+            android:lines="2"
+            android:text="仿珍珠发卡女头饰夹子韩国刘海夹一字夹成人发夹…"
+            android:textColor="#333333"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/countTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/goodsPriceTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:text="x1"
+            android:textColor="#FF999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/skuNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:text="红色;M"
+            android:textColor="#FF999999"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

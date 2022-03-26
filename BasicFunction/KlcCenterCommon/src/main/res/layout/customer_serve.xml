@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:orientation="vertical">
+    <include layout="@layout/layout_line" />
+
+    <include layout="@layout/view_title" />
+    <RelativeLayout
+        android:id="@+id/CustomerServe_phoneRe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x86"
+        android:layout_margin="@dimen/x20"
+        android:background="@drawable/bg_dialog">
+
+        <ImageView
+            android:id="@+id/CustomerServe_phoneImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@mipmap/icon_serve_phone" />
+
+        <TextView
+            android:id="@+id/CustomerServe_phoneTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x24"
+            android:layout_toRightOf="@+id/CustomerServe_phoneImage"
+            android:text="联系电话"
+            android:textColor="@color/textColor3"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/CustomerServe_phoneNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CustomerServe_phoneTitle"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x2"
+            android:layout_toRightOf="@+id/CustomerServe_phoneImage"
+            android:text="400-000-0000"
+            android:textColor="#73798D"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_right_orl"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/CustomerServe_qqRe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x86"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:background="@drawable/bg_dialog">
+
+        <ImageView
+            android:id="@+id/CustomerServe_qqImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@mipmap/icon_serve_qq" />
+
+        <TextView
+            android:id="@+id/CustomerServe_qqTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x24"
+            android:layout_toRightOf="@+id/CustomerServe_qqImage"
+            android:text="QQ客服"
+            android:textColor="@color/textColor3"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/CustomerServe_qqNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CustomerServe_qqTitle"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x2"
+            android:layout_toRightOf="@+id/CustomerServe_qqImage"
+            android:text="852836376"
+            android:textColor="#73798D"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/CustomerServe_wxRe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x20"
+        android:background="@drawable/bg_dialog">
+
+        <ImageView
+            android:id="@+id/CustomerServe_wxImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@mipmap/icon_serve_wx" />
+
+        <ImageView
+            android:id="@+id/CustomerServe_Image"
+            android:layout_width="@dimen/x160"
+            android:layout_height="@dimen/x160"
+            android:layout_below="@+id/CustomerServe_wxNum"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginBottom="@dimen/x40"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/CustomerServe_wxNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CustomerServe_wxTitle"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x2"
+            android:layout_toRightOf="@+id/CustomerServe_wxImage"
+            android:text="jhdduu123"
+            android:textColor="#73798D"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/CustomerServe_wxTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_toRightOf="@+id/CustomerServe_wxImage"
+            android:text="微信客服"
+            android:textColor="@color/textColor3"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_video_comment">
+
+    <ImageView
+        android:id="@+id/set_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x12"
+        android:background="@mipmap/close"/>
+
+    <RelativeLayout
+        android:id="@+id/room_mode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x48">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/textColor6"
+            android:text="当前房间模式"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/administrators_roomtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/textColor6"
+            android:text="当前房间模式"
+            android:layout_marginRight="@dimen/x14"
+            android:layout_toLeftOf="@+id/right_icon"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:id="@+id/right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:background="@mipmap/icon_arrow_right"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_f4f4f4"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_is_anchor_shop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x48">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/textColor6"
+            android:text="我要直播带货"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_centerVertical="true"/>
+
+        <CheckBox
+            android:id="@+id/is_anchor_shop"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:button="@null"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/cd_iwant_shop"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_f4f4f4"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/administrators_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x48">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/textColor6"
+            android:text="管理员列表"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_centerVertical="true"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:background="@mipmap/icon_arrow_right"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_f4f4f4"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/forbidden_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x48">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/textColor6"
+            android:text="禁言列表"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_centerVertical="true"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:background="@mipmap/icon_arrow_right"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_f4f4f4"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/kick_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x48">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/textColor6"
+            android:text="踢人列表"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_centerVertical="true"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:background="@mipmap/icon_arrow_right"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:onClick="backClick"
+                android:padding="15dp"
+                android:src="@mipmap/icon_back"
+                android:tint="#333" />
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="19dp"
+                android:singleLine="true"
+                android:text="购物车"
+                android:textColor="#2B2C2C"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_alignParentBottom="true"
+                android:background="#DEDEDE" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottomView"
+                android:overScrollMode="never"
+                android:paddingHorizontal="12dp" />
+
+            <RelativeLayout
+                android:id="@+id/bottomView"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#DEDEDE" />
+
+
+                <CheckBox
+                    android:id="@+id/checkAllCb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="12dp"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:button="@null"
+                    android:drawableStart="@drawable/cb_gouxuan"
+                    android:text="全选"
+                    android:textSize="14dp"
+                    android:textColor="#333333"
+                    android:drawablePadding="6dp" />
+
+                <TextView
+                    android:id="@+id/goodsCountTv"
+                    android:layout_width="100dp"
+                    android:layout_height="34dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp"
+                    android:text="结算(0)"
+                    android:background="@drawable/bg_goods_count"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:id="@+id/priceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:layout_toStartOf="@id/goodsCountTv"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="14dp"
+                    android:text="¥ 0.00"
+                    android:textSize="16dp"
+                    android:textColor="#FFFB0035" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="合计:"
+                    android:textSize="12dp"
+                    android:textColor="#FF666666"
+                    android:layout_toStartOf="@id/priceTv"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="2dp"
+                    android:layout_marginEnd="5dp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

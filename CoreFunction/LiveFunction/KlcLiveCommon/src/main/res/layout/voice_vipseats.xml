@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_video_comment">
+
+        <RelativeLayout
+            android:id="@+id/vipSeats_Top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x48">
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/close"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#444444"
+                android:textSize="20sp"
+                android:text="豪华贵宾席"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vipSeats_Top"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginBottom="@dimen/x30">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/vipSeats_userHead"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/x60"
+                android:layout_marginLeft="@dimen/x60"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:riv_oval="true" />
+
+                <TextView
+                    android:id="@+id/vipSeats_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/textColor3"
+                    android:layout_toRightOf="@+id/vipSeats_userHead"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_marginTop="@dimen/x10"
+                    android:text="撒大声地就 邀请你上座贵宾席"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/vipSeats_userHead"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_below="@+id/vipSeats_Name"
+                android:visibility="gone"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/vipSeats_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/icon_boy"
+                    />
+                <ImageView
+                    android:id="@+id/vipSeats_userGrade"
+                    android:layout_width="@dimen/x32"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_height="@dimen/x15"/>
+                <ImageView
+                    android:id="@+id/vipSeats_vipGrade"
+                    android:layout_width="@dimen/x32"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_height="@dimen/x15"/>
+                <ImageView
+                    android:id="@+id/vipSeats_fansGrade"
+                    android:layout_width="@dimen/x32"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_height="@dimen/x15"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/vipSeats_Buy"
+            android:layout_width="@dimen/x270"
+            android:layout_height="@dimen/x38"
+            android:layout_below="@+id/information"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/bg_buyvipseats"
+            android:layout_marginBottom="@dimen/x20">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_money"
+                />
+            <TextView
+                android:id="@+id/vipSeats_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginLeft="@dimen/x5"
+                android:text="100金币 成为直播间大卡司"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/vipSeats_OpenVip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_below="@+id/vipSeats_Buy"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/x20"
+            android:text="开通贵族，免费上位＞＞"
+            android:textColor="@color/yellow2"/>
+    </RelativeLayout>
+</LinearLayout>

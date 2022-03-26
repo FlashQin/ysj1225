@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/bg_dailog_joinroom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="密码房间"
+            android:textColor="#ffffffff"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <EditText
+                    android:id="@+id/edit1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_pwd_txt"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/edit2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/edit1"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_pwd_txt"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/edit3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/edit2"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_pwd_txt"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/edit4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/edit3"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_pwd_txt"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/edit5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/edit4"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_pwd_txt"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/edit6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/edit5"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_pwd_txt"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:background="@null"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="请输入房间密码"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_white_close" />
+</RelativeLayout>

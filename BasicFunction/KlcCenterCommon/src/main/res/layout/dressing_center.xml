@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="19dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:onClick="backClick"
+            android:padding="9dp"
+            android:src="@mipmap/icon_back"
+            android:tint="#333" />
+
+        <com.kalacheng.util.view.ViewPagerIndicator
+            android:id="@+id/DressingCenter_Indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x60"
+            android:layout_marginRight="@dimen/x60"
+            app:bold="true"
+            app:change_size="true"
+            app:currentItem="0"
+            app:lightColor="@color/textColor3"
+            app:normalColor="@color/textColor9"
+            app:title_textSize="14sp"
+            app:visibleItemCount="2" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/DressingCenter_Viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

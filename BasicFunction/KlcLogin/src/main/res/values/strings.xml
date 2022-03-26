@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">KlcLogin</string>
+
+    <string name="login_phone_tip">手机号登录</string>
+    <string name="login_register_tip">注册</string>
+    <string name="login_tip_1">登录即代表你同意</string>
+    <string name="login_other_type">选择其他登录方式</string>
+    <string name="reg_input_phone">请输入手机号</string>
+    <string name="reg_input_new_phone">请输入新手机号</string>
+    <string name="reg_input_code">请输入验证码</string>
+    <string name="reg_input_pwd_1">请输入密码</string>
+    <string name="reg_input_pwd_2">请确认密码</string>
+    <string name="reg_input_pwd_1_info">密码由6-20位数字和字母组成</string>
+    <string name="reg_get_code">获取验证码</string>
+    <string name="reg_get_code_again">重新获取</string>
+    <string name="reg_pwd_error">密码不一致</string>
+    <string name="reg_register_ing">注册中</string>
+    <string name="reg_register">手机号注册</string>
+    <string name="login_forget_pwd">忘记密码</string>
+    <string name="login_phone_error">请输入正确的手机号码</string>
+    <string name="login_ing">登录中</string>
+    <string name="login_confirm">登录</string>
+    <string name="login_tip_2">服务和隐私条款</string>
+    <string name="login_binding_phone">手机号</string>
+    <string name="login_modify_phone">修改手机号</string>
+    <string name="login_binding_phone_ing">绑定中</string>
+
+    <string name="modify_pwd_old">旧密码</string>
+    <string name="modify_pwd_old_1">请输入旧密码</string>
+    <string name="modify_pwd_new">新密码</string>
+    <string name="modify_pwd_new_1">请填写新密码</string>
+    <string name="modify_pwd_confirm">确认密码</string>
+    <string name="modify_pwd_confirm_1">请确认新密码</string>
+    <string name="modify_pwd_confirm_2">确认修改</string>
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/vip_gift_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="210dp"
+                android:layout_height="210dp"
+                android:background="@drawable/shape_progress_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vip_gift_content_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vip_gift_pic"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="11dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/vip_gift_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#00FFF4"
+                tools:text="【我是小妖怪】" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="赠送主播" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/vip_gift_content_gift"
+            android:layout_below="@+id/vip_gift_content_layout"
+            android:layout_centerInParent="true"
+            android:layout_width="90dp"
+            android:layout_height="105dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <RelativeLayout
+            android:layout_below="@+id/vip_gift_content_gift"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/vip_gift_tag"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="#00FFF4"
+                tools:text="【火箭】" />
+
+            <com.kalacheng.util.view.MagicTextView
+                android:id="@+id/vip_gift_number"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/vip_gift_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textStyle="italic"
+                android:lines="1"
+                android:visibility="visible"
+                app:outerShadowDx="3"
+                app:outerShadowDy="3"
+                app:outerShadowRadius="1"
+                app:strokeColor="@color/color_DD85FD"
+                app:strokeJoinStyle="round"
+                app:strokeWidthsss="2"
+                tools:text="x100" />
+        </RelativeLayout>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/vip_gift_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            app:riv_oval="true" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

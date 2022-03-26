@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_top"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="选择提现账号"
+            android:textColor="@color/textColor3"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_pay_method_dialog_close" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTypeAlipay"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="6dp"
+        android:drawableLeft="@mipmap/icon_cash_ali"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="24dp"
+        android:text="支付宝"
+        android:textColor="#3A3A3A"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#dedede" />
+
+    <TextView
+        android:id="@+id/tvTypeWx"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="12dp"
+        android:drawableLeft="@mipmap/icon_cash_wx"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="24dp"
+        android:text="微信"
+        android:textColor="#3A3A3A"
+        android:textSize="14sp" />
+
+</LinearLayout>

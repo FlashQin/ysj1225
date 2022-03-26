@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.points.viewmodel.ProfitListViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/btn_pro_day"
+                android:layout_width="60dp"
+                android:layout_height="26dp"
+                android:background="@drawable/ranklist_radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/main_list_day"
+                android:textColor="@drawable/ranklist_tvcolor"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/btn_pro_week"
+                android:layout_width="60dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/ranklist_radiobutton"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/main_list_week"
+                android:textColor="@drawable/ranklist_tvcolor"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/btn_pro_month"
+                android:layout_width="60dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/ranklist_radiobutton"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/main_list_month"
+                android:textColor="@drawable/ranklist_tvcolor"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/btn_pro_all"
+                android:layout_width="60dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/ranklist_radiobutton"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/main_list_all"
+                android:textColor="@drawable/ranklist_tvcolor"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart_Profit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_Profit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    </LinearLayout>
+</layout>

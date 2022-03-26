@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kalacheng.live">
+
+    <application>
+        <!-- 视频直播，主播端 -->
+        <activity
+            android:name=".component.compactivity.LiveAnchorActivity"
+            android:launchMode="singleTask" />
+        <!-- 视频直播，观众端 -->
+        <activity
+            android:name=".component.compactivity.LiveAudienceActivity"
+            android:launchMode="singleTask" />
+        <!-- 视频直播，结束界面 -->
+        <activity
+            android:name=".component.compactivity.CloseLiveActivity"
+            android:launchMode="singleTask" />
+    </application>
+</manifest>

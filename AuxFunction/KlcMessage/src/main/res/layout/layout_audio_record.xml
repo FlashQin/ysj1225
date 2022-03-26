@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:background="@color/gray3" />
+
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/gray1"
+                android:text="00:00"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:background="@color/gray3" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/recordBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:src="@mipmap/huatong_icon"
+                android:background="@android:color/transparent"
+                android:layout_centerInParent="true"
+                android:layout_marginVertical="20dp"/>
+
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:visibility="invisible"
+                android:text="删除"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_delete_btn"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

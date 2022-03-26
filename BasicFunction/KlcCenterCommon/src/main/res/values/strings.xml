@@ -1,0 +1,29 @@
+<resources>
+    <string name="login_out">退出登录</string>
+    <string name="set">设置</string>
+    <string name="setting_clear_cache">清除缓存成功</string>
+    <string name="setting_clear_cache_ing">清除缓存中...</string>
+    <string name="reg_input_name">需与身份证姓名一致</string>
+    <string name="reg_input_id">请输入身份证号</string>
+    <string name="reg_input_phone">请输入手机号</string>
+    <string name="reg_input_qq">请输入QQ号</string>
+    <string name="reg_input_wechat">请输入微信号</string>
+    <string name="reg_input_more">请输入附加信息</string>
+    <string name="modify_finish">修改成功</string>
+
+<!--    权限设置-->
+    <string name="mine_power_setting_title">特权设置</string>
+    <string name="mine_power_setting_text">隐身特权设置</string>
+    <string name="mine_power_setting_contribute">贡献榜隐身</string>
+    <string name="mine_power_setting_live">进入直播间隐身</string>
+    <string name="mine_power_setting_recharge">充值隐身</string>
+    <string name="mine_power_setting_all_broadcast_title">全站广播设置</string>
+    <string name="mine_power_setting_all_broadcast">直播间发消息全站广播</string>
+
+    <string name="mine_power_setting_contribute_tips">开启后，您将会在贡献榜中隐身</string>
+    <string name="mine_power_setting_live_tips">开启后，您进入直播间将会隐身，其他人将看不到您的入场信息</string>
+    <string name="mine_power_setting_recharge_tips">开启后，将不会提示您的充值飘屏</string>
+    <string name="mine_power_setting_all_broadcast_close">关闭后，贵族发言将不会全站飘屏广播</string>
+
+
+</resources>

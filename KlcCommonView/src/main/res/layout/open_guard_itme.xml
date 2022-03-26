@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kalacheng.libuser.model.ApiGuard" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/guard_Re"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x53"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_open_guard"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/guard_lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:background="@mipmap/guard" />
+
+                <TextView
+                    android:id="@+id/guard_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/guard_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guard_lin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/textColor6"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

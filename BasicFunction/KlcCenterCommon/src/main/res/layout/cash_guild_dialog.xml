@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+    
+    <RelativeLayout
+        android:layout_width="@dimen/x270"
+        android:layout_height="@dimen/x150"
+        android:background="@drawable/bg_dialog">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/x30"
+            android:textColor="@color/textColor3"
+            android:text="加入公会后所获得的收益 \n(与公会相关)"/>
+        
+        <TextView
+            android:id="@+id/CashGuild_Know"
+            android:layout_width="@dimen/x140"
+            android:layout_height="@dimen/x36"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="我知道了"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/x30"
+            android:background="@drawable/bg_user_task_btn"
+            />
+    </RelativeLayout>
+</LinearLayout>

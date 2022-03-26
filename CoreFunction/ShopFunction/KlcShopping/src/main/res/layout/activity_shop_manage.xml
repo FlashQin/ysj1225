@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="numDto"
+            type="com.kalacheng.libuser.model.ShopOrderNumDTO" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:onClick="backClick"
+                android:padding="15dp"
+                android:src="@mipmap/icon_back"
+                android:tint="#333" />
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="19dp"
+                android:singleLine="true"
+                android:text="官方小店"
+                android:textColor="#2B2C2C"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/remakeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#FFEBE0"
+                    android:drawableStart="@mipmap/icon_shenhezhong"
+                    android:drawablePadding="7dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:text="你的小店正在审核中"
+                    android:textColor="#FF5500"
+                    android:textSize="13dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/bg_shop_manage"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="我的订单"
+                            android:textColor="#FF333333"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lookAllTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:drawableEnd="@mipmap/icon_jiantou_right"
+                            android:drawablePadding="4dp"
+                            android:gravity="center_vertical"
+                            android:text="查看全部订单"
+                            android:textColor="#FF999999"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#DEDEDE" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/waitPayTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="22dp"
+                                android:drawableTop="@mipmap/icon_daifukuan"
+                                android:drawablePadding="10dp"
+                                android:text="待付款"
+                                android:textColor="#333333"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="-12dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_toEndOf="@id/waitPayTv"
+                                android:background="@drawable/bg_order_count"
+                                android:gravity="center"
+                                android:minWidth="16dp"
+                                android:paddingHorizontal="2dp"
+                                android:text="@{String.valueOf(numDto.toBePayNum)}"
+                                android:textColor="#FF5500"
+                                android:textSize="10dp"
+                                android:visibility="@{numDto.toBePayNum &lt; 1 ? View.INVISIBLE:View.VISIBLE}" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/waitDeliverGoodsTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="22dp"
+                                android:drawableTop="@mipmap/icon_daifahuo"
+                                android:drawablePadding="10dp"
+                                android:text="待发货"
+                                android:textColor="#333333"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="-12dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_toEndOf="@id/waitDeliverGoodsTv"
+                                android:background="@drawable/bg_order_count"
+                                android:gravity="center"
+                                android:minWidth="16dp"
+                                android:paddingHorizontal="2dp"
+                                android:text="@{String.valueOf(numDto.toBeDeliveredNum)}"
+                                android:textColor="#FF5500"
+                                android:textSize="10dp"
+                                android:visibility="@{numDto.toBeDeliveredNum &lt; 1 ? View.INVISIBLE:View.VISIBLE}" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/waitReceiptTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="22dp"
+                                android:drawableTop="@mipmap/icon_daishouhuo"
+                                android:drawablePadding="10dp"
+                                android:text="待收货"
+                                android:textColor="#333333"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="-12dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_toEndOf="@id/waitReceiptTv"
+                                android:background="@drawable/bg_order_count"
+                                android:gravity="center"
+                                android:minWidth="16dp"
+                                android:paddingHorizontal="2dp"
+                                android:text="@{String.valueOf(numDto.toBeReceivedNum)}"
+                                android:textColor="#FF5500"
+                                android:textSize="10dp"
+                                android:visibility="@{numDto.toBeReceivedNum &lt; 1 ? View.INVISIBLE:View.VISIBLE}" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/afterSalesTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="22dp"
+                                android:drawableTop="@mipmap/icon_tuikuanshouhou"
+                                android:drawablePadding="10dp"
+                                android:text="退货/退款"
+                                android:textColor="#333333"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="-16dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_toEndOf="@id/afterSalesTv"
+                                android:background="@drawable/bg_order_count"
+                                android:gravity="center"
+                                android:minWidth="16dp"
+                                android:paddingHorizontal="2dp"
+                                android:text="@{String.valueOf(numDto.cancelGoodsNum)}"
+                                android:textColor="#FF5500"
+                                android:textSize="10dp"
+                                android:visibility="@{numDto.cancelGoodsNum &lt; 1 ? View.INVISIBLE:View.VISIBLE}" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/bg_shop_manage"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="订单数据"
+                            android:textColor="#FF333333"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/timeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:drawableEnd="@mipmap/withdraw_expand_down"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:text="今日"
+                            android:textColor="#FF999999"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#DEDEDE" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingVertical="16dp">
+
+                            <TextView
+                                android:id="@+id/orderCountTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="#FF5500"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="8dp"
+                                android:text="订单数量"
+                                android:textColor="#333333"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="22dp"
+                            android:background="#CCCCCC" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingVertical="16dp">
+
+                            <TextView
+                                android:id="@+id/priceTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="#FF5500"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="8dp"
+                                android:text="订单金额"
+                                android:textColor="#333333"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="22dp"
+                            android:background="#CCCCCC"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingVertical="16dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="#FF5500"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="8dp"
+                                android:text="直播订单"
+                                android:textColor="#333333"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="22dp"
+                            android:background="#CCCCCC" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingVertical="16dp">
+
+                            <TextView
+                                android:id="@+id/incomeTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="#FF5500"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="8dp"
+                                android:text="卖货收入"
+                                android:textColor="#333333"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/bg_shop_manage"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="小店管理"
+                            android:textColor="#FF333333"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#DEDEDE" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_marginBottom="25dp"
+                        android:overScrollMode="never"
+                        android:scrollbars="vertical" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

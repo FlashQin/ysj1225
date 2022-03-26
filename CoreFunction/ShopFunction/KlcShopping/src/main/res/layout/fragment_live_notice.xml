@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:text="我的预告"
+                android:textSize="14dp"
+                android:textColor="#333333"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"/>
+
+            <View
+                android:id="@+id/line"
+                android:background="#F5F5F5"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:text="添加直播预告"
+                android:textSize="14dp"
+                android:textColor="#333333" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="预告标题"
+                    android:textSize="14dp"
+                    android:textColor="#555555" />
+
+                <EditText
+                    android:id="@+id/titleTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:layout_marginStart="23dp"
+                    android:hint="请输入标题（最多支持8个字）"
+                    android:textSize="13dp"
+                    android:textColor="#555555" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginHorizontal="12dp"
+                android:background="#DEDEDE" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="开始时间"
+                    android:textSize="14dp"
+                    android:textColor="#555555" />
+
+                <TextView
+                    android:id="@+id/timeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/icon_jiantou_right"
+                    android:paddingEnd="15dp"
+                    android:layout_marginStart="23dp"
+                    android:textSize="13dp"
+                    android:textColor="#555555" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginHorizontal="12dp"
+                android:background="#DEDEDE" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:paddingHorizontal="45dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <NumberPicker
+                    android:id="@+id/numberPicker"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <TimePicker
+                    android:id="@+id/timepicker"
+                    android:layout_width="0dp"
+                    android:timePickerMode="spinner"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="12dp"
+                    android:text="预告海报"
+                    android:textSize="14dp"
+                    android:textColor="#333333" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/posterIv"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginStart="23dp"
+                    app:riv_corner_radius="5dp"
+                    android:src="@mipmap/icon_fengmian" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addTv"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_confirm"
+                android:gravity="center"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="40dp"
+                android:text="添加直播预告"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

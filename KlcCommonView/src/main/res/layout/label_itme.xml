@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+        <TextView
+            android:id="@+id/Search_Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/x14"
+            android:paddingLeft="@dimen/x15"
+            android:paddingRight="@dimen/x15"
+            android:paddingTop="@dimen/x5"
+            android:text="adadas"
+            android:paddingBottom="@dimen/x5"
+            android:layout_gravity="center_vertical"
+            android:textColor="#272727"/>
+        <ImageView
+            android:id="@+id/Search_reduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/qudiao"
+            android:layout_marginLeft="-18dp"
+            android:visibility="gone"
+            android:layout_toRightOf="@id/Search_Content"/>
+</RelativeLayout>

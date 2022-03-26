@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="3dp">
+
+    <TextView
+        android:id="@+id/tv_shopping_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:drawableStart="@mipmap/icon_gouwuche_555"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:text="购物车"
+        android:textSize="16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#DDDDDD" />
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:drawableStart="@mipmap/icon_xiaoxi_555"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:text="消息"
+        android:textSize="16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#DDDDDD" />
+
+    <TextView
+        android:id="@+id/tv_order"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:drawableStart="@mipmap/icon_dingdan_555"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:text="我的订单"
+        android:textSize="16dp" />
+
+</LinearLayout>

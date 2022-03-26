@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layoutLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/ivOneBigSwitch"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_one_big_switch" />
+
+        <ImageView
+            android:id="@+id/ivOneScreen"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="9dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_one_screen" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flLabelIndicator"
+        android:layout_width="30dp"
+        android:layout_height="3dp"
+        android:layout_below="@+id/layoutLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="9dp"
+        android:background="#e9e9e9">
+
+        <TextView
+            android:id="@+id/tvLabelIndicator"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:background="#DC92F5" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutLabel"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/iv_meet"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@drawable/bg_meet" />-->
+
+        <LinearLayout
+            android:id="@+id/iv_meet"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@mipmap/bg_img_meet"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            android:paddingLeft="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="遇见TA"
+                android:textColor="#950112"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="匹配聊天"
+                android:textColor="#CA6773"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layoutChooseChat"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@mipmap/bg_img_choose_chat">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="选聊"
+                    android:textColor="#950112"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutRequestChat"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@mipmap/bg_img_request_chat">
+
+                <TextView
+                    android:id="@+id/tvRequestChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="求聊"
+                    android:textColor="#950112"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_select">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+
+                <com.kalacheng.util.view.ItemLayout
+                    android:id="@+id/item_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:height_ratio="1"
+                    app:width_ratio="3">
+
+                    <com.bigkoo.convenientbanner.ConvenientBanner
+                        android:id="@+id/convenientBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:canLoop="true" />
+                </com.kalacheng.util.view.ItemLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/iv_search"-->
+    <!--            android:layout_width="30dp"-->
+    <!--            android:layout_height="30dp"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:layout_marginTop="6dp"-->
+    <!--            android:scaleType="centerInside"-->
+    <!--            android:src="@mipmap/icon_ono2one_search" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/iv_function"-->
+    <!--            android:layout_width="30dp"-->
+    <!--            android:layout_height="30dp"-->
+    <!--            android:layout_alignParentRight="true"-->
+    <!--            android:layout_marginTop="6dp"-->
+    <!--            android:layout_marginRight="10dp"-->
+    <!--            android:scaleType="centerInside"-->
+    <!--            android:src="@mipmap/icon_function" />-->
+
+</RelativeLayout>

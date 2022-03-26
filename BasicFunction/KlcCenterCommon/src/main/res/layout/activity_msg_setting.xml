@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:paddingTop="19dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="消息设置"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:onClick="backClick"
+                android:padding="9dp"
+                android:src="@mipmap/icon_back"
+                android:tint="@color/textColor" />
+        </RelativeLayout>
+    </FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray2" />
+    <CheckBox
+        android:id="@+id/distanceCb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x55"
+        android:background="@drawable/bg_line_bottom"
+        android:gravity="center_vertical"
+        android:button="@null"
+        android:checked="true"
+        android:text="是否显示距离"
+        android:textColor="#444444"
+        android:textSize="@dimen/x14"
+        android:visibility="gone"
+        android:paddingHorizontal="@dimen/x12"
+        android:drawableEnd="@drawable/selector_open_close" />
+    <CheckBox
+        android:id="@+id/closePopupCb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x55"
+        android:background="@drawable/bg_line_bottom"
+        android:gravity="center_vertical"
+        android:button="@null"
+        android:checked="false"
+        android:text="应用内横幅弹窗"
+        android:textColor="#444444"
+        android:visibility="gone"
+        android:textSize="@dimen/x14"
+        android:paddingHorizontal="@dimen/x12"
+        android:drawableEnd="@drawable/selector_open_close" />
+    <CheckBox
+        android:id="@+id/msgPushCb_voice"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x55"
+        android:background="@drawable/bg_line_bottom"
+        android:gravity="center_vertical"
+        android:button="@null"
+        android:checked="false"
+        android:text="消息提示音"
+        android:textColor="#444444"
+        android:textSize="@dimen/x14"
+        android:paddingHorizontal="@dimen/x12"
+        android:drawableEnd="@drawable/selector_open_close" />
+    <CheckBox
+        android:id="@+id/msgPushCb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x55"
+        android:background="@drawable/bg_line_bottom"
+        android:gravity="center_vertical"
+        android:button="@null"
+        android:checked="false"
+        android:text="消息推送"
+        android:textColor="#444444"
+        android:textSize="@dimen/x14"
+        android:paddingHorizontal="@dimen/x12"
+        android:drawableEnd="@drawable/selector_open_close" />
+
+</LinearLayout>

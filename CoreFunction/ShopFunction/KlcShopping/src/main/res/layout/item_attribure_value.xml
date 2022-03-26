@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/attributeEt"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_attribure_value"
+        android:gravity="center"
+        android:hint="请输入属性值"
+        android:singleLine="true"
+        android:textColor="#FF5500"
+        android:textSize="13dp" />
+
+    <ImageView
+        android:id="@+id/delIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-24dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/attributeEt"
+        android:src="@mipmap/icon_delete" />
+
+</RelativeLayout>

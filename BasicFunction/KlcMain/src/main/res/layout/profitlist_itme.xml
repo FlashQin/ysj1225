@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.kalacheng.libuser.model.ApiUsersVoterecord" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/layoutListItemBg"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:background="@color/white"
+        android:descendantFocusability="blocksDescendants">
+
+        <View
+            android:id="@+id/viewItemDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#D8D8D8" />
+
+        <TextView
+            android:id="@+id/order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:textColor="@color/textColor2New"
+            android:text="@{String.valueOf(viewModel.number)}"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_toRightOf="@id/order"
+            android:scaleType="centerCrop"
+            app:riv_oval="true"
+            bind:image="@{viewModel.avatar}"/>
+
+        <TextView
+            android:id="@+id/votes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:drawableLeft="@mipmap/icon_money"
+            android:drawablePadding="4dp"
+            android:textColor="#EA4040"
+            android:text="@{String.valueOf(viewModel.totalvotes)}"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:layout_toLeftOf="@id/votes"
+            android:layout_toRightOf="@id/avatar"
+            android:ellipsize="end"
+            android:maxWidth="100dp"
+            android:singleLine="true"
+            android:textColor="@color/textColor2New"
+            android:textSize="15sp"
+            android:text="@{viewModel.username}"/>
+
+    </RelativeLayout>
+</layout>

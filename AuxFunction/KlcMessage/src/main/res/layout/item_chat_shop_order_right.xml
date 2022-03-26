@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:textColor="@color/gray3"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="36dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/contentTv">
+
+            <ImageView
+                android:id="@+id/icon_fail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@mipmap/icon_chat_msg_warn"
+                android:visibility="invisible" />
+
+            <ProgressBar
+                android:id="@+id/loading"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:indeterminateBehavior="repeat"
+                android:indeterminateDrawable="@drawable/anim_loading"
+                android:indeterminateOnly="true"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMsgShopOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/bg_message_right"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/tvOrderType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退款申请"
+                android:textColor="#FF333333"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_msg_shop_order_image">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivProduct"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_corner_radius="9dp" />
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/ivProduct"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#FF333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvProductNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@id/ivProduct"
+                    android:text="共0件"
+                    android:textColor="#FF999999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvTotalAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="总金额 ¥0.00 "
+                    android:textColor="#FF999999"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="收货人："
+                android:textColor="#FF666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="电话："
+                android:textColor="#FF666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="地址："
+                android:textColor="#FF666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvRefundType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="退款类型："
+                android:textColor="#FF666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvRefundAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="退款金额："
+                android:textColor="#FF666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvRefundNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="退款原因："
+                android:textColor="#FF666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvRefundAmountConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="到账金额："
+                android:textColor="#FF666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvRefundTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="到账时间："
+                android:textColor="#FF666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvReason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="原因："
+                android:textColor="#FF666666"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutRefundImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivRefundImage0"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_corner_radius="5dp" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivRefundImage1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_corner_radius="5dp" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivRefundImage2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_corner_radius="5dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="10天未处理订单将自动同意退款申请"
+                android:textColor="#FFFC8F3A"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvHandle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_btn_order_start"
+                android:gravity="center"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="5dp"
+                android:text="去处理"
+                android:textColor="#888888"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

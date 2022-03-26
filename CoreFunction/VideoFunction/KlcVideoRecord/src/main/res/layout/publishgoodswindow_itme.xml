@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/LiveGoodsWindow_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x12">
+
+        <ImageView
+            android:id="@+id/LiveGoodsWindow_image"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/LiveGoodsWindow_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_toRightOf="@+id/LiveGoodsWindow_image"
+            android:text="仿珍珠发卡女头饰夹子韩国刘海夹一字夹成人发夹…"
+            android:textColor="@color/textColor3"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LiveGoodsWindow_name"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_toRightOf="@+id/LiveGoodsWindow_image">
+
+            <TextView
+                android:id="@+id/LiveGoodsWindow_Money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="￥：140：00"
+                android:textColor="#ff4500"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/LiveGoodsWindow_button"
+                android:layout_gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x10"
+                android:background="@drawable/bg_btn_orange"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:gravity="center"
+                android:text="选择"
+                android:textSize="14sp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:paddingLeft="@dimen/x20"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/LiveGoodsWindow_sort"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/x44"
+                    android:layout_height="@dimen/x24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:background="@drawable/bg_livegoods_window"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/textColor3" />
+
+                <RelativeLayout
+                    android:id="@+id/LiveGoodsWindow_select_Re"
+                    android:layout_width="@dimen/x30"
+                    android:layout_height="@dimen/x30"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/LiveGoodsWindow_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/livegoods_unselect" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/textColor9"/>
+
+</LinearLayout>

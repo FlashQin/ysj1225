@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/bg_treasurechest">
+
+    <TextView
+        android:id="@+id/TreasureChest_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x30"
+        android:text="黄金宝箱"
+        android:textColor="#FFD45E"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/TreasureChest_choice"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/icon_treasurechest_choice" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/TreasureChest_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TreasureChest_Title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x5"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        tools:text="08:00~10:00" />
+
+    <ViewFlipper
+        android:id="@+id/TreasureChest_WinRecord"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x30"
+        android:layout_below="@+id/TreasureChest_Time"
+        android:layout_margin="@dimen/x10"
+        android:autoStart="true"
+        android:background="@drawable/bg_win_record"
+        android:flipInterval="4000"
+        android:inAnimation="@anim/slide_in_bottom"
+        android:outAnimation="@anim/slide_out_top"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/TreasureChest_GiftList"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x40"
+        android:layout_below="@+id/TreasureChest_WinRecord"
+        android:layout_centerHorizontal="true" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/TreasureChest_viewPage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x180"
+        android:layout_below="@+id/TreasureChest_GiftList"
+        android:layout_marginTop="@dimen/x10" />
+
+
+    <RelativeLayout
+        android:id="@+id/TreasureChest_ProgressBar_re"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TreasureChest_viewPage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x10">
+
+        <ProgressBar
+            android:id="@+id/TreasureChest_ProgressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="@dimen/x200"
+            android:layout_height="@dimen/x15"
+            android:max="100"
+            android:progressDrawable="@drawable/bg_game_pro" />
+
+        <FrameLayout
+            android:id="@+id/TreasureChest_Frame"
+            android:layout_width="@dimen/x200"
+            android:layout_height="@dimen/x15"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_game_pro" />
+
+            <RelativeLayout
+                android:id="@+id/TreasureChest_Rela"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/TreasureChest_View"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="@dimen/x5"
+                    android:background="@drawable/bg_game_pro3" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/pro_star" />
+            </RelativeLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/TreasureChest_spot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TreasureChest_ProgressBar_re"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x10"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/TreasureChest_Classification"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:layout_below="@+id/TreasureChest_spot"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginRight="@dimen/x30" />
+
+</RelativeLayout>

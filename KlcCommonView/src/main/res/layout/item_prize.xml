@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/rootView"
+        android:layout_width="@dimen/x58"
+        android:layout_height="@dimen/x80"
+        android:layout_marginEnd="@dimen/x10"
+        android:layout_marginBottom="@dimen/x10"
+        android:background="@drawable/bg_prize_0"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/x3">
+
+
+        <TextView
+            android:id="@+id/dayNumTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#B1B5B9"
+            android:textSize="@dimen/x11" />
+
+        <ImageView
+            android:id="@+id/prizeIv"
+            android:layout_width="@dimen/x34"
+            android:layout_height="@dimen/x34"
+            android:layout_marginVertical="@dimen/x3" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#98A1B4"
+            android:textSize="@dimen/x12" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/receivedRl"
+        android:layout_width="@dimen/x58"
+        android:layout_height="@dimen/x80"
+        android:layout_marginEnd="@dimen/x10"
+        android:layout_marginBottom="@dimen/x10"
+        android:background="@drawable/bg_prize_2"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_gouxuan_white"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

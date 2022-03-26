@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/OpenNobleGift"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--vip-->
+    <!--开通贵族-->
+    <RelativeLayout
+        android:id="@+id/Re_OpenNobleGift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationX="1700dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/Re_OpenNobleGift1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x34"
+            android:layout_marginLeft="@dimen/x12"
+            android:background="@mipmap/bg_noble_gift"
+            >
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/OpenNoble_userImage"
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30"
+                app:riv_oval="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginLeft="@dimen/x2"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:id="@+id/OpenNobleGift_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yellow2"
+                android:textSize="12sp"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_toRightOf="@+id/OpenNoble_userImage"
+                android:layout_centerVertical="true"
+                android:text="小米"/>
+            <TextView
+                android:id="@+id/OpenNobleGift_Type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/OpenNobleGift_userName"
+                android:text="开通了白银贵族"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

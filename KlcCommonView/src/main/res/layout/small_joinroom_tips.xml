@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="@dimen/x270"
+            android:layout_height="@dimen/x150"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_dialog_2">
+
+            <TextView
+                android:id="@+id/SingLaloot_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/x30"
+                android:textColor="@color/textColor3"
+                android:lineSpacingExtra="@dimen/x5"
+                android:gravity="center"
+                android:text="你正在房间中\n确认要进入其它房间吗？"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_f4f4f4"
+                android:layout_above="@+id/small_bottm"/>
+           <LinearLayout
+               android:id="@+id/small_bottm"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/x40"
+               android:layout_alignParentBottom="true"
+               android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/canle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:textColor="@color/textColor3"
+                    android:text="取消"
+                    android:gravity="center"/>
+               <ImageView
+                   android:layout_width="1dp"
+                   android:layout_height="match_parent"
+                   android:background="@color/bg_f4f4f4"
+                   />
+               <TextView
+                   android:id="@+id/confirm"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="match_parent"
+                   android:textSize="14sp"
+                   android:textColor="@color/color_DD85FD"
+                   android:text="确认"
+                   android:gravity="center"/>
+           </LinearLayout>
+        </RelativeLayout>
+
+</RelativeLayout>

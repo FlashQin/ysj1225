@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--完成任务-->
+    <RelativeLayout
+        android:id="@+id/Re_Task"
+        android:layout_width="@dimen/x320"
+        android:layout_height="@dimen/x34"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/bg_task"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/Task_Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/textColor6"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/Task_Coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_toRightOf="@+id/Task_Content"
+            android:textColor="@color/yellow2"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</LinearLayout>

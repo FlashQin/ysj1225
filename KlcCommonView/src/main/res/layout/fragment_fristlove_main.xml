@@ -1,0 +1,86 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/btn_search"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/x5"
+                android:layout_marginBottom="@dimen/x2"
+                android:padding="@dimen/x9"
+                android:src="@mipmap/icon_main_search" />
+
+            <ImageView
+                android:id="@+id/btn_msg"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/x5"
+                android:layout_marginBottom="@dimen/x2"
+                android:onClick="mainClick"
+                android:padding="9dp"
+                android:src="@mipmap/icon_main_msg"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/red_point"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x14"
+                android:layout_alignTop="@id/btn_msg"
+                android:layout_alignRight="@id/btn_msg"
+                android:layout_marginTop="@dimen/x5"
+                android:layout_marginRight="@dimen/x5"
+                android:background="@drawable/bg_red_point"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:minWidth="@dimen/x14"
+                android:paddingLeft="@dimen/x3"
+                android:paddingRight="@dimen/x3"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <com.kalacheng.util.view.ViewPagerIndicator2
+                android:id="@+id/indicator2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="50dp"
+                app:indicatorColor2="@color/main_indicator_indicator_colol"
+                app:indicatorHeight2="2"
+                app:indicatorMarginBottom="5"
+                app:indicatorShow="true"
+                app:indicatorWidth2="12"
+                app:lightBold="true"
+                app:lightColor2="@color/textColor3"
+                app:lightTextSize="18"
+                app:normalBold="false"
+                app:normalColor2="@color/textColor3"
+                app:normalTextSize="16"
+                app:padding="10" />
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+</layout>

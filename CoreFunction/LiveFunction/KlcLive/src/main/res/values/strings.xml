@@ -1,0 +1,85 @@
+<resources>
+    <!-- 直播-->
+    <string name="live_cover_2">更换封面</string>
+    <string name="app_name">MXDLive</string>
+    <string name="live_pk_me">我方</string>
+    <string name="live_pk_your">对方</string>
+    <string name="mic_enable">允许连麦</string>
+    <string name="mic_disable">禁止连麦</string>
+    <string name="live_link_mic_3">结束连麦</string>
+    <string name="live_link_mic_2">连麦互动</string>
+    <string name="end">结束</string>
+
+    <string name="live_start">开始直播</string>
+    <string name="live_room_type">选择房间类型</string>
+    <string name="live_share_to">分享到</string>
+    <string name="live_cover">直播封面</string>
+    <string name="live_title">直播标题</string>
+    <string name="live_title_hint">给你的直播写个标题吧</string>
+    <string name="wish_live_gift_ready">添加心愿单</string>
+    <string name="live_class">选择频道</string>
+    <string name="liveshop_class">购物分类</string>
+    <string name="live_class_type">房间模式</string>
+    <string name="ren">人</string>
+    <string name="live_guard">守护主播</string>
+    <string name="live_id">靓号:</string>
+    <string name="live_end_live">是否要结束直播？</string>
+    <string name="live_beauty">美颜</string>
+    <string name="live_camera">翻转</string>
+    <string name="live_flash">闪光灯</string>
+    <string name="live_music">音乐</string>
+    <string name="live_share">分享</string>
+    <string name="live_message">消息</string>
+    <string name="live_wish">心愿单</string>
+    <string name="live_game">游戏</string>
+    <string name="live_red_pack">红包</string>
+    <string name="live_link_mic">PK</string>
+    <string name="live_open_flash">只有后置摄像头才能开启闪光灯</string>
+    <string name="live_open_flash_error">打开闪光灯失败</string>
+    <string name="live_you_are_shut">你已经被禁言</string>
+
+
+    <string name="live_say_something">和大家说点什么...</string>
+    <string name="live_online_anchor">当前在线主播</string>
+    <string name="live_pk_invite">邀请连麦</string>
+    <string name="live_pk_invite_2">已邀请</string>
+    <string name="refuse">拒绝</string>
+    <string name="link_mic_refuse">对方主播拒绝了你的连麦申请</string>
+    <string name="link_mic_ownrefuse">你拒绝了TA的连麦申请</string>
+    <string name="link_mic_accept">对方主播同意了你的连麦申请</string>
+    <string name="link_mic_wait">发起连麦请求</string>
+    <string name="link_mic_noresponse">对方主播无响应</string>
+    <string name="link_mic_refuse_pk">对方主播拒绝了您的PK请求</string>
+    <string name="link_mic_pk_wait">发起PK请求</string>
+    <string name="link_mic_pk_wait_2">对方发起PK</string>
+    <string name="live_pk_time_1">PK时间</string>
+    <string name="live_pk_time_2">惩罚时间</string>
+    <string name="send">发送</string>
+
+    <string name="live_send_gift_1">送</string>
+    <string name="live_send_gift_2">个</string>
+    <string name="live_send_gift_3">送了</string>
+    <string name="live_send_gift_4">送了</string>
+    <string name="link_mic_anchor_not_response_2">对方无响应</string>
+    <string name="link_mic_exit">退出连麦</string>
+    <string name="live_anchor_leave">主播离开一下，精彩不中断，不要走开哦</string>
+    <string name="live_anchor_come_back">主播回来了！</string>
+    <string name="live_pk_search_hint">请输入您要搜索的主播昵称或ID</string>
+    <string name="city_none">火星</string>
+    <string name="edit_profile_city">修改位置</string>
+
+
+    <string name="dialog_tip">提示</string>
+    <string name="add">添加</string>
+    <string name="accept">接受</string>
+    <string name="all">全部</string>
+    <string name="alumb">相册</string>
+    <string name="cancel">取消</string>
+    <string name="camera">拍照</string>
+    <string name="confirm">确定</string>
+    <string name="edit_profile_right_date">请选择正确的日期</string>
+
+
+
+
+</resources>

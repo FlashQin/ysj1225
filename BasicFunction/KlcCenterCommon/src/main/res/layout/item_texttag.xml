@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.kalacheng.centercommon.R" />
+
+        <variable
+            name="bean"
+            type="com.kalacheng.buscommon.model.TabInfoDto" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_tagtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/whitesolid_greystroke"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingTop="4dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="4dp"
+            android:singleLine="true"
+            android:text="王者荣耀"
+            android:textColor="@color/brown"
+            android:textSize="12sp" />
+    </LinearLayout>
+</layout>

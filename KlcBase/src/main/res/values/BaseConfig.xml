@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="containLive">false</bool>//是否包含直播
+    <bool name="containOne2One">false</bool>//是否包含1对1
+    <bool name="containShortVideo">false</bool>//是否包含短视频
+    <bool name="containVoice">false</bool>//是否包含语音
+    <bool name="containShopping">false</bool>//是否包含直播购
+
+    <integer name="mainStatusBarWhite0">-1</integer>//MainActivity时，状态栏颜色，-1 自定义；0 白色字体；1 黑色字体
+    <integer name="mainStatusBarWhite1">1</integer>
+    <integer name="mainStatusBarWhite2">1</integer>
+    <integer name="mainStatusBarWhite3">1</integer>
+    <integer name="mainStatusBarWhite4">1</integer>
+
+    <integer name="mainFragmentRightTopType">0</integer>//MainFragment右上角按钮，0 +号；1 搜索
+    <integer name="mainVideoPosition">0</integer>//MainFragment默认初始化在第几个Fragment
+    <bool name="openAnchorPhone">true</bool>//一对一视频和语音，是否开启 获取主播手机号、微信功能
+    <bool name="isPhotoUpload">true</bool>//社区动态 发布 小视频（是否有 录像）
+    <bool name="videoPlayCut">true</bool>//短视频播放进行剪裁
+    <bool name="forbidScreenCap">false</bool>//禁止录屏
+
+    <integer name="authenticationStep">3</integer>//认证步骤
+    <integer name="bindingSuperiorType">0</integer>//绑定上下级方式，0 默认；1 openInstall
+    <bool name="canPublishWord">true</bool>//动态是否可以只发文字
+    <bool name="showMainStartViewMargin">false</bool>//主界面中间按钮是否显示底部间距
+    <integer name="mainStartType">0</integer>//主界面中间按钮类型，0 默认；1 根据角色速配；2 根据性别速配；3 语音；4 直播
+    <bool name="hideMeetButton">false</bool>//是否隐藏“选聊”、“求聊”按钮
+    <bool name="mainIndicatorOne2one">false</bool>//主界面导航栏显示1对1列表，即是否为纯1对1
+    <bool name="isVideo">false</bool>//是否为纯短视频
+    <bool name="openTreasure">false</bool>//一对一视频和语音，是否开启宝箱功能
+    <bool name="showDistanceCb">true</bool>//显示 "是否显示距离"
+    <bool name="sexNormal">true</bool>//是否为正常性别展示
+    <bool name="containPhotograph">true</bool>//图片选择是否包含拍照功能
+    <bool name="showContactInformation">true</bool>//个人编辑页，是否显示“联系方式”
+    <bool name="canGiveLiangNumberInVoice">false</bool>//在语音房间，是否显示赠送靓号功能
+    <bool name="showVIPSeats">true</bool>//直播间显示贵宾席
+    <bool name="useMusicOld">false</bool>//使用旧版音乐控件
+    <bool name="videoLocation">true</bool>//看视频的时候 显示该视频发布的定位和时间 (目前除了男朋友 都需要)
+    <bool name="tabNewBg">false</bool>// 交友模块上方tab 时候使用新版本颜色。
+    <bool name="powerSettingLive">false</bool>// 特权设置 时候隐藏进入直播间隐身
+    <integer name="commissionSelectType">0</integer>//佣金筛选类型，0 全部；1 注册、充值；2 充值、签到
+    <integer name="whiteMainFragmentRightStyle">0</integer>//0 默认；1 语音开播；
+    <bool name="showGuardInHomePage">true</bool>//个人主页中是否显示“TA的守护”
+    <bool name="isDynamicSetting1V1Main">false</bool>//是否需要动态配置一对一首页界面（FirstMainFragment）
+    <integer name="firstLoveMainRightType">0</integer>//一对一主页，右上角按钮样式，0 搜索；1 加号；
+    <integer name="firstLoveMainPosition">0</integer>//一对一交友，显示第几个下标 默认显示0
+    <bool name="showMeFragmentAdd">true</bool>//我的，显示“+”号
+    <bool name="nearbyIsCity">true</bool>//附近的人时候需要传城市 city
+
+    //短视频
+    <integer name="shortVideoPosition">1</integer>//短视频默认初始化在第几个Fragment
+    <bool name="shortVideoMaxPay">true</bool> // 短视频-看点 是否使用本周必看 老样式
+    <bool name="isShortVideoVisibilityRank">false</bool> // 短视频首页 是否需要展示排行榜
+
+    //发布
+    <bool name="isPublish">false</bool> // 视频、语音直播、发布、 是否需要动态
+
+    //广场
+    <bool name="squareIsOuterLayer">true</bool> // 广场是否在最外层
+
+    <integer name="isVisibleAnchorCenter">0</integer>// 个人中心 主播中心，-1 隐藏；0 显示；1 根据性别显示；
+    <bool name="isVisibleRevenueCenter">false</bool>// 个人中心 是否动态显示收益中心
+    <bool name="isVisibleRankFamily">true</bool>// 个人中心 排行榜是否显示家族榜
+
+    <string name="UMENG_APPKEY" />//友盟appkey
+    <string name="UMENG_CHANNEL" />//友盟渠道名
+
+</resources>

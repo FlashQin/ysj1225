@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_rect"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:background="@mipmap/bg_system_title" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="20dp"
+                    android:scrollbars="none">
+
+                    <TextView
+                        android:id="@+id/tv_system"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="我是系统消息，为呵护未成年人健康成长，喀啦城特别推出青少年模式，该模式下部分功能无法正常使用。"
+                        android:textColor="#ff999999"
+                        android:textSize="14sp" />
+                </ScrollView>
+            </LinearLayout>
+
+            <com.kalacheng.util.view.ItemLayout
+                android:id="@+id/layoutPicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone"
+                app:height_ratio="4"
+                app:width_ratio="3">
+
+                <ImageView
+                    android:id="@+id/ivSysNotice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+            </com.kalacheng.util.view.ItemLayout>
+
+            <TextView
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_above="@+id/tv_agreement"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/gradient_purple2"
+                android:gravity="center"
+                android:text="查看详情"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/dialog_close" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivSysNoticeTag"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:src="@mipmap/bg_system_title2" />
+</FrameLayout>

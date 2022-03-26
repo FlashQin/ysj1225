@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="@dimen/x210"
+        android:layout_height="@dimen/x210"
+        android:layout_centerVertical="true"
+        android:layout_marginVertical="@dimen/x12"
+        android:layout_marginHorizontal="@dimen/x10"
+        android:background="@drawable/bg_dialog_2">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/coverIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/zanweitu"
+            app:riv_corner_radius="@dimen/x6" />
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x10"
+            android:background="@drawable/bg_transport_grey"
+            android:drawableStart="@mipmap/icon_time"
+            android:drawablePadding="@dimen/x4"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/x5"
+            android:text="7月16日 18:00"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x11" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/x10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="进直播间领福利"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/x14" />
+
+            <TextView
+                android:id="@+id/followBuyTv"
+                android:layout_width="@dimen/x54"
+                android:layout_height="@dimen/x22"
+                android:background="@drawable/bg_follow_buy"
+                android:gravity="center"
+                android:text=" + 关注"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/x12" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

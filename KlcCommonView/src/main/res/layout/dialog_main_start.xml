@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/btn_live"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_main_start_live"
+            android:gravity="center_horizontal"
+            android:text="@string/main_start_live"
+            android:textColor="@color/textColor"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/btn_voicelive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_main_start_voice"
+            android:gravity="center_horizontal"
+            android:text="@string/main_start_voice"
+            android:textColor="@color/textColor"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/btn_video"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_main_start_video"
+            android:gravity="center_horizontal"
+            android:text="@string/main_start_video"
+            android:textColor="@color/textColor"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/btn_pic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_main_start_pic"
+            android:gravity="center_horizontal"
+            android:text="@string/main_start_pic"
+            android:textColor="@color/textColor"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/btn_shot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_main_start_dynamic"
+            android:gravity="center_horizontal"
+            android:text="@string/main_start_dynamic"
+            android:textColor="@color/textColor"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:padding="15dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_main_start_close"
+        android:visibility="visible" />
+</LinearLayout>
